@@ -8,7 +8,6 @@
 #include "cnn/expr.h"
 
 #include "utils.h"
-#include "decode.h"
 #include "morph-trans.h"
 
 #include <boost/archive/text_oarchive.hpp>

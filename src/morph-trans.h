@@ -11,6 +11,7 @@
 #include "cnn/expr.h"
 
 #include "utils.h"
+#include "proj-to-output.h"
 
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
@@ -27,15 +28,14 @@ class MorphTrans {
   LSTMBuilder input_forward, input_backward, output_forward;
   LookupParameters* char_vecs;
 
-  Expression hidden_to_output, hidden_to_output_bias;
-  Parameters *phidden_to_output, *phidden_to_output_bias;
+  ProjToOutput proj_to_vocab;
 
   Expression transform_encoded, transform_encoded_bias;
   Parameters *ptransform_encoded, *ptransform_encoded_bias;
   
   unsigned char_len;
-  Expression ZERO;
-  Parameters *pzero_vec;
+  Expression EPS;
+  Parameters *peps_vec;
 
   MorphTrans(const int& char_length, const int& hidden_length,
              const int& vocab_length, const int& layers, Model *m);
@@ -57,8 +57,8 @@ class MorphTrans {
 
   void Decode(const Expression& encoded_word_vec,
               unordered_map<string, unsigned>& char_to_id,
-              vector<unsigned>* pred_target_ids,
-              const vector<unsigned> input_ids, ComputationGraph* cg);
+              const vector<unsigned>& input_ids,
+              vector<unsigned>* pred_target_ids, ComputationGraph* cg);
 
   void Predict(const vector<unsigned>& inputs,
                unordered_map<string, unsigned>& char_to_id,

@@ -22,6 +22,9 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
+string BOW = "<s>", EOW = "</s>";
+unsigned MAX_PRED_LEN = 100;
+
 MorphTrans::MorphTrans(const int& char_length, const int& hidden_length,
                        const int& vocab_length, const int& layers, Model *m) {
   char_len = char_length;
@@ -30,15 +33,14 @@ MorphTrans::MorphTrans(const int& char_length, const int& hidden_length,
   input_backward = LSTMBuilder(layers, char_length, hidden_length, m);
   output_forward = LSTMBuilder(layers, 2 * char_length + hidden_length, hidden_length, m);
 
-  char_vecs = m->add_lookup_parameters(vocab_length, {char_length});
+  proj_to_vocab = ProjToOutput(hidden_length, vocab_length, m);
 
-  phidden_to_output = m->add_parameters({vocab_length, hidden_length});
-  phidden_to_output_bias = m->add_parameters({vocab_length, 1});
+  char_vecs = m->add_lookup_parameters(vocab_length, {char_length});
 
   ptransform_encoded = m->add_parameters({hidden_length, 2 * hidden_length});
   ptransform_encoded_bias = m->add_parameters({hidden_length, 1});
     
-  pzero_vec = m->add_parameters({char_len, 1});
+  peps_vec = m->add_parameters({char_len, 1});
 }
 
 void MorphTrans::AddParamsToCG(ComputationGraph* cg) {
@@ -46,13 +48,12 @@ void MorphTrans::AddParamsToCG(ComputationGraph* cg) {
   input_backward.new_graph(*cg);
   output_forward.new_graph(*cg);
 
-  hidden_to_output = parameter(*cg, phidden_to_output);
-  hidden_to_output_bias = parameter(*cg, phidden_to_output_bias);
+  proj_to_vocab.AddParamsToCG(cg);
 
   transform_encoded = parameter(*cg, ptransform_encoded);
   transform_encoded_bias = parameter(*cg, ptransform_encoded_bias);
     
-  ZERO = parameter(*cg, pzero_vec);
+  EPS = parameter(*cg, peps_vec);
 }
 
 void MorphTrans::RunFwdBwd(const vector<unsigned>& inputs,
@@ -86,17 +87,13 @@ void MorphTrans::TransformEncodedInputForDecoding(Expression* encoded_input) con
                                      transform_encoded, *encoded_input});
 }
 
-void MorphTrans::ProjectToVocab(const Expression& hidden, Expression* out) const {
-  *out = affine_transform({hidden_to_output_bias, hidden_to_output, hidden});
-}
-
 Expression MorphTrans::ComputeLoss(const vector<Expression>& hidden_units,
                                   const vector<unsigned>& targets) const {
   assert(hidden_units.size() == targets.size());
   vector<Expression> losses;
   for (unsigned i = 0; i < hidden_units.size(); ++i) {
     Expression out;
-    ProjectToVocab(hidden_units[i], &out);
+    proj_to_vocab.ProjectToOutput(hidden_units[i], &out);
     losses.push_back(pickneglogsoftmax(out, targets[i]));
   }
   return sum(losses);
@@ -125,7 +122,7 @@ float MorphTrans::Train(const vector<unsigned>& inputs,
              lookup(cg, char_vecs, inputs[i+1])}));
       } else {
         input_vecs_for_dec.push_back(concatenate(
-            {encoded_input_vec, lookup(cg, char_vecs, outputs[i]), ZERO}));
+            {encoded_input_vec, lookup(cg, char_vecs, outputs[i]), EPS}));
       }
     }
     if (i > 0) {  // '<s>' will not be predicted in the output -- its fed in.
@@ -148,8 +145,8 @@ float MorphTrans::Train(const vector<unsigned>& inputs,
 
 void MorphTrans::Decode(const Expression& encoded_word_vec,
                         unordered_map<string, unsigned>& char_to_id,
-                        vector<unsigned>* pred_target_ids,
                         const vector<unsigned>& input_ids,
+                        vector<unsigned>* pred_target_ids,
                         ComputationGraph* cg) {
   Expression input_word_vec = lookup(*cg, char_vecs, char_to_id[BOW]);
   pred_target_ids->push_back(char_to_id[BOW]);
@@ -161,11 +158,11 @@ void MorphTrans::Decode(const Expression& encoded_word_vec,
       input = concatenate({encoded_word_vec, input_word_vec,
                           lookup(*cg, char_vecs, input_ids[out_index])});
     } else {
-      input = concatenate({encoded_word_vec, input_word_vec, ZERO});
+      input = concatenate({encoded_word_vec, input_word_vec, EPS});
     }
     Expression hidden = output_forward.add_input(input);
     Expression out;
-    ProjectToVocab(hidden, &out);
+    proj_to_vocab.ProjectToOutput(hidden, &out);
     vector<float> dist = as_vector(cg->incremental_forward());
     unsigned pred_index = 0;
     float best_score = dist[pred_index];
@@ -196,5 +193,5 @@ void MorphTrans::Predict(const vector<unsigned>& inputs,
   TransformEncodedInputForDecoding(&encoded_input_vec);
 
   // Make preditions using the decoder.
-  Decode(encoded_input_vec, char_to_id, outputs, inputs, &cg);
+  Decode(encoded_input_vec, char_to_id, inputs, outputs, &cg);
 }
