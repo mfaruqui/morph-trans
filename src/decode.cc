@@ -22,8 +22,12 @@ void Decode(unordered_map<string, unsigned>& char_to_id,
   unsigned pred_index = char_to_id[BOW];
   model->output_forward.start_new_sequence();
   while (pred_target_ids->size() < MAX_PRED_LEN) {
-    Expression prev_output_vec = lookup(cg, model->char_vecs, pred_index);
     pred_target_ids->push_back(pred_index);
+    if (pred_index == char_to_id[EOW]) {
+      return;  // If the end is found, break from the loop and return
+    }
+
+    Expression prev_output_vec = lookup(cg, model->char_vecs, pred_index);
     Expression input, input_char_vec;
     if (out_index < input_ids.size()) {
       input_char_vec = lookup(cg, model->char_vecs, input_ids[out_index]);
@@ -36,18 +40,8 @@ void Decode(unordered_map<string, unsigned>& char_to_id,
     Expression out;
     model->ProjectToOutput(hidden, &out);
     vector<float> dist = as_vector(cg.incremental_forward());
-    unsigned pred_index = 0;
-    float best_score = dist[pred_index];
-    for (unsigned index = 1; index < dist.size(); ++index) {
-      if (dist[index] > best_score) {
-        best_score = dist[index];
-        pred_index = index;
-      }
-    }
-    pred_target_ids->push_back(pred_index);
-    if (pred_index == char_to_id[EOW]) {
-      return;  // If the end is found, break from the loop and return
-    }
+    pred_index = distance(dist.begin(), max_element(dist.begin(),
+                                                    dist.end()));;
     out_index++;
   }
 }

@@ -10,6 +10,7 @@
 #include "utils.h"
 #include "morph-trans.h"
 #include "decode.h"
+#include "read-write.h"
 
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
@@ -34,44 +35,21 @@ int main(int argc, char** argv) {
   unsigned num_iter = atoi(argv[7]);
   float reg_strength = atof(argv[8]);
   unsigned layers = atoi(argv[9]);
+  string model_outputfilename = argv[10];
 
-  ifstream vocab_file(vocab_filename);
-  vector<string> chars;
-  if (vocab_file.is_open()) {  // Reading the vocab file
-    string line;
-    getline(vocab_file, line);
-    chars = split_line(line, ' ');
-  } else {
-    cerr << "File opening failed" << endl;
-  }
-  unordered_map<string, unsigned> char_to_id;
-  unordered_map<unsigned, string> id_to_char;
-  unsigned char_id = 0;
-  for (const string& ch : chars) {
-    char_to_id[ch] = char_id;
-    id_to_char[char_id] = ch;
-    char_id++;
-  }
+  unordered_map<string, unsigned> char_to_id, morph_to_id;
+  unordered_map<unsigned, string> id_to_char, id_to_morph;
+
+  ReadVocab(vocab_filename, &char_to_id, &id_to_char);
   unsigned vocab_size = char_to_id.size();
-
-  ifstream morph_file(morph_filename);
-  vector<string> morph_attrs;
-  if (morph_file.is_open()) {  // Reading the vocab file
-    string line;
-    getline(morph_file, line);
-    morph_attrs = split_line(line, ' ');
-  } else {
-    cerr << "File opening failed" << endl;
-  }
-  unordered_map<string, unsigned> morph_to_id;
-  unordered_map<unsigned, string> id_to_morph;
-  unsigned morph_id = 0;
-  for (const string& ch : morph_attrs) {
-    morph_to_id[ch] = morph_id;
-    id_to_morph[morph_id] = ch;
-    morph_id++;
-  }
+  ReadVocab(morph_filename, &morph_to_id, &id_to_morph);
   unsigned morph_size = morph_to_id.size();
+
+  vector<string> train_data;  // Read the training file in a vector
+  ReadData(train_filename, &train_data);
+
+  vector<string> test_data;  // Read the dev file in a vector
+  ReadData(test_filename, &test_data);
 
   vector<Model*> m;
   vector<AdadeltaTrainer> optimizer;
@@ -84,29 +62,8 @@ int main(int argc, char** argv) {
     nn.push_back(neural);
   }
 
-  // Read the training file in a vector
-  vector<string> train_data;
-  ifstream train_file(train_filename);
-  if (train_file.is_open()) {
-    string line;
-    while (getline(train_file, line)) {
-      train_data.push_back(line);
-    }
-  }
-  train_file.close();
-
-  // Read the test file in a vector
-  vector<string> test_data;
-  ifstream test_file(test_filename);
-  if (test_file.is_open()) {
-    string line;
-    while (getline(test_file, line)) {
-      test_data.push_back(line);
-    }
-  }
-  test_file.close();
-
   // Read the training file and train the model
+  double best_score = -1;
   for (unsigned iter = 0; iter < num_iter; ++iter) {
     unsigned line_id = 0;
     random_shuffle(train_data.begin(), train_data.end());
@@ -125,12 +82,6 @@ int main(int argc, char** argv) {
       loss[morph_id] += nn[morph_id].Train(input_ids, target_ids, &optimizer[morph_id]);
       cerr << ++line_id << "\r";
     }
-
-    cerr << "Iter " << iter + 1 << " ";
-    for (unsigned i = 0; i < loss.size(); ++i) {
-      cerr << loss[i] << " ";
-    }
-    cerr << "Sum: " << accumulate(loss.begin(), loss.end(), 0.) << endl;
 
     // Read the test file and output predictions for the words.
     string line;
@@ -157,15 +108,17 @@ int main(int argc, char** argv) {
       }
       if (prediction == items[1]) {
         correct += 1;
-      } else {  // If wrong, print prediction and correct answer
-        if (iter == num_iter - 1) {
-          cout << items[0] << '|' << items[1] << '|' << items[2] << endl;
-          cout << items[0] << '|' << prediction << '|' << items[2] << endl;
-        }
       }
       total += 1;
     }
-    cerr << "Prediction Accuracy: " << correct / total << endl;
+    double curr_score = correct / total;
+    cerr << "Iter " << iter + 1 << " ";
+    cerr << "Prediction Accuracy: " << curr_score << endl;
+    if (curr_score > best_score) {
+      best_score = curr_score;
+      Serialize(nn, m, model_outputfilename);
+      cerr << "Serialized" << endl;
+    }
   }
   return 1;
 }

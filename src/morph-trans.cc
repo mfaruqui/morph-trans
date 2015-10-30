@@ -4,22 +4,28 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
-MorphTrans::MorphTrans(const int& char_length, const int& hidden_length,
-                       const int& vocab_length, const int& layers, Model *m) {
+MorphTrans::MorphTrans(const unsigned& char_length, const unsigned& hidden_length,
+                       const unsigned& vocab_length, const unsigned& num_layers, Model *m) {
   char_len = char_length;
+  hidden_len = hidden_length;
+  vocab_len = vocab_length;
+  layers = num_layers;
+  InitParams(m);
+}
 
-  input_forward = LSTMBuilder(layers, char_length, hidden_length, m);
-  input_backward = LSTMBuilder(layers, char_length, hidden_length, m);
-  output_forward = LSTMBuilder(layers, 2 * char_length + hidden_length, hidden_length, m);
+void MorphTrans::InitParams(Model *m) {
+  input_forward = LSTMBuilder(layers, char_len, hidden_len, m);
+  input_backward = LSTMBuilder(layers, char_len, hidden_len, m);
+  output_forward = LSTMBuilder(layers, 2 * char_len + hidden_len, hidden_len, m);
 
-  phidden_to_output = m->add_parameters({vocab_length, hidden_length});
-  phidden_to_output_bias = m->add_parameters({vocab_length, 1});
+  phidden_to_output = m->add_parameters({vocab_len, hidden_len});
+  phidden_to_output_bias = m->add_parameters({vocab_len, 1});
 
-  char_vecs = m->add_lookup_parameters(vocab_length, {char_length});
+  char_vecs = m->add_lookup_parameters(vocab_len, {char_len});
 
-  ptransform_encoded = m->add_parameters({hidden_length, 2 * hidden_length});
-  ptransform_encoded_bias = m->add_parameters({hidden_length, 1});
-    
+  ptransform_encoded = m->add_parameters({hidden_len, 2 * hidden_len});
+  ptransform_encoded_bias = m->add_parameters({hidden_len, 1});
+
   peps_vec = m->add_parameters({char_len, 1});
 }
 

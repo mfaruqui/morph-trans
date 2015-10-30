@@ -12,6 +12,7 @@
 
 #include "utils.h"
 
+#include <boost/archive/text_oarchive.hpp>
 #include <unordered_map>
 
 using namespace std;
@@ -29,12 +30,16 @@ class MorphTrans {
   Expression transform_encoded, transform_encoded_bias;
   Parameters *ptransform_encoded, *ptransform_encoded_bias;
   
-  unsigned char_len;
+  unsigned char_len, hidden_len, vocab_len, layers;
   Expression EPS;
   Parameters *peps_vec;
 
-  MorphTrans(const int& char_length, const int& hidden_length,
-             const int& vocab_length, const int& layers, Model *m);
+  MorphTrans() {}
+
+  MorphTrans(const unsigned& char_length, const unsigned& hidden_length,
+             const unsigned& vocab_length, const unsigned& layers, Model *m);
+
+  void InitParams(Model *m);
 
   void AddParamsToCG(ComputationGraph* cg);
 
@@ -50,6 +55,14 @@ class MorphTrans {
 
   float Train(const vector<unsigned>& inputs, const vector<unsigned>& outputs,
               AdadeltaTrainer* ada_gd);
+
+  friend class boost::serialization::access;
+  template<class Archive> void serialize(Archive& ar, const unsigned int) {
+    ar & char_len;
+    ar & hidden_len;
+    ar & vocab_len;
+    ar & layers;
+  }
 };
 
 #endif
