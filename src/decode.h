@@ -1,3 +1,6 @@
+#ifndef DECODE_H_
+#define DECODE_H_
+
 #include "cnn/nodes.h"
 #include "cnn/cnn.h"
 #include "cnn/rnn.h"
@@ -9,6 +12,8 @@
 
 #include "utils.h"
 #include "proj-to-output.h"
+#include "ensemble.h"
+#include "morph-trans.h"
 
 #include <unordered_map>
 
@@ -16,9 +21,14 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
-void Decode(const Expression& encoded_word_vec,
-            unordered_map<string, unsigned>& char_to_id,
-            const vector<unsigned>& input_ids,
-            ProjToOutput& proj_to_vocab, LSTMBuilder* decoder,
-            LookupParameters* char_vecs, Expression& EPS,
-            vector<unsigned>* pred_target_ids, ComputationGraph* cg);
+template<typename T> void
+Decode(unordered_map<string, unsigned>& char_to_id,
+       const vector<unsigned>& input_ids, vector<unsigned>* pred_target_ids,
+       T* model);
+
+template<typename T> void
+EnsembleDecode(unordered_map<string, unsigned>& char_to_id,
+               const vector<unsigned>& input_ids,
+               vector<unsigned>* pred_target_ids, Ensemble<T>* ensmb_model);
+
+#endif
