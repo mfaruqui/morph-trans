@@ -11,7 +11,6 @@
 #include "cnn/expr.h"
 
 #include "utils.h"
-#include "proj-to-output.h"
 #include "ensemble.h"
 #include "morph-trans.h"
 

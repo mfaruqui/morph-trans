@@ -9,13 +9,13 @@
 
 #include "utils.h"
 #include "morph-trans.h"
+#include "decode.h"
 
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
 
 #include <iostream>
 #include <fstream>
-#include <sstream>
 #include <unordered_map>
 
 using namespace std;
@@ -146,7 +146,7 @@ int main(int argc, char** argv) {
         target_ids.push_back(char_to_id[ch]);
       }
       unsigned morph_id = morph_to_id[items[2]];
-      nn[morph_id].Predict(input_ids, char_to_id, &pred_target_ids);
+      Decode(char_to_id, input_ids, &pred_target_ids, &nn[morph_id]);
 
       string prediction = "";
       for (unsigned i = 0; i < pred_target_ids.size(); ++i) {

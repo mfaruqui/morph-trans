@@ -11,12 +11,7 @@
 #include "cnn/expr.h"
 
 #include "utils.h"
-#include "proj-to-output.h"
 
-#include <boost/archive/text_oarchive.hpp>
-#include <boost/archive/text_iarchive.hpp>
-
-#include <fstream>
 #include <unordered_map>
 
 using namespace std;
@@ -28,7 +23,8 @@ class MorphTrans {
   LSTMBuilder input_forward, input_backward, output_forward;
   LookupParameters* char_vecs;
 
-  ProjToOutput proj_to_vocab;
+  Expression hidden_to_output, hidden_to_output_bias;
+  Parameters *phidden_to_output, *phidden_to_output_bias;
 
   Expression transform_encoded, transform_encoded_bias;
   Parameters *ptransform_encoded, *ptransform_encoded_bias;
@@ -47,22 +43,13 @@ class MorphTrans {
 
   void TransformEncodedInputForDecoding(Expression* encoded_input) const;
 
-  void ProjectToVocab(const Expression& hidden, Expression* out) const;
+  void ProjectToOutput(const Expression& hidden, Expression* out) const;
 
   Expression ComputeLoss(const vector<Expression>& hidden_units,
                          const vector<unsigned>& targets) const;
 
   float Train(const vector<unsigned>& inputs, const vector<unsigned>& outputs,
               AdadeltaTrainer* ada_gd);
-
-  void Decode(const Expression& encoded_word_vec,
-              unordered_map<string, unsigned>& char_to_id,
-              const vector<unsigned>& input_ids,
-              vector<unsigned>* pred_target_ids, ComputationGraph* cg);
-
-  void Predict(const vector<unsigned>& inputs,
-               unordered_map<string, unsigned>& char_to_id,
-               vector<unsigned>* outputs);
 };
 
 #endif

@@ -34,7 +34,7 @@ void Decode(unordered_map<string, unsigned>& char_to_id,
     Expression hidden = model->output_forward.add_input(input);
 
     Expression out;
-    model->proj_to_vocab.ProjectToOutput(hidden, &out);
+    model->ProjectToOutput(hidden, &out);
     vector<float> dist = as_vector(cg.incremental_forward());
     unsigned pred_index = 0;
     float best_score = dist[pred_index];
@@ -96,7 +96,7 @@ EnsembleDecode(unordered_map<string, unsigned>& char_to_id,
 
       Expression hidden = model.output_forward.add_input(input);
       Expression out;
-      model.proj_to_vocab.ProjectToOutput(hidden, &out);
+      model.ProjectToOutput(hidden, &out);
       ensmb_out.push_back(softmax(out));
     }
 
