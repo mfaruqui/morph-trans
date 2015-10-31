@@ -1,5 +1,5 @@
-#ifndef MORPH_CHAR_H_
-#define MORPH_CHAR_H_
+#ifndef SEP_MORPH_TRANS_H_
+#define SEP_MORPH_TRANS_H_
 
 #include "cnn/nodes.h"
 #include "cnn/cnn.h"
@@ -19,31 +19,32 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
-class MorphTrans {
+class SepMorph {
  public:
-  LSTMBuilder input_forward, input_backward, output_forward;
-  LookupParameters* char_vecs;
+  vector<LSTMBuilder> input_forward, input_backward, output_forward;
+  vector<LookupParameters*> char_vecs;
 
   Expression hidden_to_output, hidden_to_output_bias;
-  Parameters *phidden_to_output, *phidden_to_output_bias;
+  vector<Parameters*> phidden_to_output, phidden_to_output_bias;
 
   Expression transform_encoded, transform_encoded_bias;
-  Parameters *ptransform_encoded, *ptransform_encoded_bias;
+  vector<Parameters*> ptransform_encoded, ptransform_encoded_bias;
   
-  unsigned char_len, hidden_len, vocab_len, layers;
+  unsigned char_len, hidden_len, vocab_len, layers, morph_len;
   Expression EPS;
-  Parameters *peps_vec;
+  vector<Parameters*> peps_vec;
 
-  MorphTrans() {}
+  SepMorph() {}
 
-  MorphTrans(const unsigned& char_length, const unsigned& hidden_length,
-             const unsigned& vocab_length, const unsigned& layers, Model *m);
+  SepMorph(const unsigned& char_length, const unsigned& hidden_length,
+           const unsigned& vocab_length, const unsigned& layers,
+           const unsigned& num_morph, Model *m);
 
   void InitParams(Model *m);
 
-  void AddParamsToCG(ComputationGraph* cg);
+  void AddParamsToCG(const unsigned& morph_id, ComputationGraph* cg);
 
-  void RunFwdBwd(const vector<unsigned>& inputs,
+  void RunFwdBwd(const unsigned& morph_id, const vector<unsigned>& inputs,
                  Expression* hidden, ComputationGraph *cg);
 
   void TransformEncodedInputForDecoding(Expression* encoded_input) const;
@@ -53,8 +54,8 @@ class MorphTrans {
   Expression ComputeLoss(const vector<Expression>& hidden_units,
                          const vector<unsigned>& targets) const;
 
-  float Train(const vector<unsigned>& inputs, const vector<unsigned>& outputs,
-              AdadeltaTrainer* ada_gd);
+  float Train(const unsigned& morph_id, const vector<unsigned>& inputs,
+              const vector<unsigned>& outputs, AdadeltaTrainer* ada_gd);
 
   friend class boost::serialization::access;
   template<class Archive> void serialize(Archive& ar, const unsigned int) {
@@ -62,6 +63,7 @@ class MorphTrans {
     ar & hidden_len;
     ar & vocab_len;
     ar & layers;
+    ar & morph_len;
   }
 };
 

@@ -11,8 +11,7 @@
 #include "cnn/expr.h"
 
 #include "utils.h"
-#include "ensemble.h"
-#include "morph-trans.h"
+#include "sep-morph.h"
 
 #include <unordered_map>
 
@@ -21,13 +20,13 @@ using namespace cnn;
 using namespace cnn::expr;
 
 template<typename T> void
-Decode(unordered_map<string, unsigned>& char_to_id,
+Decode(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
        const vector<unsigned>& input_ids, vector<unsigned>* pred_target_ids,
        T* model);
 
 template<typename T> void
 EnsembleDecode(unordered_map<string, unsigned>& char_to_id,
                const vector<unsigned>& input_ids,
-               vector<unsigned>* pred_target_ids, Ensemble<T>* ensmb_model);
+               vector<unsigned>* pred_target_ids, vector<T>* ensmb_model);
 
 #endif

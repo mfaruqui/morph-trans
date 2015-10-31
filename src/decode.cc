@@ -8,34 +8,35 @@ string BOW = "<s>", EOW = "</s>";
 int MAX_PRED_LEN = 100;
 
 template<typename T>
-void Decode(unordered_map<string, unsigned>& char_to_id,
+void Decode(const unsigned& morph_id,
+            unordered_map<string, unsigned>& char_to_id,
             const vector<unsigned>& input_ids,
             vector<unsigned>* pred_target_ids, T* model) {
   ComputationGraph cg;
-  model->AddParamsToCG(&cg);
+  model->AddParamsToCG(morph_id, &cg);
 
   Expression encoded_word_vec;
-  model->RunFwdBwd(input_ids, &encoded_word_vec, &cg);
+  model->RunFwdBwd(morph_id, input_ids, &encoded_word_vec, &cg);
   model->TransformEncodedInputForDecoding(&encoded_word_vec);
 
   unsigned out_index = 1;
   unsigned pred_index = char_to_id[BOW];
-  model->output_forward.start_new_sequence();
+  model->output_forward[morph_id].start_new_sequence();
   while (pred_target_ids->size() < MAX_PRED_LEN) {
     pred_target_ids->push_back(pred_index);
     if (pred_index == char_to_id[EOW]) {
       return;  // If the end is found, break from the loop and return
     }
 
-    Expression prev_output_vec = lookup(cg, model->char_vecs, pred_index);
+    Expression prev_output_vec = lookup(cg, model->char_vecs[morph_id], pred_index);
     Expression input, input_char_vec;
     if (out_index < input_ids.size()) {
-      input_char_vec = lookup(cg, model->char_vecs, input_ids[out_index]);
+      input_char_vec = lookup(cg, model->char_vecs[morph_id], input_ids[out_index]);
     } else {
       input_char_vec = model->EPS;
     }
     input = concatenate({encoded_word_vec, prev_output_vec, input_char_vec});
-    Expression hidden = model->output_forward.add_input(input);
+    Expression hidden = model->output_forward[morph_id].add_input(input);
 
     Expression out;
     model->ProjectToOutput(hidden, &out);
@@ -47,24 +48,21 @@ void Decode(unordered_map<string, unsigned>& char_to_id,
 }
 
 template<typename T> void
-EnsembleDecode(unordered_map<string, unsigned>& char_to_id,
+EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
                const vector<unsigned>& input_ids, 
-               vector<unsigned>* pred_target_ids, Ensemble<T>* ensmb_model) {
+               vector<unsigned>* pred_target_ids, vector<T>* ensmb_model) {
   ComputationGraph cg;
 
-  // WHY IS THIS NOT ABLE TO FIND THIS METHOD HERE
-  //ensmb_model->AddParamsToCG(&cg);
-
-  unsigned ensmb = ensmb_model->ensmb;
+  unsigned ensmb = ensmb_model->size();
   vector<Expression> encoded_word_vecs;
   for (unsigned i = 0; i < ensmb; ++i) {
     Expression encoded_word_vec;
-    auto& model = ensmb_model->models[i];
-    model.AddParamsToCG(&cg);
-    model.RunFwdBwd(input_ids, &encoded_word_vec, &cg);
+    auto& model = (*ensmb_model)[i];
+    model.AddParamsToCG(morph_id, &cg);
+    model.RunFwdBwd(morph_id, input_ids, &encoded_word_vec, &cg);
     model.TransformEncodedInputForDecoding(&encoded_word_vec);
     encoded_word_vecs.push_back(encoded_word_vec);
-    model.output_forward.start_new_sequence();
+    model.output_forward[morph_id].start_new_sequence();
   }
 
   unsigned out_index = 1;
@@ -77,18 +75,18 @@ EnsembleDecode(unordered_map<string, unsigned>& char_to_id,
     }
 
     for (unsigned ensmb_id = 0; ensmb_id < ensmb; ++ensmb_id) {
-      auto& model = ensmb_model->models[ensmb_id];
-      Expression prev_output_vec = lookup(cg, model.char_vecs, pred_index);
+      auto& model = (*ensmb_model)[ensmb_id];
+      Expression prev_output_vec = lookup(cg, model.char_vecs[morph_id], pred_index);
       Expression input, input_char_vec;
       if (out_index < input_ids.size()) {
-        input_char_vec = lookup(cg, model.char_vecs, input_ids[out_index]);
+        input_char_vec = lookup(cg, model.char_vecs[morph_id], input_ids[out_index]);
       } else {
         input_char_vec = model.EPS;
       }
       input = concatenate({encoded_word_vecs[ensmb_id], prev_output_vec,
                            input_char_vec});
 
-      Expression hidden = model.output_forward.add_input(input);
+      Expression hidden = model.output_forward[morph_id].add_input(input);
       Expression out;
       model.ProjectToOutput(hidden, &out);
       ensmb_out.push_back(softmax(out));
@@ -102,12 +100,12 @@ EnsembleDecode(unordered_map<string, unsigned>& char_to_id,
 }
 
 template void
-Decode<MorphTrans>(unordered_map<string, unsigned>& char_to_id,
+Decode<SepMorph>(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
                    const vector<unsigned>& input_ids,
-                   vector<unsigned>* pred_target_ids, MorphTrans* model);
+                   vector<unsigned>* pred_target_ids, SepMorph* model);
 
 template void
-EnsembleDecode<MorphTrans>(unordered_map<string, unsigned>& char_to_id,
+EnsembleDecode<SepMorph>(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
                            const vector<unsigned>& input_ids,
                            vector<unsigned>* pred_target_ids,
-                           Ensemble<MorphTrans>* ensmb_model);
+                           vector<SepMorph>* ensmb_model);

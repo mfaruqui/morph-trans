@@ -8,7 +8,7 @@
 #include "cnn/expr.h"
 
 #include "utils.h"
-#include "morph-trans.h"
+#include "sep-morph.h"
 #include "decode.h"
 #include "read-write.h"
 
@@ -51,16 +51,9 @@ int main(int argc, char** argv) {
   vector<string> test_data;  // Read the dev file in a vector
   ReadData(test_filename, &test_data);
 
-  vector<Model*> m;
-  vector<AdadeltaTrainer> optimizer;
-  vector<MorphTrans> nn;
-  for (unsigned i = 0; i < morph_size; ++i) {
-    m.push_back(new Model());
-    AdadeltaTrainer ada(m[i], reg_strength);
-    optimizer.push_back(ada);
-    MorphTrans neural(char_size, hidden_size, vocab_size, layers, m[i]);
-    nn.push_back(neural);
-  }
+  Model m;
+  AdadeltaTrainer optimizer(&m, reg_strength);
+  SepMorph nn(char_size, hidden_size, vocab_size, layers, morph_size, &m);
 
   // Read the training file and train the model
   double best_score = -1;
@@ -79,7 +72,7 @@ int main(int argc, char** argv) {
         target_ids.push_back(char_to_id[ch]);
       }
       unsigned morph_id = morph_to_id[items[2]];
-      loss[morph_id] += nn[morph_id].Train(input_ids, target_ids, &optimizer[morph_id]);
+      loss[morph_id] += nn.Train(morph_id, input_ids, target_ids, &optimizer);
       cerr << ++line_id << "\r";
     }
 
@@ -97,7 +90,7 @@ int main(int argc, char** argv) {
         target_ids.push_back(char_to_id[ch]);
       }
       unsigned morph_id = morph_to_id[items[2]];
-      Decode(char_to_id, input_ids, &pred_target_ids, &nn[morph_id]);
+      Decode(morph_id, char_to_id, input_ids, &pred_target_ids, &nn);
 
       string prediction = "";
       for (unsigned i = 0; i < pred_target_ids.size(); ++i) {
@@ -116,7 +109,7 @@ int main(int argc, char** argv) {
     cerr << "Prediction Accuracy: " << curr_score << endl;
     if (curr_score > best_score) {
       best_score = curr_score;
-      Serialize(nn, m, model_outputfilename);
+      Serialize(model_outputfilename, nn, &m);
       cerr << "Serialized" << endl;
     }
   }

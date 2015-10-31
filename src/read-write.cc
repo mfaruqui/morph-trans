@@ -4,7 +4,7 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
-void Serialize(vector<MorphTrans>& models, vector<Model*>& cnn_models,
+void Serialize(vector<SepMorph>& models, vector<Model*>& cnn_models,
                string& filename) {
   ofstream outfile(filename);
   if (!outfile.is_open()) {
@@ -21,8 +21,8 @@ void Serialize(vector<MorphTrans>& models, vector<Model*>& cnn_models,
   outfile.close();
 }
 
-void Read(vector<MorphTrans>* models, vector<Model*>* cnn_models,
-          string& filename) {
+void Read(string& filename, vector<SepMorph>* models,
+          vector<Model*>* cnn_models) {
   ifstream infile(filename);
   if (!infile.is_open()) {
     cerr << "File opening failed" << endl;
@@ -32,7 +32,7 @@ void Read(vector<MorphTrans>* models, vector<Model*>* cnn_models,
   unsigned morph_size;
   ia & morph_size;
   for (unsigned i = 0; i < morph_size; ++i) {
-    MorphTrans model;
+    SepMorph model;
     Model *cnn_model = new Model();
    
     ia & model;
@@ -44,3 +44,31 @@ void Read(vector<MorphTrans>* models, vector<Model*>* cnn_models,
   }
   infile.close();
 }
+
+void Serialize(string& filename, SepMorph& model, Model* cnn_model) {
+  ofstream outfile(filename);
+  if (!outfile.is_open()) {
+    cerr << "File opening failed" << endl;
+  }
+
+  boost::archive::text_oarchive oa(outfile);
+  oa & model;
+  oa & *cnn_model;
+  outfile.close();
+}
+
+void Read(string& filename, SepMorph* model,
+          Model* cnn_model) {
+  ifstream infile(filename);
+  if (!infile.is_open()) {
+    cerr << "File opening failed" << endl;
+  }
+
+  boost::archive::text_iarchive ia(infile);
+  ia & *model;
+  model->InitParams(cnn_model);
+  ia & *cnn_model;
+
+  infile.close();
+}
+
