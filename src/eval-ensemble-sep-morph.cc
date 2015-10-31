@@ -25,7 +25,6 @@ int main(int argc, char** argv) {
   string vocab_filename = argv[1];  // vocabulary of words/characters
   string morph_filename = argv[2];
   string test_filename = argv[3];
-  string model_filename = argv[4];
 
   unordered_map<string, unsigned> char_to_id, morph_to_id;
   unordered_map<unsigned, string> id_to_char, id_to_morph;
@@ -38,9 +37,16 @@ int main(int argc, char** argv) {
   vector<string> test_data;  // Read the dev file in a vector
   ReadData(test_filename, &test_data);
 
-  Model m;
-  SepMorph nn;
-  Read(model_filename, &nn, &m);
+  vector<Model*> ensmb_m;
+  vector<SepMorph> ensmb_nn;
+  for (unsigned i = 0; i < argc - 4; ++i) {
+    Model *m = new Model();
+    SepMorph nn;
+    string f = argv[i + 4];
+    Read(f, &nn, m);
+    ensmb_m.push_back(m);
+    ensmb_nn.push_back(nn);
+  }
 
   // Read the test file and output predictions for the words.
   string line;
@@ -56,7 +62,7 @@ int main(int argc, char** argv) {
       target_ids.push_back(char_to_id[ch]);
     }
     unsigned morph_id = morph_to_id[items[2]];
-    Decode(morph_id, char_to_id, input_ids, &pred_target_ids, &nn);
+    EnsembleDecode(morph_id, char_to_id, input_ids, &pred_target_ids, &ensmb_nn);
 
     string prediction = "";
     for (unsigned i = 0; i < pred_target_ids.size(); ++i) {
