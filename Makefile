@@ -13,7 +13,7 @@ OBJDIR=obj
 SRCDIR=src
 
 .PHONY: clean
-all: make_dirs $(BINDIR)/sep-morph-char $(BINDIR)/ensemble-sep-morph-char
+all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-sep-morph $(BINDIR)/eval-ensemble-sep-morph
 
 make_dirs:
 	mkdir -p $(OBJDIR)
@@ -25,10 +25,13 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cc
 	$(CC) $(CFLAGS) $(INCS) -c $< -o $@
 	$(CC) -MM -MP -MT "$@" $(CFLAGS) $(INCS) $< > $(OBJDIR)/$*.d
 
-$(BINDIR)/sep-morph-char: $(addprefix $(OBJDIR)/, sep-morph-char.o utils.o morph-trans.o decode.o read-write.o)
+$(BINDIR)/train-sep-morph: $(addprefix $(OBJDIR)/, train-sep-morph.o sep-morph.o utils.o  decode.o read-write.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
-$(BINDIR)/ensemble-sep-morph-char: $(addprefix $(OBJDIR)/, ensemble-sep-morph-char.o utils.o morph-trans.o decode.o ensemble.o)
+$(BINDIR)/eval-sep-morph: $(addprefix $(OBJDIR)/, eval-sep-morph.o utils.o sep-morph.o decode.o read-write.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
+$(BINDIR)/eval-ensemble-sep-morph: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph.o utils.o sep-morph.o decode.o read-write.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
 clean:
