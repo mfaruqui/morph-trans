@@ -3,7 +3,7 @@ CNN_DIR = ../cnn
 EIGEN = /opt/tools/eigen-dev/
 CNN_BUILD_DIR=$(CNN_DIR)/build
 INCS=-I$(CNN_DIR) -I$(CNN_BUILD_DIR) -I$(EIGEN)
-LIBS=-L$(CNN_BUILD_DIR)/cnn/
+LIBS=-L$(CNN_BUILD_DIR)/cnn/ -L/opt/tools/boost_1_55_0/lib
 FINAL=-lcnn -lboost_regex -lboost_serialization -lboost_program_options -lrt -lpthread
 #FINAL=-lcnn -lcnncuda -lboost_regex -lboost_serialization -lboost_program_options -lcuda -lcudart -lcublas
 CFLAGS=-std=c++11 -Ofast -g -march=native -pipe
@@ -13,7 +13,7 @@ OBJDIR=obj
 SRCDIR=src
 
 .PHONY: clean
-all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-sep-morph $(BINDIR)/eval-ensemble-sep-morph
+all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph
 
 make_dirs:
 	mkdir -p $(OBJDIR)
