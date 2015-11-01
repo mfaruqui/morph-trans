@@ -28,9 +28,6 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cc
 $(BINDIR)/train-sep-morph: $(addprefix $(OBJDIR)/, train-sep-morph.o sep-morph.o utils.o  decode.o read-write.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
-$(BINDIR)/eval-sep-morph: $(addprefix $(OBJDIR)/, eval-sep-morph.o utils.o sep-morph.o decode.o read-write.o)
-	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
-
 $(BINDIR)/eval-ensemble-sep-morph: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph.o utils.o sep-morph.o decode.o read-write.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
