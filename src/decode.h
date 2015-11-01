@@ -25,7 +25,7 @@ Decode(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
        T* model);
 
 template<typename T> void
-EnsembleDecode(unordered_map<string, unsigned>& char_to_id,
+EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
                const vector<unsigned>& input_ids,
                vector<unsigned>* pred_target_ids, vector<T>* ensmb_model);
 
