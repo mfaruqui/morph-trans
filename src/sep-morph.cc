@@ -64,10 +64,9 @@ void SepMorph::RunFwdBwd(const unsigned& morph_id, const vector<unsigned>& input
   }
 
   // Run backward LSTM
-  reverse(input_vecs.begin(), input_vecs.end());
   Expression backward_unit;
   input_backward[morph_id].start_new_sequence();
-  for (unsigned i = 0; i < input_vecs.size(); ++i) {
+  for (unsigned i = input_vecs.size() - 1; i >= 0; --i) {
     backward_unit = input_backward[morph_id].add_input(input_vecs[i]);
   }
 
