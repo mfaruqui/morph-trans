@@ -30,12 +30,11 @@ int main(int argc, char** argv) {
   string morph_filename = argv[2];
   string train_filename = argv[3];
   string test_filename = argv[4];
-  unsigned char_size = atoi(argv[5]);
-  unsigned hidden_size = atoi(argv[6]);
-  unsigned num_iter = atoi(argv[7]);
-  float reg_strength = atof(argv[8]);
-  unsigned layers = atoi(argv[9]);
-  string model_outputfilename = argv[10];
+  unsigned hidden_size = atoi(argv[5]);
+  unsigned num_iter = atoi(argv[6]);
+  float reg_strength = atof(argv[7]);
+  unsigned layers = atoi(argv[8]);
+  string model_outputfilename = argv[9];
 
   unordered_map<string, unsigned> char_to_id, morph_to_id;
   unordered_map<unsigned, string> id_to_char, id_to_morph;
@@ -60,6 +59,7 @@ int main(int argc, char** argv) {
     optimizer.push_back(ada);
   }
 
+  unsigned char_size = vocab_size;
   SepMorph nn(char_size, hidden_size, vocab_size, layers, morph_size,
               &m, &optimizer);
 
