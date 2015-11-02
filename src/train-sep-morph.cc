@@ -51,9 +51,17 @@ int main(int argc, char** argv) {
   vector<string> test_data;  // Read the dev file in a vector
   ReadData(test_filename, &test_data);
 
-  Model m;
-  AdadeltaTrainer optimizer(&m, reg_strength);
-  SepMorph nn(char_size, hidden_size, vocab_size, layers, morph_size, &m);
+  vector<Model*> m;
+  vector<AdadeltaTrainer> optimizer;
+
+  for (unsigned i = 0; i < morph_size; ++i) {
+    m.push_back(new Model());
+    AdadeltaTrainer ada(m[i], reg_strength);
+    optimizer.push_back(ada);
+  }
+
+  SepMorph nn(char_size, hidden_size, vocab_size, layers, morph_size,
+              &m, &optimizer);
 
   // Read the training file and train the model
   double best_score = -1;
@@ -72,7 +80,8 @@ int main(int argc, char** argv) {
         target_ids.push_back(char_to_id[ch]);
       }
       unsigned morph_id = morph_to_id[items[2]];
-      loss[morph_id] += nn.Train(morph_id, input_ids, target_ids, &optimizer);
+      loss[morph_id] += nn.Train(morph_id, input_ids, target_ids,
+                                 &optimizer[morph_id]);
       cerr << ++line_id << "\r";
     }
 
