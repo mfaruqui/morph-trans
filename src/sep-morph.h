@@ -38,9 +38,10 @@ class SepMorph {
 
   SepMorph(const unsigned& char_length, const unsigned& hidden_length,
            const unsigned& vocab_length, const unsigned& layers,
-           const unsigned& num_morph, Model *m);
+           const unsigned& num_morph, vector<Model*>* m,
+           vector<AdadeltaTrainer>* optimizer);
 
-  void InitParams(Model *m);
+  void InitParams(vector<Model*>* m);
 
   void AddParamsToCG(const unsigned& morph_id, ComputationGraph* cg);
 

@@ -6,7 +6,8 @@ using namespace cnn::expr;
 
 SepMorph::SepMorph(const unsigned& char_length, const unsigned& hidden_length,
                    const unsigned& vocab_length, const unsigned& num_layers,
-                   const unsigned& num_morph, Model *m) {
+                   const unsigned& num_morph, vector<Model*>* m,
+                   vector<AdadeltaTrainer>* optimizer) {
   char_len = char_length;
   hidden_len = hidden_length;
   vocab_len = vocab_length;
@@ -15,22 +16,23 @@ SepMorph::SepMorph(const unsigned& char_length, const unsigned& hidden_length,
   InitParams(m);
 }
 
-void SepMorph::InitParams(Model *m) {
+void SepMorph::InitParams(vector<Model*>* m) {
   for (unsigned i = 0; i < morph_len; ++i) {
-    input_forward.push_back(LSTMBuilder(layers, char_len, hidden_len, m));
-    input_backward.push_back(LSTMBuilder(layers, char_len, hidden_len, m));
+    input_forward.push_back(LSTMBuilder(layers, char_len, hidden_len, (*m)[i]));
+    input_backward.push_back(LSTMBuilder(layers, char_len, hidden_len, (*m)[i]));
     output_forward.push_back(LSTMBuilder(layers, 2 * char_len + hidden_len,
-                                         hidden_len, m));
+                                         hidden_len, (*m)[i]));
 
-    phidden_to_output.push_back(m->add_parameters({vocab_len, hidden_len}));
-    phidden_to_output_bias.push_back(m->add_parameters({vocab_len, 1}));
+    phidden_to_output.push_back((*m)[i]->add_parameters({vocab_len, hidden_len}));
+    phidden_to_output_bias.push_back((*m)[i]->add_parameters({vocab_len, 1}));
 
-    char_vecs.push_back(m->add_lookup_parameters(vocab_len, {char_len}));
+    char_vecs.push_back((*m)[i]->add_lookup_parameters(vocab_len, {char_len}));
 
-    ptransform_encoded.push_back(m->add_parameters({hidden_len, 2 * hidden_len}));
-    ptransform_encoded_bias.push_back(m->add_parameters({hidden_len, 1}));
+    ptransform_encoded.push_back((*m)[i]->add_parameters({hidden_len,
+                                                          2 * hidden_len}));
+    ptransform_encoded_bias.push_back((*m)[i]->add_parameters({hidden_len, 1}));
 
-    peps_vec.push_back(m->add_parameters({char_len, 1}));
+    peps_vec.push_back((*m)[i]->add_parameters({char_len, 1}));
   }
 }
 

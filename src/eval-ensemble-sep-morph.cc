@@ -37,13 +37,13 @@ int main(int argc, char** argv) {
   vector<string> test_data;  // Read the dev file in a vector
   ReadData(test_filename, &test_data);
 
-  vector<Model*> ensmb_m;
+  vector<vector<Model*> > ensmb_m;
   vector<SepMorph> ensmb_nn;
   for (unsigned i = 0; i < argc - 4; ++i) {
-    Model *m = new Model();
+    vector<Model*> m;
     SepMorph nn;
     string f = argv[i + 4];
-    Read(f, &nn, m);
+    Read(f, &nn, &m);
     ensmb_m.push_back(m);
     ensmb_nn.push_back(nn);
   }

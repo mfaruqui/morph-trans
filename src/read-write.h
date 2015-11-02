@@ -11,14 +11,8 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
-void Serialize(string& filename, vector<SepMorph>& models,
-               vector<Model*>& cnn_models);
+void Serialize(string& filename, SepMorph& model, vector<Model*>* cnn_model);
 
-void Read(string& filename, vector<SepMorph>* models,
-          vector<Model*>* cnn_models);
-
-void Serialize(string& filename, SepMorph& model, Model* cnn_model);
-
-void Read(string& filename, SepMorph* model, Model* cnn_model);
+void Read(string& filename, SepMorph* model, vector<Model*>* cnn_model);
 
 #endif
