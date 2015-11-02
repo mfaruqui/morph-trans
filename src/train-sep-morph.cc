@@ -119,7 +119,6 @@ int main(int argc, char** argv) {
     if (curr_score > best_score) {
       best_score = curr_score;
       Serialize(model_outputfilename, nn, &m);
-      cerr << "Serialized" << endl;
     }
   }
   return 1;
