@@ -4,11 +4,9 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
-double DROPOUT_RATE = 0.5;
-
 SepMorph::SepMorph(const unsigned& char_length, const unsigned& hidden_length,
-                       const unsigned& vocab_length, const unsigned& num_layers,
-                       const unsigned& num_morph, Model *m) {
+                   const unsigned& vocab_length, const unsigned& num_layers,
+                   const unsigned& num_morph, Model *m) {
   char_len = char_length;
   hidden_len = hidden_length;
   vocab_len = vocab_length;
@@ -21,7 +19,8 @@ void SepMorph::InitParams(Model *m) {
   for (unsigned i = 0; i < morph_len; ++i) {
     input_forward.push_back(LSTMBuilder(layers, char_len, hidden_len, m));
     input_backward.push_back(LSTMBuilder(layers, char_len, hidden_len, m));
-    output_forward.push_back(LSTMBuilder(layers, 2 * char_len + hidden_len, hidden_len, m));
+    output_forward.push_back(LSTMBuilder(layers, 2 * char_len + hidden_len,
+                                         hidden_len, m));
 
     phidden_to_output.push_back(m->add_parameters({vocab_len, hidden_len}));
     phidden_to_output_bias.push_back(m->add_parameters({vocab_len, 1}));
@@ -49,8 +48,9 @@ void SepMorph::AddParamsToCG(const unsigned& morph_id, ComputationGraph* cg) {
   EPS = parameter(*cg, peps_vec[morph_id]);
 }
 
-void SepMorph::RunFwdBwd(const unsigned& morph_id, const vector<unsigned>& inputs,
-                           Expression* hidden, ComputationGraph *cg) {
+void SepMorph::RunFwdBwd(const unsigned& morph_id,
+                         const vector<unsigned>& inputs,
+                         Expression* hidden, ComputationGraph *cg) {
   vector<Expression> input_vecs;
   for (const unsigned& input_id : inputs) {
     input_vecs.push_back(lookup(*cg, char_vecs[morph_id], input_id));
@@ -85,7 +85,7 @@ void SepMorph::ProjectToOutput(const Expression& hidden, Expression* out) const 
 
 
 Expression SepMorph::ComputeLoss(const vector<Expression>& hidden_units,
-                                  const vector<unsigned>& targets) const {
+                                 const vector<unsigned>& targets) const {
   assert(hidden_units.size() == targets.size());
   vector<Expression> losses;
   for (unsigned i = 0; i < hidden_units.size(); ++i) {
@@ -97,8 +97,7 @@ Expression SepMorph::ComputeLoss(const vector<Expression>& hidden_units,
 }
 
 float SepMorph::Train(const unsigned& morph_id, const vector<unsigned>& inputs,
-                        const vector<unsigned>& outputs,
-                        AdadeltaTrainer* ada_gd) {
+                      const vector<unsigned>& outputs, AdadeltaTrainer* ada_gd) {
   ComputationGraph cg;
   AddParamsToCG(morph_id, &cg);
 
