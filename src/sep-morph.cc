@@ -4,6 +4,8 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
+double DROPOUT_RATE = 0.5;
+
 SepMorph::SepMorph(const unsigned& char_length, const unsigned& hidden_length,
                    const unsigned& vocab_length, const unsigned& num_layers,
                    const unsigned& num_morph, vector<Model*>* m,
@@ -32,7 +34,8 @@ void SepMorph::InitParams(vector<Model*>* m) {
                                                           2 * hidden_len}));
     ptransform_encoded_bias.push_back((*m)[i]->add_parameters({hidden_len, 1}));
 
-    peps_vec.push_back((*m)[i]->add_parameters({char_len, 1}));
+    eps_vecs.push_back((*m)[i]->add_lookup_parameters(max_eps, {char_len}));
+    //peps_vec.push_back((*m)[i]->add_parameters({char_len, 1}));
   }
 }
 
@@ -46,8 +49,6 @@ void SepMorph::AddParamsToCG(const unsigned& morph_id, ComputationGraph* cg) {
 
   transform_encoded = parameter(*cg, ptransform_encoded[morph_id]);
   transform_encoded_bias = parameter(*cg, ptransform_encoded_bias[morph_id]);
-    
-  EPS = parameter(*cg, peps_vec[morph_id]);
 }
 
 void SepMorph::RunFwdBwd(const unsigned& morph_id,
@@ -76,7 +77,21 @@ void SepMorph::RunFwdBwd(const unsigned& morph_id,
   *hidden = concatenate({forward_unit, backward_unit});
 }
 
-void SepMorph::TransformEncodedInputForDecoding(Expression* encoded_input) const {
+void SepMorph::TransformEncodedInputDuringTraining(Expression* encoded_input)
+  const {
+  *encoded_input = affine_transform({transform_encoded_bias,
+                                     transform_encoded, *encoded_input});
+  *encoded_input = dropout(*encoded_input, DROPOUT_RATE);
+}
+
+void SepMorph::TransformEncodedInputDuringDecoding(Expression* encoded_input)
+  const {
+  *encoded_input = affine_transform({transform_encoded_bias,
+                                     transform_encoded, *encoded_input});
+  *encoded_input = DROPOUT_RATE * *encoded_input;
+}
+
+void SepMorph::TransformEncodedInput(Expression* encoded_input) const {
   *encoded_input = affine_transform({transform_encoded_bias,
                                      transform_encoded, *encoded_input});
 }
@@ -112,7 +127,7 @@ float SepMorph::Train(const unsigned& morph_id, const vector<unsigned>& inputs,
   // Encode and Transform to feed into decoder
   Expression encoded_input_vec;
   RunFwdBwd(morph_id, inputs, &encoded_input_vec, &cg);
-  TransformEncodedInputForDecoding(&encoded_input_vec);
+  TransformEncodedInput(&encoded_input_vec);
 
   // Use this encoded word vector to predict the transformed word
   vector<Expression> input_vecs_for_dec;
@@ -126,7 +141,8 @@ float SepMorph::Train(const unsigned& morph_id, const vector<unsigned>& inputs,
              lookup(cg, char_vecs[morph_id], inputs[i + 1])}));
       } else {
         input_vecs_for_dec.push_back(concatenate(
-            {encoded_input_vec, lookup(cg, char_vecs[morph_id], outputs[i]), EPS}));
+            {encoded_input_vec, lookup(cg, char_vecs[morph_id], outputs[i]),
+             lookup(cg, eps_vecs[morph_id], min(unsigned(i - inputs.size()), max_eps - 1))}));
       }
     }
     if (i > 0) {  // '<s>' will not be predicted in the output -- its fed in.

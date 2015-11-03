@@ -1,5 +1,5 @@
-#ifndef SEP_MORPH_TRANS_H_
-#define SEP_MORPH_TRANS_H_
+#ifndef SEP_MORPH_H_
+#define SEP_MORPH_H_
 
 #include "cnn/nodes.h"
 #include "cnn/cnn.h"
@@ -30,9 +30,8 @@ class SepMorph {
   Expression transform_encoded, transform_encoded_bias;
   vector<Parameters*> ptransform_encoded, ptransform_encoded_bias;
   
-  unsigned char_len, hidden_len, vocab_len, layers, morph_len;
-  Expression EPS;
-  vector<Parameters*> peps_vec;
+  unsigned char_len, hidden_len, vocab_len, layers, morph_len, max_eps = 5;
+  vector<LookupParameters*> eps_vecs;
 
   SepMorph() {}
 
@@ -48,7 +47,11 @@ class SepMorph {
   void RunFwdBwd(const unsigned& morph_id, const vector<unsigned>& inputs,
                  Expression* hidden, ComputationGraph *cg);
 
-  void TransformEncodedInputForDecoding(Expression* encoded_input) const;
+  void TransformEncodedInputDuringTraining(Expression* encoded_input) const;
+
+  void TransformEncodedInputDuringDecoding(Expression* encoded_input) const; 
+
+  void TransformEncodedInput(Expression* encoded_input) const;
 
   void TransformEncodedInputDuringDecoding(Expression* encoded_input) const;
 
@@ -67,6 +70,7 @@ class SepMorph {
     ar & vocab_len;
     ar & layers;
     ar & morph_len;
+    ar & max_eps;
   }
 };
 
