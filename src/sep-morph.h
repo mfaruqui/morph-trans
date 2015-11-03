@@ -47,10 +47,6 @@ class SepMorph {
   void RunFwdBwd(const unsigned& morph_id, const vector<unsigned>& inputs,
                  Expression* hidden, ComputationGraph *cg);
 
-  void TransformEncodedInputDuringTraining(Expression* encoded_input) const;
-
-  void TransformEncodedInputDuringDecoding(Expression* encoded_input) const; 
-
   void TransformEncodedInput(Expression* encoded_input) const;
 
   void TransformEncodedInputDuringDecoding(Expression* encoded_input) const;

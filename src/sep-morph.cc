@@ -35,7 +35,6 @@ void SepMorph::InitParams(vector<Model*>* m) {
     ptransform_encoded_bias.push_back((*m)[i]->add_parameters({hidden_len, 1}));
 
     eps_vecs.push_back((*m)[i]->add_lookup_parameters(max_eps, {char_len}));
-    //peps_vec.push_back((*m)[i]->add_parameters({char_len, 1}));
   }
 }
 
@@ -75,20 +74,6 @@ void SepMorph::RunFwdBwd(const unsigned& morph_id,
 
   // Concatenate the forward and back hidden layers
   *hidden = concatenate({forward_unit, backward_unit});
-}
-
-void SepMorph::TransformEncodedInputDuringTraining(Expression* encoded_input)
-  const {
-  *encoded_input = affine_transform({transform_encoded_bias,
-                                     transform_encoded, *encoded_input});
-  *encoded_input = dropout(*encoded_input, DROPOUT_RATE);
-}
-
-void SepMorph::TransformEncodedInputDuringDecoding(Expression* encoded_input)
-  const {
-  *encoded_input = affine_transform({transform_encoded_bias,
-                                     transform_encoded, *encoded_input});
-  *encoded_input = DROPOUT_RATE * *encoded_input;
 }
 
 void SepMorph::TransformEncodedInput(Expression* encoded_input) const {
