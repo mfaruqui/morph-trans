@@ -73,6 +73,9 @@ int main(int argc, char** argv) {
     }
     if (prediction == items[1]) {
       correct += 1;     
+    } else {
+      cout << "GOLD: " << line << endl;
+      cout << "PRED: " << items[0] << "|" << prediction << "|" << items[2] << endl;
     }
     total += 1;
   }

@@ -17,7 +17,7 @@ void Decode(const unsigned& morph_id,
 
   Expression encoded_word_vec;
   model->RunFwdBwd(morph_id, input_ids, &encoded_word_vec, &cg);
-  model->TransformEncodedInputForDecoding(&encoded_word_vec);
+  model->TransformEncodedInput(&encoded_word_vec);
 
   unsigned out_index = 1;
   unsigned pred_index = char_to_id[BOW];
@@ -33,7 +33,9 @@ void Decode(const unsigned& morph_id,
     if (out_index < input_ids.size()) {
       input_char_vec = lookup(cg, model->char_vecs[morph_id], input_ids[out_index]);
     } else {
-      input_char_vec = model->EPS;
+      input_char_vec = lookup(cg, model->eps_vecs[morph_id],
+                              min(unsigned(out_index - input_ids.size()),
+                                           model->max_eps - 1));
     }
     input = concatenate({encoded_word_vec, prev_output_vec, input_char_vec});
     Expression hidden = model->output_forward[morph_id].add_input(input);
@@ -60,7 +62,7 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
     auto& model = (*ensmb_model)[i];
     model.AddParamsToCG(morph_id, &cg);
     model.RunFwdBwd(morph_id, input_ids, &encoded_word_vec, &cg);
-    model.TransformEncodedInputForDecoding(&encoded_word_vec);
+    model.TransformEncodedInput(&encoded_word_vec);
     encoded_word_vecs.push_back(encoded_word_vec);
     model.output_forward[morph_id].start_new_sequence();
   }
@@ -81,7 +83,9 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
       if (out_index < input_ids.size()) {
         input_char_vec = lookup(cg, model.char_vecs[morph_id], input_ids[out_index]);
       } else {
-        input_char_vec = model.EPS;
+        input_char_vec = lookup(cg, model.eps_vecs[morph_id],
+                                min(unsigned(out_index - input_ids.size()),
+                                             model.max_eps - 1));
       }
       input = concatenate({encoded_word_vecs[ensmb_id], prev_output_vec,
                            input_char_vec});

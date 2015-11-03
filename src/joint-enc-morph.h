@@ -1,5 +1,5 @@
-#ifndef SEP_MORPH_H_
-#define SEP_MORPH_H_
+#ifndef SEP_MORPH_TRANS_H_
+#define SEP_MORPH_TRANS_H_
 
 #include "cnn/nodes.h"
 #include "cnn/cnn.h"
@@ -19,19 +19,24 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
-class SepMorph {
+// The class has a shared encoder acorss all morphological types.
+// Other auxiliary units are also shared, except for the decoder and
+// input transofrmation parameters.
+class JointEncMorph {
  public:
-  vector<LSTMBuilder> input_forward, input_backward, output_forward;
-  vector<LookupParameters*> char_vecs;
+  LSTMBuilder input_forward, input_backward;  // Shared encoder
+  vector<LSTMBuilder> output_forward;
+  LookupParameters* char_vecs;  // Shared char vectors
 
   Expression hidden_to_output, hidden_to_output_bias;
-  vector<Parameters*> phidden_to_output, phidden_to_output_bias;
+  Parameters *phidden_to_output, *phidden_to_output_bias;  // Shared
 
   Expression transform_encoded, transform_encoded_bias;
   vector<Parameters*> ptransform_encoded, ptransform_encoded_bias;
   
-  unsigned char_len, hidden_len, vocab_len, layers, morph_len, max_eps = 5;
-  vector<LookupParameters*> eps_vecs;
+  unsigned char_len, hidden_len, vocab_len, layers, morph_len;
+  Expression EPS;
+  vector<Parameters*> peps_vec;
 
   SepMorph() {}
 
@@ -47,11 +52,9 @@ class SepMorph {
   void RunFwdBwd(const unsigned& morph_id, const vector<unsigned>& inputs,
                  Expression* hidden, ComputationGraph *cg);
 
-  void TransformEncodedInputDuringTraining(Expression* encoded_input) const;
+  void TransformEncodedInputForDecoding(Expression* encoded_input) const;
 
   void TransformEncodedInputDuringDecoding(Expression* encoded_input) const; 
-
-  void TransformEncodedInput(Expression* encoded_input) const;
 
   void ProjectToOutput(const Expression& hidden, Expression* out) const;
 
@@ -68,7 +71,6 @@ class SepMorph {
     ar & vocab_len;
     ar & layers;
     ar & morph_len;
-    ar & max_eps;
   }
 };
 
