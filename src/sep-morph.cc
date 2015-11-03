@@ -81,6 +81,12 @@ void SepMorph::TransformEncodedInputForDecoding(Expression* encoded_input) const
                                      transform_encoded, *encoded_input});
 }
 
+void SepMorph::TransformEncodedInputDuringDecoding(Expression* encoded_input) const {
+  *encoded_input = 0.5 * affine_transform({transform_encoded_bias,
+                                     transform_encoded, *encoded_input});
+}
+
+
 void SepMorph::ProjectToOutput(const Expression& hidden, Expression* out) const {
   *out = affine_transform({hidden_to_output_bias, hidden_to_output, hidden});
 }

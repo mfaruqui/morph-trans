@@ -60,7 +60,7 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
     auto& model = (*ensmb_model)[i];
     model.AddParamsToCG(morph_id, &cg);
     model.RunFwdBwd(morph_id, input_ids, &encoded_word_vec, &cg);
-    model.TransformEncodedInputForDecoding(&encoded_word_vec);
+    model.TransformEncodedInputDuringDecoding(&encoded_word_vec);
     encoded_word_vecs.push_back(encoded_word_vec);
     model.output_forward[morph_id].start_new_sequence();
   }

@@ -50,6 +50,8 @@ class SepMorph {
 
   void TransformEncodedInputForDecoding(Expression* encoded_input) const;
 
+  void TransformEncodedInputDuringDecoding(Expression* encoded_input) const;
+
   void ProjectToOutput(const Expression& hidden, Expression* out) const;
 
   Expression ComputeLoss(const vector<Expression>& hidden_units,
