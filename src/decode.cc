@@ -93,7 +93,7 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
       Expression hidden = model.output_forward[morph_id].add_input(input);
       Expression out;
       model.ProjectToOutput(hidden, &out);
-      ensmb_out.push_back(softmax(out));
+      ensmb_out.push_back(log_softmax(out));
     }
 
     Expression out = sum(ensmb_out) / ensmb_out.size();
