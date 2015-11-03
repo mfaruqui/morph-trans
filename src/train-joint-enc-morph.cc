@@ -59,6 +59,8 @@ int main(int argc, char** argv) {
 
   // Read the training file and train the model
   double best_score = -1;
+  vector<JointEncMorph*> model_pointers;
+  model_pointers.push_back(&nn);
   for (unsigned iter = 0; iter < num_iter; ++iter) {
     unsigned line_id = 0;
     random_shuffle(train_data.begin(), train_data.end());
@@ -75,15 +77,13 @@ int main(int argc, char** argv) {
       }
       unsigned morph_id = morph_to_id[items[2]];
       loss[morph_id] += nn.Train(morph_id, input_ids, target_ids,
-                                 &optimizer[morph_id], &optimizer[0]);
+                                 &optimizer[morph_id], &optimizer[morph_size]);
       cerr << ++line_id << "\r";
     }
 
     // Read the test file and output predictions for the words.
     string line;
     double correct = 0, total = 0;
-    vector<JointEncMorph*> model_pointers;
-    model_pointers.push_back(&nn);
     for (string& line : test_data) {
       vector<string> items = split_line(line, '|');
       vector<unsigned> input_ids, target_ids, pred_target_ids;
