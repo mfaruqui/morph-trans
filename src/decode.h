@@ -19,14 +19,14 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
-template<typename T> void
+void
 Decode(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
        const vector<unsigned>& input_ids, vector<unsigned>* pred_target_ids,
-       T* model);
+       SepMorph* model);
 
-template<typename T> void
+void
 EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
                const vector<unsigned>& input_ids,
-               vector<unsigned>* pred_target_ids, vector<T>* ensmb_model);
+               vector<unsigned>* pred_target_ids, vector<SepMorph>* ensmb_model);
 
 #endif

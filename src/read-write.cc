@@ -41,4 +41,3 @@ void Read(string& filename, SepMorph* model, vector<Model*>* cnn_models) {
   cerr << "Loaded model from: " << filename << endl;
   infile.close();
 }
-

@@ -7,11 +7,10 @@ using namespace cnn::expr;
 string BOW = "<s>", EOW = "</s>";
 int MAX_PRED_LEN = 100;
 
-template<typename T>
 void Decode(const unsigned& morph_id,
             unordered_map<string, unsigned>& char_to_id,
             const vector<unsigned>& input_ids,
-            vector<unsigned>* pred_target_ids, T* model) {
+            vector<unsigned>* pred_target_ids, SepMorph* model) {
   ComputationGraph cg;
   model->AddParamsToCG(morph_id, &cg);
 
@@ -49,10 +48,10 @@ void Decode(const unsigned& morph_id,
   }
 }
 
-template<typename T> void
+void
 EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
                const vector<unsigned>& input_ids, 
-               vector<unsigned>* pred_target_ids, vector<T>* ensmb_model) {
+               vector<unsigned>* pred_target_ids, vector<SepMorph>* ensmb_model) {
   ComputationGraph cg;
 
   unsigned ensmb = ensmb_model->size();
@@ -102,14 +101,3 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
     out_index++;
   }
 }
-
-template void
-Decode<SepMorph>(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
-                   const vector<unsigned>& input_ids,
-                   vector<unsigned>* pred_target_ids, SepMorph* model);
-
-template void
-EnsembleDecode<SepMorph>(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
-                           const vector<unsigned>& input_ids,
-                           vector<unsigned>* pred_target_ids,
-                           vector<SepMorph>* ensmb_model);
