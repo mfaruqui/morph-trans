@@ -13,6 +13,7 @@
 #include "utils.h"
 
 #include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
 #include <unordered_map>
 
 using namespace std;
@@ -49,6 +50,8 @@ class SepMorph {
 
   void TransformEncodedInput(Expression* encoded_input) const;
 
+  void TransformEncodedInputDuringDecoding(Expression* encoded_input) const;
+
   void ProjectToOutput(const Expression& hidden, Expression* out) const;
 
   Expression ComputeLoss(const vector<Expression>& hidden_units,
@@ -67,5 +70,15 @@ class SepMorph {
     ar & max_eps;
   }
 };
+
+void
+EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
+               const vector<unsigned>& input_ids,
+               vector<unsigned>* pred_target_ids, vector<SepMorph*>* ensmb_model);
+
+void Serialize(string& filename, SepMorph& model, vector<Model*>* cnn_model);
+
+void Read(string& filename, SepMorph* model, vector<Model*>* cnn_model);
+
 
 #endif
