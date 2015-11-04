@@ -4,7 +4,8 @@ using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
-double DROPOUT_RATE = 0.5;
+string BOW = "<s>", EOW = "</s>";
+int MAX_PRED_LEN = 100;
 
 SepMorph::SepMorph(const unsigned& char_length, const unsigned& hidden_length,
                    const unsigned& vocab_length, const unsigned& num_layers,
@@ -147,3 +148,97 @@ float SepMorph::Train(const unsigned& morph_id, const vector<unsigned>& inputs,
   ada_gd->update(1.0f);
   return return_loss;
 }
+
+void
+EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
+               const vector<unsigned>& input_ids,
+               vector<unsigned>* pred_target_ids, vector<SepMorph*>* ensmb_model) {
+  ComputationGraph cg;
+
+  unsigned ensmb = ensmb_model->size();
+  vector<Expression> encoded_word_vecs;
+  for (unsigned i = 0; i < ensmb; ++i) {
+    Expression encoded_word_vec;
+    auto model = (*ensmb_model)[i];
+    model->AddParamsToCG(morph_id, &cg);
+    model->RunFwdBwd(morph_id, input_ids, &encoded_word_vec, &cg);
+    model->TransformEncodedInput(&encoded_word_vec);
+    encoded_word_vecs.push_back(encoded_word_vec);
+    model->output_forward[morph_id].start_new_sequence();
+  }
+
+  unsigned out_index = 1;
+  unsigned pred_index = char_to_id[BOW];
+  while (pred_target_ids->size() < MAX_PRED_LEN) {
+    vector<Expression> ensmb_out;
+    pred_target_ids->push_back(pred_index);
+    if (pred_index == char_to_id[EOW]) {
+      return;  // If the end is found, break from the loop and return
+    }
+
+    for (unsigned ensmb_id = 0; ensmb_id < ensmb; ++ensmb_id) {
+      auto model = (*ensmb_model)[ensmb_id];
+      Expression prev_output_vec = lookup(cg, model->char_vecs[morph_id], pred_index);
+      Expression input, input_char_vec;
+      if (out_index < input_ids.size()) {
+        input_char_vec = lookup(cg, model->char_vecs[morph_id], input_ids[out_index]);
+      } else {
+        input_char_vec = lookup(cg, model->eps_vecs[morph_id],
+                                min(unsigned(out_index - input_ids.size()),
+                                             model->max_eps - 1));
+      }
+      input = concatenate({encoded_word_vecs[ensmb_id], prev_output_vec,
+                           input_char_vec});
+
+      Expression hidden = model->output_forward[morph_id].add_input(input);
+      Expression out;
+      model->ProjectToOutput(hidden, &out);
+      ensmb_out.push_back(log_softmax(out));
+    }
+
+    Expression out = sum(ensmb_out) / ensmb_out.size();
+    vector<float> dist = as_vector(cg.incremental_forward());
+    pred_index = distance(dist.begin(), max_element(dist.begin(), dist.end()));
+    out_index++;
+  }
+}
+
+
+void Serialize(string& filename, SepMorph& model, vector<Model*>* cnn_models) {
+  ofstream outfile(filename);
+  if (!outfile.is_open()) {
+    cerr << "File opening failed" << endl;
+  }
+
+  boost::archive::text_oarchive oa(outfile);
+  oa & model;
+  for (unsigned i = 0; i < cnn_models->size(); ++i) {
+    oa & *(*cnn_models)[i];
+  }
+
+  cerr << "Saved model to: " << filename << endl;
+  outfile.close();
+}
+
+void Read(string& filename, SepMorph* model, vector<Model*>* cnn_models) {
+  ifstream infile(filename);
+  if (!infile.is_open()) {
+    cerr << "File opening failed" << endl;
+  }
+
+  boost::archive::text_iarchive ia(infile);
+  ia & *model;
+  for (unsigned i = 0; i < model->morph_len; ++i) {
+    Model *cnn_model = new Model();
+    cnn_models->push_back(cnn_model);
+  }
+
+  model->InitParams(cnn_models);
+  for (unsigned i = 0; i < model->morph_len; ++i) {
+    ia & *(*cnn_models)[i];
+  }
+
+  cerr << "Loaded model from: " << filename << endl;
+  infile.close();
+}
+

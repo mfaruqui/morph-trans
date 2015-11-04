@@ -9,8 +9,6 @@
 
 #include "utils.h"
 #include "sep-morph.h"
-#include "decode.h"
-#include "read-write.h"
 
 #include <iostream>
 #include <fstream>
@@ -51,6 +49,10 @@ int main(int argc, char** argv) {
   // Read the test file and output predictions for the words.
   string line;
   double correct = 0, total = 0;
+  vector<SepMorph*> object_pointers;
+  for (unsigned i = 0; i < ensmb_nn.size(); ++i) {
+    object_pointers.push_back(&ensmb_nn[i]);
+  }
   for (string& line : test_data) {
     vector<string> items = split_line(line, '|');
     vector<unsigned> input_ids, target_ids, pred_target_ids;
@@ -62,7 +64,8 @@ int main(int argc, char** argv) {
       target_ids.push_back(char_to_id[ch]);
     }
     unsigned morph_id = morph_to_id[items[2]];
-    EnsembleDecode(morph_id, char_to_id, input_ids, &pred_target_ids, &ensmb_nn);
+    EnsembleDecode(morph_id, char_to_id, input_ids, &pred_target_ids,
+                   &object_pointers);
 
     string prediction = "";
     for (unsigned i = 0; i < pred_target_ids.size(); ++i) {

@@ -9,8 +9,6 @@
 
 #include "utils.h"
 #include "sep-morph.h"
-#include "decode.h"
-#include "read-write.h"
 
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
@@ -65,6 +63,8 @@ int main(int argc, char** argv) {
 
   // Read the training file and train the model
   double best_score = -1;
+  vector<SepMorph*> object_list;
+  object_list.push_back(&nn);
   for (unsigned iter = 0; iter < num_iter; ++iter) {
     unsigned line_id = 0;
     random_shuffle(train_data.begin(), train_data.end());
@@ -99,7 +99,8 @@ int main(int argc, char** argv) {
         target_ids.push_back(char_to_id[ch]);
       }
       unsigned morph_id = morph_to_id[items[2]];
-      Decode(morph_id, char_to_id, input_ids, &pred_target_ids, &nn);
+      EnsembleDecode(morph_id, char_to_id, input_ids, &pred_target_ids,
+                     &object_list);
 
       string prediction = "";
       for (unsigned i = 0; i < pred_target_ids.size(); ++i) {
