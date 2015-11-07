@@ -115,20 +115,7 @@ Expression LMSepMorph::ComputeLoss(const unsigned& morph_id,
   return sum(losses);
 }
 
-Expression LMSepMorph::ComputeLoss(const unsigned& morph_id,
-                                   const vector<Expression>& hidden_units,
-                                   const vector<unsigned>& targets) const {
-  vector<Expression> losses;
-  for (unsigned i = 0; i < hidden_units.size(); ++i) {
-    Expression out;
-    ProjectToOutput(hidden_units[i], &out);
-    losses.push_back(pickneglogsoftmax(out, targets[i]));
-  }
-  return sum(losses);
-}
-
-
-float LMSepMorph::Train(const unsigned& morph_id, const unsigned& num_iter,
+float LMSepMorph::Train(const unsigned& morph_id,
                         const vector<unsigned>& inputs,
                         const vector<unsigned>& outputs, LM *lm,
                         AdadeltaTrainer* ada_gd) {
@@ -168,13 +155,8 @@ float LMSepMorph::Train(const unsigned& morph_id, const unsigned& num_iter,
   }
 
   // If its the first iteration, do not use language model.
-  Expression loss;
-  if (num_iter == 1) {
-    loss = ComputeLoss(morph_id, decoder_hidden_units, output_ids_for_pred);
-  } else {
-    loss = ComputeLoss(morph_id, decoder_hidden_units, output_ids_for_pred,
-                       lm, &cg);
-  }
+  Expression loss = ComputeLoss(morph_id, decoder_hidden_units,
+                                output_ids_for_pred, lm, &cg);
 
   float return_loss = as_scalar(cg.incremental_forward());
   cg.backward();
@@ -270,7 +252,6 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
 float Softplus(float x) {
   return log(1 + exp(x));
 }
-
 
 Expression Softplus(Expression x) {
   return log(1 + exp(x));

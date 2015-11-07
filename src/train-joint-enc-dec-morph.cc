@@ -7,18 +7,11 @@
 #include "cnn/gpu-ops.h"
 #include "cnn/expr.h"
 
-#include "lm.h"
 #include "utils.h"
-#include "lm-sep-morph.h"
-
-#include <boost/archive/text_oarchive.hpp>
-#include <boost/archive/text_iarchive.hpp>
+#include "joint-enc-dec-morph.h"
 
 #include <iostream>
-#include <fstream>
 #include <unordered_map>
-
-#include <fenv.h>
 
 using namespace std;
 using namespace cnn;
@@ -26,7 +19,6 @@ using namespace cnn::expr;
 
 int main(int argc, char** argv) {
   cnn::Initialize(argc, argv);
-  feenableexcept(FE_INVALID | FE_OVERFLOW | FE_DIVBYZERO);
 
   string vocab_filename = argv[1];  // vocabulary of words/characters
   string morph_filename = argv[2];
@@ -36,8 +28,7 @@ int main(int argc, char** argv) {
   unsigned num_iter = atoi(argv[6]);
   float reg_strength = atof(argv[7]);
   unsigned layers = atoi(argv[8]);
-  string lm_model_filename = argv[9];
-  string model_outputfilename = argv[10];
+  string model_outputfilename = argv[9];
 
   unordered_map<string, unsigned> char_to_id, morph_to_id;
   unordered_map<unsigned, string> id_to_char, id_to_morph;
@@ -53,25 +44,23 @@ int main(int argc, char** argv) {
   vector<string> test_data;  // Read the dev file in a vector
   ReadData(test_filename, &test_data);
 
-  LM lm(lm_model_filename, char_to_id);
-
   vector<Model*> m;
   vector<AdadeltaTrainer> optimizer;
 
-  for (unsigned i = 0; i < morph_size; ++i) {
+  for (unsigned i = 0; i < morph_size + 1; ++i) {
     m.push_back(new Model());
     AdadeltaTrainer ada(m[i], reg_strength);
     optimizer.push_back(ada);
   }
 
   unsigned char_size = vocab_size;
-  LMSepMorph nn(char_size, hidden_size, vocab_size, layers, morph_size,
-                &m, &optimizer);
+  JointEncDecMorph nn(char_size, hidden_size, vocab_size, layers, morph_size,
+                   &m, &optimizer);
 
   // Read the training file and train the model
   double best_score = -1;
-  vector<LMSepMorph*> object_list;
-  object_list.push_back(&nn);
+  vector<JointEncDecMorph*> model_pointers;
+  model_pointers.push_back(&nn);
   for (unsigned iter = 0; iter < num_iter; ++iter) {
     unsigned line_id = 0;
     random_shuffle(train_data.begin(), train_data.end());
@@ -88,7 +77,7 @@ int main(int argc, char** argv) {
       }
       unsigned morph_id = morph_to_id[items[2]];
       loss[morph_id] += nn.Train(morph_id, input_ids, target_ids,
-                                 &lm, &optimizer[morph_id]);
+                                 &optimizer[morph_id], &optimizer[morph_size]);
       cerr << ++line_id << "\r";
     }
 
@@ -106,8 +95,8 @@ int main(int argc, char** argv) {
         target_ids.push_back(char_to_id[ch]);
       }
       unsigned morph_id = morph_to_id[items[2]];
-      EnsembleDecode(morph_id, char_to_id, input_ids, &pred_target_ids, &lm,
-                     &object_list);
+      EnsembleDecode(morph_id, char_to_id, input_ids, &pred_target_ids,
+                     &model_pointers);
 
       string prediction = "";
       for (unsigned i = 0; i < pred_target_ids.size(); ++i) {
@@ -122,8 +111,8 @@ int main(int argc, char** argv) {
       total += 1;
     }
     double curr_score = correct / total;
-    cerr << "Iter " << iter + 1 << " " << "Loss: " << accumulate(loss.begin(), loss.end(), 0.);
-    cerr << " Prediction Accuracy: " << curr_score << endl;
+    cerr << "Iter " << iter + 1 << " ";
+    cerr << "Prediction Accuracy: " << curr_score << endl;
     if (curr_score > best_score) {
       best_score = curr_score;
       Serialize(model_outputfilename, nn, &m);

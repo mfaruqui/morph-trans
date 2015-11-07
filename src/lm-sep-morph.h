@@ -62,12 +62,7 @@ class LMSepMorph {
                          const vector<unsigned>& targets,
                          LM *lm, ComputationGraph* cg) const;
 
-  Expression ComputeLoss(const unsigned& morph_id,
-                         const vector<Expression>& hidden_units,
-                         const vector<unsigned>& targets) const;
-
-  float Train(const unsigned& morph_id, const unsigned& num_iter,
-              const vector<unsigned>& inputs,
+  float Train(const unsigned& morph_id, const vector<unsigned>& inputs,
               const vector<unsigned>& outputs, LM* lm, AdadeltaTrainer* ada_gd);
 
   friend class boost::serialization::access;

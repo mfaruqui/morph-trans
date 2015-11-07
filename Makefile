@@ -11,7 +11,7 @@ OBJDIR=obj
 SRCDIR=src
 
 .PHONY: clean
-all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph $(BINDIR)/train-joint-enc-morph $(BINDIR)/eval-ensemble-joint-enc-morph $(BINDIR)/train-lm-sep-morph
+all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph $(BINDIR)/train-joint-enc-morph $(BINDIR)/eval-ensemble-joint-enc-morph $(BINDIR)/train-lm-sep-morph $(BINDIR)/eval-ensemble-lm-sep-morph $(BINDIR)/train-joint-enc-dec-morph
 
 make_dirs:
 	mkdir -p $(OBJDIR)
@@ -29,10 +29,16 @@ $(BINDIR)/train-sep-morph: $(addprefix $(OBJDIR)/, train-sep-morph.o sep-morph.o
 $(BINDIR)/train-joint-enc-morph: $(addprefix $(OBJDIR)/, train-joint-enc-morph.o joint-enc-morph.o utils.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
+$(BINDIR)/train-joint-enc-dec-morph: $(addprefix $(OBJDIR)/, train-joint-enc-dec-morph.o joint-enc-dec-morph.o utils.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
 $(BINDIR)/train-lm-sep-morph: $(addprefix $(OBJDIR)/, train-lm-sep-morph.o lm-sep-morph.o utils.o lm.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
 $(BINDIR)/eval-ensemble-sep-morph: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph.o utils.o sep-morph.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
+$(BINDIR)/eval-ensemble-lm-sep-morph: $(addprefix $(OBJDIR)/, eval-ensemble-lm-sep-morph.o utils.o lm-sep-morph.o lm.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
 $(BINDIR)/eval-ensemble-joint-enc-morph: $(addprefix $(OBJDIR)/, eval-ensemble-joint-enc-morph.o utils.o joint-enc-morph.o)
