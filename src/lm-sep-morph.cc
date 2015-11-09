@@ -162,12 +162,12 @@ float LMSepMorph::Train(const unsigned& morph_id,
   cg.backward();
   ada_gd->update(1.0f);
 
-  cout << morph_id << " ";
+  /*cout << morph_id << " ";
   for (unsigned i = 1; i < 10; ++i) {
     float p = lm_pos_weights[morph_id]->values[i].v[8];
     cout << Softplus(p) << " ";
   }
-  cout << endl;
+  cout << endl;*/
 
   return return_loss;
 }
