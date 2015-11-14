@@ -11,14 +11,8 @@
 #include "utils.h"
 #include "lm-joint-enc.h"
 
-#include <boost/archive/text_oarchive.hpp>
-#include <boost/archive/text_iarchive.hpp>
-
 #include <iostream>
-#include <fstream>
 #include <unordered_map>
-
-#include <fenv.h>
 
 using namespace std;
 using namespace cnn;
@@ -26,7 +20,6 @@ using namespace cnn::expr;
 
 int main(int argc, char** argv) {
   cnn::Initialize(argc, argv);
-  feenableexcept(FE_INVALID | FE_OVERFLOW | FE_DIVBYZERO);
 
   string vocab_filename = argv[1];  // vocabulary of words/characters
   string morph_filename = argv[2];
@@ -58,7 +51,7 @@ int main(int argc, char** argv) {
   vector<Model*> m;
   vector<AdadeltaTrainer> optimizer;
 
-  for (unsigned i = 0; i < morph_size; ++i) {
+  for (unsigned i = 0; i < morph_size + 1; ++i) {
     m.push_back(new Model());
     AdadeltaTrainer ada(m[i], reg_strength);
     optimizer.push_back(ada);
@@ -66,12 +59,12 @@ int main(int argc, char** argv) {
 
   unsigned char_size = vocab_size;
   LMJointEnc nn(char_size, hidden_size, vocab_size, layers, morph_size,
-                &m, &optimizer);
+                   &m, &optimizer);
 
   // Read the training file and train the model
   double best_score = -1;
-  vector<LMJointEnc*> object_list;
-  object_list.push_back(&nn);
+  vector<LMJointEnc*> model_pointers;
+  model_pointers.push_back(&nn);
   for (unsigned iter = 0; iter < num_iter; ++iter) {
     unsigned line_id = 0;
     random_shuffle(train_data.begin(), train_data.end());
@@ -80,17 +73,15 @@ int main(int argc, char** argv) {
       vector<string> items = split_line(line, '|');
       vector<unsigned> input_ids, target_ids;
       input_ids.clear(); target_ids.clear();
-
-      string input = items[0], output = items[1];
-      for (const string& ch : split_line(input, ' ')) {
+      for (const string& ch : split_line(items[0], ' ')) {
         input_ids.push_back(char_to_id[ch]);
       }
-      for (const string& ch : split_line(output, ' ')) {
+      for (const string& ch : split_line(items[1], ' ')) {
         target_ids.push_back(char_to_id[ch]);
       }
       unsigned morph_id = morph_to_id[items[2]];
-      loss[morph_id] += nn.Train(morph_id, input_ids, target_ids,
-                                 &lm, &optimizer[morph_id]);
+      loss[morph_id] += nn.Train(morph_id, input_ids, target_ids, &lm,
+                                 &optimizer[morph_id], &optimizer[morph_size]);
       cerr << ++line_id << "\r";
     }
 
@@ -101,17 +92,15 @@ int main(int argc, char** argv) {
       vector<string> items = split_line(line, '|');
       vector<unsigned> input_ids, target_ids, pred_target_ids;
       input_ids.clear(); target_ids.clear(); pred_target_ids.clear();
-
-      string input = items[0], output = items[1];
-      for (const string& ch : split_line(input, ' ')) {
+      for (const string& ch : split_line(items[0], ' ')) {
         input_ids.push_back(char_to_id[ch]);
       }
-      for (const string& ch : split_line(output, ' ')) {
+      for (const string& ch : split_line(items[1], ' ')) {
         target_ids.push_back(char_to_id[ch]);
       }
       unsigned morph_id = morph_to_id[items[2]];
       EnsembleDecode(morph_id, char_to_id, input_ids, &pred_target_ids,
-                     &lm, &object_list);
+                     &lm, &model_pointers);
 
       string prediction = "";
       for (unsigned i = 0; i < pred_target_ids.size(); ++i) {
@@ -120,14 +109,14 @@ int main(int argc, char** argv) {
           prediction += " ";
         }
       }
-      if (prediction == output) {
+      if (prediction == items[1]) {
         correct += 1;
       }
       total += 1;
     }
     double curr_score = correct / total;
-    cerr << "Iter " << iter + 1 << " " << "Loss: " << accumulate(loss.begin(), loss.end(), 0.);
-    cerr << " Prediction Accuracy: " << curr_score << endl;
+    cerr << "Iter " << iter + 1 << " ";
+    cerr << "Prediction Accuracy: " << curr_score << endl;
     if (curr_score > best_score) {
       best_score = curr_score;
       Serialize(model_outputfilename, nn, &m);

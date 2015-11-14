@@ -12,6 +12,7 @@
 #include "lm-joint-enc.h"
 
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 using namespace cnn;
@@ -50,23 +51,20 @@ int main(int argc, char** argv) {
   }
 
   // Read the test file and output predictions for the words.
+  string line;
   vector<LMJointEnc*> object_pointers;
   for (unsigned i = 0; i < ensmb_nn.size(); ++i) {
     object_pointers.push_back(&ensmb_nn[i]);
   }
-
-  string line;
   double correct = 0, total = 0;
   for (string& line : test_data) {
     vector<string> items = split_line(line, '|');
     vector<unsigned> input_ids, target_ids, pred_target_ids;
     input_ids.clear(); target_ids.clear(); pred_target_ids.clear();
-
-    string input = items[0], output = items[1];
-    for (const string& ch : split_line(input, ' ')) {
+    for (const string& ch : split_line(items[0], ' ')) {
       input_ids.push_back(char_to_id[ch]);
     }
-    for (const string& ch : split_line(output, ' ')) {
+    for (const string& ch : split_line(items[1], ' ')) {
       target_ids.push_back(char_to_id[ch]);
     }
     unsigned morph_id = morph_to_id[items[2]];
@@ -80,7 +78,7 @@ int main(int argc, char** argv) {
         prediction += " ";
       }
     }
-    if (prediction == output) {
+    if (prediction == items[1]) {
       correct += 1;     
     } else {
       cout << "GOLD: " << line << endl;
