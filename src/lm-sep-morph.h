@@ -33,7 +33,7 @@ class LMSepMorph {
   vector<Parameters*> ptransform_encoded, ptransform_encoded_bias;
   
   unsigned char_len, hidden_len, vocab_len, layers, morph_len;
-  unsigned max_eps = 5, max_lm_pos_weights = 30;
+  unsigned max_eps = 5, max_lm_pos_weights = 20;
   vector<LookupParameters*> eps_vecs;
   vector<LookupParameters*> lm_pos_weights;
 

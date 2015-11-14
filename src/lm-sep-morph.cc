@@ -38,7 +38,7 @@ void LMSepMorph::InitParams(vector<Model*>* m) {
 
     eps_vecs.push_back((*m)[i]->add_lookup_parameters(max_eps, {char_len}));
     lm_pos_weights.push_back((*m)[i]->add_lookup_parameters(
-      max_lm_pos_weights, {vocab_len}));
+        max_lm_pos_weights, {1}));
   }
 }
 
@@ -108,7 +108,8 @@ Expression LMSepMorph::ComputeLoss(const unsigned& morph_id,
     unsigned lm_index = min(i + 1, max_lm_pos_weights - 1);
     Expression lm_weight = lookup(*cg, lm_pos_weights[morph_id], lm_index);
 
-    Expression total_lp = trans_lp + cwise_multiply(lm_lp, Softplus(lm_weight));
+    //Expression total_lp = trans_lp + cwise_multiply(lm_lp, Softplus(lm_weight));
+    Expression total_lp = trans_lp + lm_lp * Softplus(lm_weight);
     losses.push_back(pickneglogsoftmax(total_lp, targets[i]));
     incremental_targets.push_back(targets[i]);
   }
@@ -162,21 +163,19 @@ float LMSepMorph::Train(const unsigned& morph_id,
   cg.backward();
   ada_gd->update(1.0f);
 
-  /*cout << morph_id << " ";
-  for (unsigned i = 1; i < 10; ++i) {
-    float p = lm_pos_weights[morph_id]->values[i].v[8];
-    cout << Softplus(p) << " ";
-  }
-  cout << endl;*/
-
   return return_loss;
 }
 
+// Computes the probability of all possible next characters given
+// a sequence, but removes the first character (<s>).
 Expression LogProbDist(const vector<unsigned>& seq, LM *lm,
                        ComputationGraph *cg) {
   vector<float> lm_dist(lm->char_to_id.size(), 0.f);
+
+  // Remove the first (<s>) character.
+  vector<unsigned> seq_without_start(seq.begin() + 1, seq.end());
   for (const auto& it : lm->char_to_id) {
-    vector<unsigned> possible_seq(seq);
+    vector<unsigned> possible_seq(seq_without_start);
     possible_seq.push_back(it.second);
     lm_dist[it.second] = lm->LogProbSeq(possible_seq);
   }
@@ -204,13 +203,23 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
   unsigned out_index = 1;
   unsigned pred_index = char_to_id[BOW];
   while (pred_target_ids->size() < MAX_PRED_LEN) {
-    vector<Expression> ensmb_out;
     pred_target_ids->push_back(pred_index);
     if (pred_index == char_to_id[EOW]) {
+      // Print the lm weights.
+      /*for (unsigned ensmb_id = 0; ensmb_id < ensmb; ++ensmb_id) {
+          auto model = (*ensmb_model)[ensmb_id];
+          for (unsigned i = 1; i < model->max_lm_pos_weights; ++i) {
+            float p = model->lm_pos_weights[morph_id]->values[i].v[0];
+            cerr << Softplus(p) << " ";
+          }
+          cerr << endl;
+      }*/
+
       return;  // If the end is found, break from the loop and return
     }
 
-    vector<Expression> lm_weights;
+    vector<Expression> ensmb_out;
+    Expression lm_dist = LogProbDist(*pred_target_ids, lm, &cg);
     for (unsigned ensmb_id = 0; ensmb_id < ensmb; ++ensmb_id) {
       auto model = (*ensmb_model)[ensmb_id];
       Expression prev_output_vec = lookup(cg, model->char_vecs[morph_id], pred_index);
@@ -226,22 +235,17 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
                            input_char_vec});
 
       Expression hidden = model->output_forward[morph_id].add_input(input);
-      Expression out;
-      model->ProjectToOutput(hidden, &out);
-      ensmb_out.push_back(log_softmax(out));
-      
-      unsigned lm_index = min(out_index, model->max_lm_pos_weights - 1);
-      lm_weights.push_back(lookup(cg, model->lm_pos_weights[morph_id], lm_index));
-    }
-    Expression trans_morph_dist = average(ensmb_out);
-    Expression avg_lm_weight = average(lm_weights);
+      Expression tm_prob;
+      model->ProjectToOutput(hidden, &tm_prob);
+      tm_prob = log_softmax(tm_prob);
 
-    // Compute the language model distribution now.
-    Expression lm_dist = LogProbDist(*pred_target_ids, lm, &cg);
-    
-    // Sum the LM dist and the trans morph dist.
-    Expression total_dist = trans_morph_dist +
-                            cwise_multiply(lm_dist, Softplus(avg_lm_weight));
+      unsigned lm_index = min(out_index, model->max_lm_pos_weights - 1);
+      Expression lm_weight = lookup(cg, model->lm_pos_weights[morph_id], lm_index);
+      Expression total_lp = tm_prob + lm_dist * Softplus(lm_weight);
+
+      ensmb_out.push_back(log_softmax(total_lp));
+    }
+    Expression total_dist = average(ensmb_out);
 
     vector<float> dist = as_vector(cg.incremental_forward());
     pred_index = distance(dist.begin(), max_element(dist.begin(), dist.end()));

@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
   vector<string> test_data;  // Read the dev file in a vector
   ReadData(test_filename, &test_data);
 
-  LM lm(lm_model_filename, char_to_id);
+  LM lm(lm_model_filename, char_to_id, id_to_char);
 
   vector<vector<Model*> > ensmb_m;
   vector<LMSepMorph> ensmb_nn;
@@ -51,20 +51,23 @@ int main(int argc, char** argv) {
   }
 
   // Read the test file and output predictions for the words.
-  string line;
-  double correct = 0, total = 0;
   vector<LMSepMorph*> object_pointers;
   for (unsigned i = 0; i < ensmb_nn.size(); ++i) {
     object_pointers.push_back(&ensmb_nn[i]);
   }
+
+  string line;
+  double correct = 0, total = 0;
   for (string& line : test_data) {
     vector<string> items = split_line(line, '|');
     vector<unsigned> input_ids, target_ids, pred_target_ids;
     input_ids.clear(); target_ids.clear(); pred_target_ids.clear();
-    for (const string& ch : split_line(items[0], ' ')) {
+
+    string input = items[0], output = items[1];
+    for (const string& ch : split_line(input, ' ')) {
       input_ids.push_back(char_to_id[ch]);
     }
-    for (const string& ch : split_line(items[1], ' ')) {
+    for (const string& ch : split_line(output, ' ')) {
       target_ids.push_back(char_to_id[ch]);
     }
     unsigned morph_id = morph_to_id[items[2]];
@@ -78,7 +81,7 @@ int main(int argc, char** argv) {
         prediction += " ";
       }
     }
-    if (prediction == items[1]) {
+    if (prediction == output) {
       correct += 1;     
     } else {
       cout << "GOLD: " << line << endl;
