@@ -11,7 +11,7 @@ OBJDIR=obj
 SRCDIR=src
 
 .PHONY: clean
-all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph $(BINDIR)/train-joint-enc-morph $(BINDIR)/eval-ensemble-joint-enc-morph $(BINDIR)/train-lm-sep-morph $(BINDIR)/eval-ensemble-lm-sep-morph $(BINDIR)/train-joint-enc-dec-morph $(BINDIR)/eval-ensemble-joint-enc-dec-morph $(BINDIR)/train-infl-to-root $(BINDIR)/train-sep-infl-to-root $(BINDIR)/eval-ensemble-sep-morph-beam-lm-rerank
+all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph $(BINDIR)/train-joint-enc-morph $(BINDIR)/eval-ensemble-joint-enc-morph $(BINDIR)/train-lm-sep-morph $(BINDIR)/eval-ensemble-lm-sep-morph $(BINDIR)/train-joint-enc-dec-morph $(BINDIR)/eval-ensemble-joint-enc-dec-morph $(BINDIR)/train-infl-to-root $(BINDIR)/train-sep-infl-to-root
 
 make_dirs:
 	mkdir -p $(OBJDIR)
