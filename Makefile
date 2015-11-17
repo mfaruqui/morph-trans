@@ -59,7 +59,7 @@ $(BINDIR)/eval-ensemble-joint-enc-morph: $(addprefix $(OBJDIR)/, eval-ensemble-j
 $(BINDIR)/eval-ensemble-joint-enc-dec-morph: $(addprefix $(OBJDIR)/, eval-ensemble-joint-enc-dec-morph.o utils.o joint-enc-dec-morph.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
-$(BINDIR)/eval-ensemble-sep-morph-beam: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph-beam-lm-rerank.o lm.o utils.o sep-morph.o)
+$(BINDIR)/eval-ensemble-sep-morph-beam: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph-beam.o lm.o utils.o sep-morph.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
 
