@@ -1,3 +1,6 @@
+/*
+This file outputs all the strings in the beam.
+*/
 #include "cnn/nodes.h"
 #include "cnn/cnn.h"
 #include "cnn/rnn.h"
@@ -38,8 +41,6 @@ int main(int argc, char** argv) {
   vector<string> test_data;  // Read the dev file in a vector
   ReadData(test_filename, &test_data);
 
-  LM lm(lm_filename, char_to_id, id_to_char);
-
   vector<vector<Model*> > ensmb_m;
   vector<SepMorph> ensmb_nn;
   for (unsigned i = 0; i < argc - 6; ++i) {
@@ -76,23 +77,6 @@ int main(int argc, char** argv) {
     EnsembleBeamDecode(morph_id, beam_size, char_to_id, input_ids, &pred_beams,
                        &beam_score, &object_pointers);
 
-    /*unsigned max_beam_index = distance(beam_score.begin(),
-                                       max_element(beam_score.begin(),
-                                                   beam_score.end()));
-
-    string prediction = "";
-    pred_target_ids = pred_beams[max_beam_index];
-    for (unsigned i = 0; i < pred_target_ids.size(); ++i) {
-      prediction += id_to_char[pred_target_ids[i]];
-      if (i != pred_target_ids.size() - 1) {
-        prediction += " ";
-      }
-    }
-
-    if (prediction == items[1]) {
-      correct += 1;     
-    }*/
-
     cout << "GOLD: " << line << endl;
     for (unsigned beam_id = 0; beam_id < beam_size; ++beam_id) {
       pred_target_ids = pred_beams[beam_id];
@@ -105,9 +89,7 @@ int main(int argc, char** argv) {
       }
       vector<unsigned> lm_seq(pred_target_ids.begin() + 1, pred_target_ids.end() - 1);
       cout << "PRED: " << prediction << " " << beam_score[beam_id] << endl;
-      //     << lm.LogProbSeq(lm_seq) << endl;
     }
   }
-  //cerr << "Prediction Accuracy: " << correct / total << endl;
   return 1;
 }
