@@ -15,6 +15,8 @@
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
 #include <unordered_map>
+#include <queue>
+#include <limits>
 
 using namespace std;
 using namespace cnn;
@@ -75,6 +77,13 @@ void
 EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_to_id,
                const vector<unsigned>& input_ids,
                vector<unsigned>* pred_target_ids, vector<SepMorph*>* ensmb_model);
+
+void
+EnsembleBeamDecode(const unsigned& morph_id, const unsigned& beam_size,
+                   unordered_map<string, unsigned>& char_to_id,
+                   const vector<unsigned>& input_ids,
+                   vector<vector<unsigned> >* sequences, vector<float>* tm_scores,
+                   vector<SepMorph*>* ensmb_model);
 
 void Serialize(string& filename, SepMorph& model, vector<Model*>* cnn_model);
 
