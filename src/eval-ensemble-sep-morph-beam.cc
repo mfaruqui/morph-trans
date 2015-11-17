@@ -10,7 +10,6 @@ This file outputs all the strings in the beam.
 #include "cnn/gpu-ops.h"
 #include "cnn/expr.h"
 
-#include "lm.h"
 #include "utils.h"
 #include "sep-morph.h"
 
@@ -87,7 +86,6 @@ int main(int argc, char** argv) {
           prediction += " ";
         }
       }
-      vector<unsigned> lm_seq(pred_target_ids.begin() + 1, pred_target_ids.end() - 1);
       cout << "PRED: " << prediction << " " << beam_score[beam_id] << endl;
     }
   }
