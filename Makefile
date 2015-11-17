@@ -11,7 +11,7 @@ OBJDIR=obj
 SRCDIR=src
 
 .PHONY: clean
-all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph $(BINDIR)/train-joint-enc-morph $(BINDIR)/eval-ensemble-joint-enc-morph $(BINDIR)/train-lm-sep-morph $(BINDIR)/eval-ensemble-lm-sep-morph $(BINDIR)/train-joint-enc-dec-morph $(BINDIR)/eval-ensemble-joint-enc-dec-morph $(BINDIR)/train-infl-to-root $(BINDIR)/train-sep-infl-to-root $(BINDIR)/train-lm-joint-enc $(BINDIR)/eval-ensemble-lm-joint-enc
+all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph $(BINDIR)/train-joint-enc-morph $(BINDIR)/eval-ensemble-joint-enc-morph $(BINDIR)/train-lm-sep-morph $(BINDIR)/eval-ensemble-lm-sep-morph $(BINDIR)/train-joint-enc-dec-morph $(BINDIR)/eval-ensemble-joint-enc-dec-morph $(BINDIR)/train-infl-to-root $(BINDIR)/train-sep-infl-to-root $(BINDIR)/eval-ensemble-sep-morph-beam-lm-rerank $(BINDIR)/train-lm-joint-enc $(BINDIR)/eval-ensemble-lm-joint-enc
 
 make_dirs:
 	mkdir -p $(OBJDIR)
@@ -61,6 +61,7 @@ $(BINDIR)/eval-ensemble-joint-enc-dec-morph: $(addprefix $(OBJDIR)/, eval-ensemb
 
 $(BINDIR)/eval-ensemble-sep-morph-beam-lm-rerank: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph-beam-lm-rerank.o lm.o utils.o sep-morph.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
 
 clean:
 	rm -rf $(BINDIR)/*
