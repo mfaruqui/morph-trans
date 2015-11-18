@@ -312,14 +312,64 @@ EnsembleBeamDecode(const unsigned& morph_id, const unsigned& beam_size,
   vector<cnn::real> neg_inf(vocab_size, NEG_INF);
   Expression neg_inf_vec = cnn::expr::input(cg, {vocab_size}, &neg_inf);
 
-  // Find the beam_size best now and update the variables.
-  unordered_map<unsigned, vector<unsigned> > new_seq;
   vector<bool> active_beams(beam_size, true);
   while (true) {
     out_index++;
     priority_queue<pair<float, pair<unsigned, unsigned> > > probs_queue;
     vector<vector<RNNPointer> > curr_states;
     vector<Expression> out_dist;
+    for (unsigned beam_id = 0; beam_id < beam_size; ++beam_id) {
+      if (active_beams[beam_id]) {
+        unsigned prev_out_char = (*sequences)[beam_id].back();
+        vector<Expression> ensmb_out;
+        vector<RNNPointer> ensmb_states;
+        for (unsigned ensmb_id = 0; ensmb_id < ensmb; ensmb_id++) {
+          auto& model = *(*ensmb_model)[ensmb_id];
+          Expression input_char_vec;
+          if (out_index < input_ids.size()) {
+            input_char_vec = lookup(cg, model.char_vecs, input_ids[out_index]);
+          } else {
+            input_char_vec = lookup(cg, model.eps_vecs[morph_id],
+                                    min(unsigned(out_index - input_ids.size()),
+                                                 model.max_eps - 1));
+          }
+
+          Expression prev_out_vec = lookup(cg, model.char_vecs, prev_out_char);
+          Expression input = concatenate({encoded_word_vecs[ensmb_id], prev_out_vec,
+                                          input_char_vec});
+          Expression hidden = model.output_forward[morph_id].add_input(
+                                prev_states[beam_id][ensmb_id], input);
+          ensmb_states.push_back(model.output_forward[morph_id].state());
+
+          Expression out;
+          model.ProjectToOutput(hidden, &out);
+          out = log_softmax(out);
+          ensmb_out.push_back(out);
+        }
+        curr_states.push_back(ensmb_states);
+        out_dist.push_back(average(ensmb_out));
+      } else {
+        vector<RNNPointer> dummy(ensmb, RNNPointer(0));
+        curr_states.push_back(dummy);
+        out_dist.push_back(neg_inf_vec);
+      }
+    }
+
+    Expression all_scores = concatenate(out_dist);
+    vector<float> log_dist = as_vector(cg.incremental_forward());
+
+    for (unsigned index = 0; index < log_dist.size(); ++index) {
+      unsigned beam_id = index / vocab_size;
+      unsigned char_id = index % vocab_size;
+      if (active_beams[beam_id]) {
+        pair<unsigned, unsigned> location = make_pair(beam_id, char_id);
+        probs_queue.push(pair<float, pair<unsigned, unsigned> >(
+                         log_scores[beam_id] + log_dist[index], location));
+      }
+    }
+
+    // Find the beam_size best now and update the variables.
+    unordered_map<unsigned, vector<unsigned> > new_seq;
     for (unsigned beam_id = 0; beam_id < beam_size; ++beam_id) {
       if (active_beams[beam_id]) {
         float log_prob = probs_queue.top().first;
