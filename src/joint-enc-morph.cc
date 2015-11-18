@@ -1,11 +1,14 @@
 #include "joint-enc-morph.h"
 
+#include <queue>
+
 using namespace std;
 using namespace cnn;
 using namespace cnn::expr;
 
 string BOW = "<s>", EOW = "</s>";
 unsigned MAX_PRED_LEN = 100;
+float NEG_INF = numeric_limits<int>::min();
 
 JointEncMorph::JointEncMorph(
   const unsigned& char_length, const unsigned& hidden_length,
@@ -154,7 +157,7 @@ void Serialize(string& filename, JointEncMorph& model,
                vector<Model*>* cnn_models) {
   ofstream outfile(filename);
   if (!outfile.is_open()) {
-    cerr << "File opening failed" << endl;
+    cerr << "File opening failed: " << filename << endl;
   }
 
   boost::archive::text_oarchive oa(outfile);
@@ -170,7 +173,7 @@ void Serialize(string& filename, JointEncMorph& model,
 void Read(string& filename, JointEncMorph* model, vector<Model*>* cnn_models) {
   ifstream infile(filename);
   if (!infile.is_open()) {
-    cerr << "File opening failed" << endl;
+    cerr << "File opening failed: " << filename << endl;
   }
 
   boost::archive::text_iarchive ia(infile);
@@ -242,3 +245,124 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
     out_index++;
   }
 }
+
+void
+EnsembleBeamDecode(const unsigned& morph_id, const unsigned& beam_size,
+                   unordered_map<string, unsigned>& char_to_id,
+                   const vector<unsigned>& input_ids,
+                   vector<vector<unsigned> >* sequences, vector<float>* tm_scores,
+                   vector<JointEncMorph*>* ensmb_model) {
+  unsigned out_index = 1;
+  unsigned ensmb = ensmb_model->size();
+  ComputationGraph cg;
+
+  // Compute stuff for every model in the ensemble.
+  vector<Expression> encoded_word_vecs;
+  vector<Expression> ensmb_out;
+  for (unsigned ensmb_id = 0; ensmb_id < ensmb; ++ensmb_id) {
+    auto& model = *(*ensmb_model)[ensmb_id];
+    model.AddParamsToCG(morph_id, &cg);
+
+    Expression encoded_word_vec;
+    model.RunFwdBwd(input_ids, &encoded_word_vec, &cg);
+    model.TransformEncodedInput(&encoded_word_vec);
+    encoded_word_vecs.push_back(encoded_word_vec);
+    model.output_forward[morph_id].start_new_sequence();
+
+    Expression prev_output_vec = lookup(cg, model.char_vecs,
+                                        char_to_id[BOW]);
+    Expression input = concatenate({encoded_word_vecs[ensmb_id], prev_output_vec,
+                                    lookup(cg, model.char_vecs,
+                                    input_ids[out_index])});
+    Expression hidden = model.output_forward[morph_id].add_input(input);
+    Expression out;
+    model.ProjectToOutput(hidden, &out);
+    out = log_softmax(out);
+    ensmb_out.push_back(out);
+  }
+
+  // Compute the average of the ensemble output.
+  Expression out_dist = average(ensmb_out);
+  vector<float> log_dist = as_vector(cg.incremental_forward());
+  priority_queue<pair<float, unsigned> > init_queue;
+  for (unsigned i = 0; i < log_dist.size(); ++i) {
+    init_queue.push(make_pair(log_dist[i], i));
+  }
+  unsigned vocab_size = log_dist.size();
+
+  // Initialise the beam_size sequences, scores, hidden states.
+  vector<float> log_scores;
+  vector<vector<RNNPointer> > prev_states;
+  for (unsigned beam_id = 0; beam_id < beam_size; ++beam_id) {
+    vector<unsigned> seq;
+    seq.push_back(char_to_id[BOW]);
+    seq.push_back(init_queue.top().second);
+    sequences->push_back(seq);
+    log_scores.push_back(init_queue.top().first);
+
+    vector<RNNPointer> ensmb_states;
+    for (unsigned ensmb_id = 0; ensmb_id < ensmb; ++ensmb_id) {
+      auto& model = *(*ensmb_model)[ensmb_id];
+      ensmb_states.push_back(model.output_forward[morph_id].state());
+    }
+    prev_states.push_back(ensmb_states);
+    init_queue.pop();
+  }
+
+  vector<cnn::real> neg_inf(vocab_size, NEG_INF);
+  Expression neg_inf_vec = cnn::expr::input(cg, {vocab_size}, &neg_inf);
+
+  // Find the beam_size best now and update the variables.
+  unordered_map<unsigned, vector<unsigned> > new_seq;
+  vector<bool> active_beams(beam_size, true);
+  while (true) {
+    out_index++;
+    priority_queue<pair<float, pair<unsigned, unsigned> > > probs_queue;
+    vector<vector<RNNPointer> > curr_states;
+    vector<Expression> out_dist;
+    for (unsigned beam_id = 0; beam_id < beam_size; ++beam_id) {
+      if (active_beams[beam_id]) {
+        float log_prob = probs_queue.top().first;
+        pair<unsigned, unsigned> location = probs_queue.top().second;
+        unsigned old_beam_id = location.first, char_id = location.second;
+
+        vector<unsigned> seq = (*sequences)[old_beam_id];
+        seq.push_back(char_id);
+        new_seq[beam_id] = seq;
+        log_scores[beam_id] = log_prob;  // Update the score
+
+        prev_states[beam_id] = curr_states[old_beam_id];  // Update hidden state
+        probs_queue.pop();
+      }
+    }
+
+    // Update the sequences now.
+    for (auto& it : new_seq) {
+      (*sequences)[it.first] = it.second;
+    }
+
+    // Check if a sequence should be made inactive.
+    for (unsigned beam_id = 0; beam_id < beam_size; ++beam_id) {
+      if (active_beams[beam_id] &&
+          ((*sequences)[beam_id].back() == char_to_id[EOW] ||
+           (*sequences)[beam_id].size() > MAX_PRED_LEN)) {
+        active_beams[beam_id] = false;
+      }
+    }
+
+    // Check if all sequences are inactive.
+    bool all_inactive = true;
+    for (unsigned beam_id = 0; beam_id < beam_size; ++beam_id) {
+      if (active_beams[beam_id]) {
+        all_inactive = false;
+        break;
+      }
+    }
+
+    if (all_inactive) {
+      *tm_scores = log_scores;
+      return;
+    }
+  }
+}
+
