@@ -84,4 +84,11 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
                const vector<unsigned>& input_ids, vector<unsigned>* pred_target_ids,
                vector<JointEncMorph*>* ensmb_model);
 
+void
+EnsembleBeamDecode(const unsigned& morph_id, const unsigned& beam_size,
+                   unordered_map<string, unsigned>& char_to_id,
+                   const vector<unsigned>& input_ids,
+                   vector<vector<unsigned> >* sequences, vector<float>* tm_scores,
+                   vector<JointEncMorph*>* ensmb_model);
+
 #endif
