@@ -11,7 +11,7 @@ OBJDIR=obj
 SRCDIR=src
 
 .PHONY: clean
-all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph $(BINDIR)/train-joint-enc-morph $(BINDIR)/eval-ensemble-joint-enc-morph $(BINDIR)/train-lm-sep-morph $(BINDIR)/eval-ensemble-lm-sep-morph $(BINDIR)/train-joint-enc-dec-morph $(BINDIR)/eval-ensemble-joint-enc-dec-morph $(BINDIR)/train-infl-to-root $(BINDIR)/train-sep-infl-to-root $(BINDIR)/eval-ensemble-sep-morph-beam $(BINDIR)/train-lm-joint-enc $(BINDIR)/eval-ensemble-lm-joint-enc $(BINDIR)/eval-ensemble-joint-enc-beam
+all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph $(BINDIR)/train-joint-enc-morph $(BINDIR)/eval-ensemble-joint-enc-morph $(BINDIR)/train-lm-sep-morph $(BINDIR)/eval-ensemble-lm-sep-morph $(BINDIR)/train-joint-enc-dec-morph $(BINDIR)/eval-ensemble-joint-enc-dec-morph $(BINDIR)/train-infl-to-root $(BINDIR)/train-sep-infl-to-root $(BINDIR)/eval-ensemble-sep-morph-beam $(BINDIR)/train-lm-joint-enc $(BINDIR)/eval-ensemble-lm-joint-enc $(BINDIR)/eval-ensemble-joint-enc-beam $(BINDIR)/train-no-enc $(BINDIR)/eval-ensemble-no-enc $(BINDIR)/train-enc-dec $(BINDIR)/eval-ensemble-enc-dec $(BINDIR)/train-enc-dec-attn $(BINDIR)/eval-ensemble-enc-dec-attn
 
 make_dirs:
 	mkdir -p $(OBJDIR)
@@ -24,6 +24,15 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cc
 	$(CC) -MM -MP -MT "$@" $(CFLAGS) $(INCS) $< > $(OBJDIR)/$*.d
 
 $(BINDIR)/train-sep-morph: $(addprefix $(OBJDIR)/, train-sep-morph.o sep-morph.o utils.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
+$(BINDIR)/train-no-enc: $(addprefix $(OBJDIR)/, train-no-enc.o no-enc.o utils.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
+$(BINDIR)/train-enc-dec: $(addprefix $(OBJDIR)/, train-enc-dec.o enc-dec.o utils.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
+$(BINDIR)/train-enc-dec-attn: $(addprefix $(OBJDIR)/, train-enc-dec-attn.o enc-dec-attn.o utils.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
 $(BINDIR)/train-joint-enc-morph: $(addprefix $(OBJDIR)/, train-joint-enc-morph.o joint-enc-morph.o utils.o)
@@ -48,6 +57,15 @@ $(BINDIR)/eval-ensemble-lm-joint-enc: $(addprefix $(OBJDIR)/, eval-ensemble-lm-j
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
 $(BINDIR)/eval-ensemble-sep-morph: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph.o utils.o sep-morph.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
+$(BINDIR)/eval-ensemble-no-enc: $(addprefix $(OBJDIR)/, eval-ensemble-no-enc.o utils.o no-enc.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
+$(BINDIR)/eval-ensemble-enc-dec: $(addprefix $(OBJDIR)/, eval-ensemble-enc-dec.o utils.o enc-dec.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
+$(BINDIR)/eval-ensemble-enc-dec-attn: $(addprefix $(OBJDIR)/, eval-ensemble-enc-dec-attn.o utils.o enc-dec-attn.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
 $(BINDIR)/eval-ensemble-lm-sep-morph: $(addprefix $(OBJDIR)/, eval-ensemble-lm-sep-morph.o utils.o lm-sep-morph.o lm.o)
