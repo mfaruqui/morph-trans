@@ -43,7 +43,7 @@ Here, 100 is the hidden layer size of the LSTM, 30 is the number of iterations f
 
 To test the system, run:-
 
-```./bin/eval-ensemble-sep-morph char_vocab.txt morph_vocab.txt test_infl.txt model1.txt model2.txt model3.txt ...```
+```./bin/eval-ensemble-sep-morph char_vocab.txt morph_vocab.txt test_infl.txt model1.txt model2.txt model3.txt ... > output.txt```
 
 This can use an ensemble of models for evaluation. If you want to use only one model, just provide one model. The sep-moprh model is the model that provided us best supervised results. Other models can be used in the same way. Baseline encoder-decoder models can be trained using ```train-enc-dec``` and ```train-enc-dec-attn``` models.
 
