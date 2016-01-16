@@ -16,13 +16,13 @@ Please download and compile these libraries.
 You need three files to train the inflection generation system. Two files that contain vocabulary of the characters, and the vocabulary of the morphological attributes. The third file contains the training/dev/test data.
 
 1. Character vocabulary file: char_vocab.txt
+
 ```<s> </s> a b c g f ä ...```
 
 2. Morphological attribute file: morph_vocab.txt
+
 ```case=nominative:number=singular case=dative:number=plural ...```
 
 3. Inflection train/dev/test file: infl.txt
-```<s> a a l </s>|<s> a a l </s>|case=nominative:number=singular
-<s> a a l </s>|<s> a a l e </s>|case=nominative:number=plural
-<s> a a l </s>|<s> a a l e s </s>|case=genitive:number=singular
-```
+
+```<s> a a l </s>|<s> a a l e s </s>|case=genitive:number=singular```
