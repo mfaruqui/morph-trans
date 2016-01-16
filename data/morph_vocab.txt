@@ -1,0 +1,1 @@
+case=nominative:number=singular case=dative:number=plural case=nominative:number=plural case=genitive:number=singular case=dative:number=singular case=accusative:number=singular case=accusative:number=plural case=genitive:number=plural
