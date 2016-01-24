@@ -123,8 +123,12 @@ float EncDec::Train(const unsigned& morph_id, const vector<unsigned>& inputs,
 
   vector<Expression> decoder_hidden_units;
   vector<Expression> init;
-  init.push_back(tanh(encoded_input_vec));
-  init.push_back(encoded_input_vec);
+  for (unsigned i = 0; i < layers; ++i) {
+    init.push_back(tanh(encoded_input_vec));  // init cell of decoder
+  }
+  for (unsigned i = 0; i < layers; ++i) {
+    init.push_back(encoded_input_vec);  // init hidden layer of decoder
+  }
   output_forward[morph_id].start_new_sequence(init);
   for (const auto& vec : input_vecs_for_dec) {
     decoder_hidden_units.push_back(output_forward[morph_id].add_input(vec));
@@ -153,8 +157,12 @@ EnsembleDecode(const unsigned& morph_id, unordered_map<string, unsigned>& char_t
     model->TransformEncodedInput(&encoded_word_vec);
     //encoded_word_vecs.push_back(encoded_word_vec);
     vector<Expression> init;
-    init.push_back(tanh(encoded_word_vec));
-    init.push_back(encoded_word_vec);
+    for (unsigned i = 0; i < model->layers; ++i) {
+      init.push_back(tanh(encoded_word_vec));  // init cell of decoder
+    }
+    for (unsigned i = 0; i < model->layers; ++i) {
+      init.push_back(encoded_word_vec);  // init hidden layer of decoder
+    }
     model->output_forward[morph_id].start_new_sequence(init);
   }
 
@@ -218,8 +226,12 @@ EnsembleBeamDecode(const unsigned& morph_id, const unsigned& beam_size,
     encoded_word_vecs.push_back(encoded_word_vec);
 
     vector<Expression> init;
-    init.push_back(tanh(encoded_word_vec));
-    init.push_back(encoded_word_vec);
+    for (unsigned i = 0; i < model.layers; ++i) {
+      init.push_back(tanh(encoded_word_vec));  // init cell of decoder
+    }
+    for (unsigned i = 0; i < model.layers; ++i) {
+      init.push_back(encoded_word_vec);  // init hidden layer of decoder
+    }
     model.output_forward[morph_id].start_new_sequence(init);
 
     Expression prev_output_vec = lookup(cg, model.char_vecs[morph_id],
