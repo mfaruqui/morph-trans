@@ -61,27 +61,6 @@ int main(int argc, char** argv) {
   EncDec nn(char_size, hidden_size, vocab_size, layers, morph_size,
               &m, &optimizer);
 
-  // Pre-train all models on all datasets.
-  /*cerr << "Pre-training... " << endl; 
-  for (unsigned morph_id = 0; morph_id < morph_size; ++morph_id) {
-    cerr << "Morph class: " << morph_id + 1 << endl;
-    for (string& line : train_data) {
-      vector<string> items = split_line(line, '|');
-      vector<unsigned> input_ids, target_ids;
-      input_ids.clear(); target_ids.clear();
-      for (const string& ch : split_line(items[0], ' ')) {
-        input_ids.push_back(char_to_id[ch]);
-      }
-      for (const string& ch : split_line(items[1], ' ')) {
-        target_ids.push_back(char_to_id[ch]);
-      }
-      //unsigned morph_id = morph_to_id[items[2]];
-      double temp_loss = nn.Train(morph_id, input_ids, target_ids,
-                                  &optimizer[morph_id]);
-    }
-  }
-  cerr << "complete." << endl;*/
-
   // Read the training file and train the model
   double best_score = -1;
   vector<EncDec*> object_list;
