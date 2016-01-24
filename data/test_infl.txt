@@ -1,0 +1,1600 @@
+<s> a b b i t t e </s>|<s> a b b i t t e </s>|case=nominative:number=singular
+<s> a b b i t t e </s>|<s> a b b i t t e n </s>|case=nominative:number=plural
+<s> a b b i t t e </s>|<s> a b b i t t e </s>|case=genitive:number=singular
+<s> a b b i t t e </s>|<s> a b b i t t e n </s>|case=genitive:number=plural
+<s> a b b i t t e </s>|<s> a b b i t t e </s>|case=dative:number=singular
+<s> a b b i t t e </s>|<s> a b b i t t e n </s>|case=dative:number=plural
+<s> a b b i t t e </s>|<s> a b b i t t e </s>|case=accusative:number=singular
+<s> a b b i t t e </s>|<s> a b b i t t e n </s>|case=accusative:number=plural
+<s> a b f a h r t s l i s t e </s>|<s> a b f a h r t s l i s t e </s>|case=nominative:number=singular
+<s> a b f a h r t s l i s t e </s>|<s> a b f a h r t s l i s t e n </s>|case=nominative:number=plural
+<s> a b f a h r t s l i s t e </s>|<s> a b f a h r t s l i s t e </s>|case=genitive:number=singular
+<s> a b f a h r t s l i s t e </s>|<s> a b f a h r t s l i s t e n </s>|case=genitive:number=plural
+<s> a b f a h r t s l i s t e </s>|<s> a b f a h r t s l i s t e </s>|case=dative:number=singular
+<s> a b f a h r t s l i s t e </s>|<s> a b f a h r t s l i s t e n </s>|case=dative:number=plural
+<s> a b f a h r t s l i s t e </s>|<s> a b f a h r t s l i s t e </s>|case=accusative:number=singular
+<s> a b f a h r t s l i s t e </s>|<s> a b f a h r t s l i s t e n </s>|case=accusative:number=plural
+<s> a b f o l g e </s>|<s> a b f o l g e </s>|case=nominative:number=singular
+<s> a b f o l g e </s>|<s> a b f o l g e n </s>|case=nominative:number=plural
+<s> a b f o l g e </s>|<s> a b f o l g e </s>|case=genitive:number=singular
+<s> a b f o l g e </s>|<s> a b f o l g e n </s>|case=genitive:number=plural
+<s> a b f o l g e </s>|<s> a b f o l g e </s>|case=dative:number=singular
+<s> a b f o l g e </s>|<s> a b f o l g e n </s>|case=dative:number=plural
+<s> a b f o l g e </s>|<s> a b f o l g e </s>|case=accusative:number=singular
+<s> a b f o l g e </s>|<s> a b f o l g e n </s>|case=accusative:number=plural
+<s> a b h ä n g i g k e i t </s>|<s> a b h ä n g i g k e i t </s>|case=nominative:number=singular
+<s> a b h ä n g i g k e i t </s>|<s> a b h ä n g i g k e i t e n </s>|case=nominative:number=plural
+<s> a b h ä n g i g k e i t </s>|<s> a b h ä n g i g k e i t </s>|case=genitive:number=singular
+<s> a b h ä n g i g k e i t </s>|<s> a b h ä n g i g k e i t e n </s>|case=genitive:number=plural
+<s> a b h ä n g i g k e i t </s>|<s> a b h ä n g i g k e i t </s>|case=dative:number=singular
+<s> a b h ä n g i g k e i t </s>|<s> a b h ä n g i g k e i t e n </s>|case=dative:number=plural
+<s> a b h ä n g i g k e i t </s>|<s> a b h ä n g i g k e i t </s>|case=accusative:number=singular
+<s> a b h ä n g i g k e i t </s>|<s> a b h ä n g i g k e i t e n </s>|case=accusative:number=plural
+<s> a b i t u r i e n t </s>|<s> a b i t u r i e n t </s>|case=nominative:number=singular
+<s> a b i t u r i e n t </s>|<s> a b i t u r i e n t e n </s>|case=nominative:number=plural
+<s> a b i t u r i e n t </s>|<s> a b i t u r i e n t e n </s>|case=genitive:number=singular
+<s> a b i t u r i e n t </s>|<s> a b i t u r i e n t e n </s>|case=genitive:number=plural
+<s> a b i t u r i e n t </s>|<s> a b i t u r i e n t e n </s>|case=dative:number=singular
+<s> a b i t u r i e n t </s>|<s> a b i t u r i e n t e n </s>|case=dative:number=plural
+<s> a b i t u r i e n t </s>|<s> a b i t u r i e n t e n </s>|case=accusative:number=singular
+<s> a b i t u r i e n t </s>|<s> a b i t u r i e n t e n </s>|case=accusative:number=plural
+<s> a b k l ä r u n g </s>|<s> a b k l ä r u n g </s>|case=nominative:number=singular
+<s> a b k l ä r u n g </s>|<s> a b k l ä r u n g e n </s>|case=nominative:number=plural
+<s> a b k l ä r u n g </s>|<s> a b k l ä r u n g </s>|case=genitive:number=singular
+<s> a b k l ä r u n g </s>|<s> a b k l ä r u n g e n </s>|case=genitive:number=plural
+<s> a b k l ä r u n g </s>|<s> a b k l ä r u n g </s>|case=dative:number=singular
+<s> a b k l ä r u n g </s>|<s> a b k l ä r u n g e n </s>|case=dative:number=plural
+<s> a b k l ä r u n g </s>|<s> a b k l ä r u n g </s>|case=accusative:number=singular
+<s> a b k l ä r u n g </s>|<s> a b k l ä r u n g e n </s>|case=accusative:number=plural
+<s> a b s c h a f f u n g </s>|<s> a b s c h a f f u n g </s>|case=nominative:number=singular
+<s> a b s c h a f f u n g </s>|<s> a b s c h a f f u n g e n </s>|case=nominative:number=plural
+<s> a b s c h a f f u n g </s>|<s> a b s c h a f f u n g </s>|case=genitive:number=singular
+<s> a b s c h a f f u n g </s>|<s> a b s c h a f f u n g e n </s>|case=genitive:number=plural
+<s> a b s c h a f f u n g </s>|<s> a b s c h a f f u n g </s>|case=dative:number=singular
+<s> a b s c h a f f u n g </s>|<s> a b s c h a f f u n g e n </s>|case=dative:number=plural
+<s> a b s c h a f f u n g </s>|<s> a b s c h a f f u n g </s>|case=accusative:number=singular
+<s> a b s c h a f f u n g </s>|<s> a b s c h a f f u n g e n </s>|case=accusative:number=plural
+<s> a c k e r </s>|<s> a c k e r </s>|case=nominative:number=singular
+<s> a c k e r </s>|<s> ä c k e r </s>|case=nominative:number=plural
+<s> a c k e r </s>|<s> a c k e r s </s>|case=genitive:number=singular
+<s> a c k e r </s>|<s> ä c k e r </s>|case=genitive:number=plural
+<s> a c k e r </s>|<s> a c k e r </s>|case=dative:number=singular
+<s> a c k e r </s>|<s> ä c k e r n </s>|case=dative:number=plural
+<s> a c k e r </s>|<s> a c k e r </s>|case=accusative:number=singular
+<s> a c k e r </s>|<s> ä c k e r </s>|case=accusative:number=plural
+<s> a d e r h a u t </s>|<s> a d e r h a u t </s>|case=nominative:number=singular
+<s> a d e r h a u t </s>|<s> a d e r h ä u t e </s>|case=nominative:number=plural
+<s> a d e r h a u t </s>|<s> a d e r h a u t </s>|case=genitive:number=singular
+<s> a d e r h a u t </s>|<s> a d e r h ä u t e </s>|case=genitive:number=plural
+<s> a d e r h a u t </s>|<s> a d e r h a u t </s>|case=dative:number=singular
+<s> a d e r h a u t </s>|<s> a d e r h ä u t e n </s>|case=dative:number=plural
+<s> a d e r h a u t </s>|<s> a d e r h a u t </s>|case=accusative:number=singular
+<s> a d e r h a u t </s>|<s> a d e r h ä u t e </s>|case=accusative:number=plural
+<s> a l m h ü t t e </s>|<s> a l m h ü t t e </s>|case=nominative:number=singular
+<s> a l m h ü t t e </s>|<s> a l m h ü t t e n </s>|case=nominative:number=plural
+<s> a l m h ü t t e </s>|<s> a l m h ü t t e </s>|case=genitive:number=singular
+<s> a l m h ü t t e </s>|<s> a l m h ü t t e n </s>|case=genitive:number=plural
+<s> a l m h ü t t e </s>|<s> a l m h ü t t e </s>|case=dative:number=singular
+<s> a l m h ü t t e </s>|<s> a l m h ü t t e n </s>|case=dative:number=plural
+<s> a l m h ü t t e </s>|<s> a l m h ü t t e </s>|case=accusative:number=singular
+<s> a l m h ü t t e </s>|<s> a l m h ü t t e n </s>|case=accusative:number=plural
+<s> a n g r e i f e r i n </s>|<s> a n g r e i f e r i n </s>|case=nominative:number=singular
+<s> a n g r e i f e r i n </s>|<s> a n g r e i f e r i n n e n </s>|case=nominative:number=plural
+<s> a n g r e i f e r i n </s>|<s> a n g r e i f e r i n </s>|case=genitive:number=singular
+<s> a n g r e i f e r i n </s>|<s> a n g r e i f e r i n n e n </s>|case=genitive:number=plural
+<s> a n g r e i f e r i n </s>|<s> a n g r e i f e r i n </s>|case=dative:number=singular
+<s> a n g r e i f e r i n </s>|<s> a n g r e i f e r i n n e n </s>|case=dative:number=plural
+<s> a n g r e i f e r i n </s>|<s> a n g r e i f e r i n </s>|case=accusative:number=singular
+<s> a n g r e i f e r i n </s>|<s> a n g r e i f e r i n n e n </s>|case=accusative:number=plural
+<s> a n i m a t i o n </s>|<s> a n i m a t i o n </s>|case=nominative:number=singular
+<s> a n i m a t i o n </s>|<s> a n i m a t i o n e n </s>|case=nominative:number=plural
+<s> a n i m a t i o n </s>|<s> a n i m a t i o n </s>|case=genitive:number=singular
+<s> a n i m a t i o n </s>|<s> a n i m a t i o n e n </s>|case=genitive:number=plural
+<s> a n i m a t i o n </s>|<s> a n i m a t i o n </s>|case=dative:number=singular
+<s> a n i m a t i o n </s>|<s> a n i m a t i o n e n </s>|case=dative:number=plural
+<s> a n i m a t i o n </s>|<s> a n i m a t i o n </s>|case=accusative:number=singular
+<s> a n i m a t i o n </s>|<s> a n i m a t i o n e n </s>|case=accusative:number=plural
+<s> a n s a t z </s>|<s> a n s a t z </s>|case=nominative:number=singular
+<s> a n s a t z </s>|<s> a n s ä t z e </s>|case=nominative:number=plural
+<s> a n s a t z </s>|<s> a n s a t z e s </s>|case=genitive:number=singular
+<s> a n s a t z </s>|<s> a n s ä t z e </s>|case=genitive:number=plural
+<s> a n s a t z </s>|<s> a n s a t z </s>|case=dative:number=singular
+<s> a n s a t z </s>|<s> a n s ä t z e n </s>|case=dative:number=plural
+<s> a n s a t z </s>|<s> a n s a t z </s>|case=accusative:number=singular
+<s> a n s a t z </s>|<s> a n s ä t z e </s>|case=accusative:number=plural
+<s> a r s c h b a c k e </s>|<s> a r s c h b a c k e </s>|case=nominative:number=singular
+<s> a r s c h b a c k e </s>|<s> a r s c h b a c k e n </s>|case=nominative:number=plural
+<s> a r s c h b a c k e </s>|<s> a r s c h b a c k e </s>|case=genitive:number=singular
+<s> a r s c h b a c k e </s>|<s> a r s c h b a c k e n </s>|case=genitive:number=plural
+<s> a r s c h b a c k e </s>|<s> a r s c h b a c k e </s>|case=dative:number=singular
+<s> a r s c h b a c k e </s>|<s> a r s c h b a c k e n </s>|case=dative:number=plural
+<s> a r s c h b a c k e </s>|<s> a r s c h b a c k e </s>|case=accusative:number=singular
+<s> a r s c h b a c k e </s>|<s> a r s c h b a c k e n </s>|case=accusative:number=plural
+<s> a r s c h k r i e c h e r e i </s>|<s> a r s c h k r i e c h e r e i </s>|case=nominative:number=singular
+<s> a r s c h k r i e c h e r e i </s>|<s> a r s c h k r i e c h e r e i e n </s>|case=nominative:number=plural
+<s> a r s c h k r i e c h e r e i </s>|<s> a r s c h k r i e c h e r e i </s>|case=genitive:number=singular
+<s> a r s c h k r i e c h e r e i </s>|<s> a r s c h k r i e c h e r e i e n </s>|case=genitive:number=plural
+<s> a r s c h k r i e c h e r e i </s>|<s> a r s c h k r i e c h e r e i </s>|case=dative:number=singular
+<s> a r s c h k r i e c h e r e i </s>|<s> a r s c h k r i e c h e r e i e n </s>|case=dative:number=plural
+<s> a r s c h k r i e c h e r e i </s>|<s> a r s c h k r i e c h e r e i </s>|case=accusative:number=singular
+<s> a r s c h k r i e c h e r e i </s>|<s> a r s c h k r i e c h e r e i e n </s>|case=accusative:number=plural
+<s> a r s c h l e c k e r </s>|<s> a r s c h l e c k e r </s>|case=nominative:number=singular
+<s> a r s c h l e c k e r </s>|<s> a r s c h l e c k e r </s>|case=nominative:number=plural
+<s> a r s c h l e c k e r </s>|<s> a r s c h l e c k e r s </s>|case=genitive:number=singular
+<s> a r s c h l e c k e r </s>|<s> a r s c h l e c k e r </s>|case=genitive:number=plural
+<s> a r s c h l e c k e r </s>|<s> a r s c h l e c k e r </s>|case=dative:number=singular
+<s> a r s c h l e c k e r </s>|<s> a r s c h l e c k e r n </s>|case=dative:number=plural
+<s> a r s c h l e c k e r </s>|<s> a r s c h l e c k e r </s>|case=accusative:number=singular
+<s> a r s c h l e c k e r </s>|<s> a r s c h l e c k e r </s>|case=accusative:number=plural
+<s> a s s i m i l a t i o n </s>|<s> a s s i m i l a t i o n </s>|case=nominative:number=singular
+<s> a s s i m i l a t i o n </s>|<s> a s s i m i l a t i o n e n </s>|case=nominative:number=plural
+<s> a s s i m i l a t i o n </s>|<s> a s s i m i l a t i o n </s>|case=genitive:number=singular
+<s> a s s i m i l a t i o n </s>|<s> a s s i m i l a t i o n e n </s>|case=genitive:number=plural
+<s> a s s i m i l a t i o n </s>|<s> a s s i m i l a t i o n </s>|case=dative:number=singular
+<s> a s s i m i l a t i o n </s>|<s> a s s i m i l a t i o n e n </s>|case=dative:number=plural
+<s> a s s i m i l a t i o n </s>|<s> a s s i m i l a t i o n </s>|case=accusative:number=singular
+<s> a s s i m i l a t i o n </s>|<s> a s s i m i l a t i o n e n </s>|case=accusative:number=plural
+<s> a t a x i e </s>|<s> a t a x i e </s>|case=nominative:number=singular
+<s> a t a x i e </s>|<s> a t a x i e n </s>|case=nominative:number=plural
+<s> a t a x i e </s>|<s> a t a x i e </s>|case=genitive:number=singular
+<s> a t a x i e </s>|<s> a t a x i e n </s>|case=genitive:number=plural
+<s> a t a x i e </s>|<s> a t a x i e </s>|case=dative:number=singular
+<s> a t a x i e </s>|<s> a t a x i e n </s>|case=dative:number=plural
+<s> a t a x i e </s>|<s> a t a x i e </s>|case=accusative:number=singular
+<s> a t a x i e </s>|<s> a t a x i e n </s>|case=accusative:number=plural
+<s> a u f s e h e r </s>|<s> a u f s e h e r </s>|case=nominative:number=singular
+<s> a u f s e h e r </s>|<s> a u f s e h e r </s>|case=nominative:number=plural
+<s> a u f s e h e r </s>|<s> a u f s e h e r s </s>|case=genitive:number=singular
+<s> a u f s e h e r </s>|<s> a u f s e h e r </s>|case=genitive:number=plural
+<s> a u f s e h e r </s>|<s> a u f s e h e r </s>|case=dative:number=singular
+<s> a u f s e h e r </s>|<s> a u f s e h e r n </s>|case=dative:number=plural
+<s> a u f s e h e r </s>|<s> a u f s e h e r </s>|case=accusative:number=singular
+<s> a u f s e h e r </s>|<s> a u f s e h e r </s>|case=accusative:number=plural
+<s> a u s w e g </s>|<s> a u s w e g </s>|case=nominative:number=singular
+<s> a u s w e g </s>|<s> a u s w e g e </s>|case=nominative:number=plural
+<s> a u s w e g </s>|<s> a u s w e g e s </s>|case=genitive:number=singular
+<s> a u s w e g </s>|<s> a u s w e g e </s>|case=genitive:number=plural
+<s> a u s w e g </s>|<s> a u s w e g </s>|case=dative:number=singular
+<s> a u s w e g </s>|<s> a u s w e g e n </s>|case=dative:number=plural
+<s> a u s w e g </s>|<s> a u s w e g </s>|case=accusative:number=singular
+<s> a u s w e g </s>|<s> a u s w e g e </s>|case=accusative:number=plural
+<s> a v a n t g a r d e k u n s t </s>|<s> a v a n t g a r d e k u n s t </s>|case=nominative:number=singular
+<s> a v a n t g a r d e k u n s t </s>|<s> a v a n t g a r d e k ü n s t e </s>|case=nominative:number=plural
+<s> a v a n t g a r d e k u n s t </s>|<s> a v a n t g a r d e k u n s t </s>|case=genitive:number=singular
+<s> a v a n t g a r d e k u n s t </s>|<s> a v a n t g a r d e k ü n s t e </s>|case=genitive:number=plural
+<s> a v a n t g a r d e k u n s t </s>|<s> a v a n t g a r d e k u n s t </s>|case=dative:number=singular
+<s> a v a n t g a r d e k u n s t </s>|<s> a v a n t g a r d e k ü n s t e n </s>|case=dative:number=plural
+<s> a v a n t g a r d e k u n s t </s>|<s> a v a n t g a r d e k u n s t </s>|case=accusative:number=singular
+<s> a v a n t g a r d e k u n s t </s>|<s> a v a n t g a r d e k ü n s t e </s>|case=accusative:number=plural
+<s> b a c k b o r d </s>|<s> b a c k b o r d </s>|case=nominative:number=singular
+<s> b a c k b o r d </s>|<s> b a c k b o r d e </s>|case=nominative:number=plural
+<s> b a c k b o r d </s>|<s> b a c k b o r d e s </s>|case=genitive:number=singular
+<s> b a c k b o r d </s>|<s> b a c k b o r d e </s>|case=genitive:number=plural
+<s> b a c k b o r d </s>|<s> b a c k b o r d </s>|case=dative:number=singular
+<s> b a c k b o r d </s>|<s> b a c k b o r d e n </s>|case=dative:number=plural
+<s> b a c k b o r d </s>|<s> b a c k b o r d </s>|case=accusative:number=singular
+<s> b a c k b o r d </s>|<s> b a c k b o r d e </s>|case=accusative:number=plural
+<s> b a l k o n </s>|<s> b a l k o n </s>|case=nominative:number=singular
+<s> b a l k o n </s>|<s> b a l k o n e </s>|case=nominative:number=plural
+<s> b a l k o n </s>|<s> b a l k o n s </s>|case=genitive:number=singular
+<s> b a l k o n </s>|<s> b a l k o n e </s>|case=genitive:number=plural
+<s> b a l k o n </s>|<s> b a l k o n </s>|case=dative:number=singular
+<s> b a l k o n </s>|<s> b a l k o n e n </s>|case=dative:number=plural
+<s> b a l k o n </s>|<s> b a l k o n </s>|case=accusative:number=singular
+<s> b a l k o n </s>|<s> b a l k o n e </s>|case=accusative:number=plural
+<s> b a n k a u t o m a t </s>|<s> b a n k a u t o m a t </s>|case=nominative:number=singular
+<s> b a n k a u t o m a t </s>|<s> b a n k a u t o m a t e n </s>|case=nominative:number=plural
+<s> b a n k a u t o m a t </s>|<s> b a n k a u t o m a t e n </s>|case=genitive:number=singular
+<s> b a n k a u t o m a t </s>|<s> b a n k a u t o m a t e n </s>|case=genitive:number=plural
+<s> b a n k a u t o m a t </s>|<s> b a n k a u t o m a t e n </s>|case=dative:number=singular
+<s> b a n k a u t o m a t </s>|<s> b a n k a u t o m a t e n </s>|case=dative:number=plural
+<s> b a n k a u t o m a t </s>|<s> b a n k a u t o m a t e n </s>|case=accusative:number=singular
+<s> b a n k a u t o m a t </s>|<s> b a n k a u t o m a t e n </s>|case=accusative:number=plural
+<s> b a u e r n h o f </s>|<s> b a u e r n h o f </s>|case=nominative:number=singular
+<s> b a u e r n h o f </s>|<s> b a u e r n h ö f e </s>|case=nominative:number=plural
+<s> b a u e r n h o f </s>|<s> b a u e r n h o f e s </s>|case=genitive:number=singular
+<s> b a u e r n h o f </s>|<s> b a u e r n h ö f e </s>|case=genitive:number=plural
+<s> b a u e r n h o f </s>|<s> b a u e r n h o f </s>|case=dative:number=singular
+<s> b a u e r n h o f </s>|<s> b a u e r n h ö f e n </s>|case=dative:number=plural
+<s> b a u e r n h o f </s>|<s> b a u e r n h o f </s>|case=accusative:number=singular
+<s> b a u e r n h o f </s>|<s> b a u e r n h ö f e </s>|case=accusative:number=plural
+<s> b a u m </s>|<s> b a u m </s>|case=nominative:number=singular
+<s> b a u m </s>|<s> b ä u m e </s>|case=nominative:number=plural
+<s> b a u m </s>|<s> b a u m e s </s>|case=genitive:number=singular
+<s> b a u m </s>|<s> b ä u m e </s>|case=genitive:number=plural
+<s> b a u m </s>|<s> b a u m </s>|case=dative:number=singular
+<s> b a u m </s>|<s> b ä u m e n </s>|case=dative:number=plural
+<s> b a u m </s>|<s> b a u m </s>|case=accusative:number=singular
+<s> b a u m </s>|<s> b ä u m e </s>|case=accusative:number=plural
+<s> b e f r e i u n g </s>|<s> b e f r e i u n g </s>|case=nominative:number=singular
+<s> b e f r e i u n g </s>|<s> b e f r e i u n g e n </s>|case=nominative:number=plural
+<s> b e f r e i u n g </s>|<s> b e f r e i u n g </s>|case=genitive:number=singular
+<s> b e f r e i u n g </s>|<s> b e f r e i u n g e n </s>|case=genitive:number=plural
+<s> b e f r e i u n g </s>|<s> b e f r e i u n g </s>|case=dative:number=singular
+<s> b e f r e i u n g </s>|<s> b e f r e i u n g e n </s>|case=dative:number=plural
+<s> b e f r e i u n g </s>|<s> b e f r e i u n g </s>|case=accusative:number=singular
+<s> b e f r e i u n g </s>|<s> b e f r e i u n g e n </s>|case=accusative:number=plural
+<s> b e g r i f f </s>|<s> b e g r i f f </s>|case=nominative:number=singular
+<s> b e g r i f f </s>|<s> b e g r i f f e </s>|case=nominative:number=plural
+<s> b e g r i f f </s>|<s> b e g r i f f e s </s>|case=genitive:number=singular
+<s> b e g r i f f </s>|<s> b e g r i f f e </s>|case=genitive:number=plural
+<s> b e g r i f f </s>|<s> b e g r i f f </s>|case=dative:number=singular
+<s> b e g r i f f </s>|<s> b e g r i f f e n </s>|case=dative:number=plural
+<s> b e g r i f f </s>|<s> b e g r i f f </s>|case=accusative:number=singular
+<s> b e g r i f f </s>|<s> b e g r i f f e </s>|case=accusative:number=plural
+<s> b e i l a g e </s>|<s> b e i l a g e </s>|case=nominative:number=singular
+<s> b e i l a g e </s>|<s> b e i l a g e n </s>|case=nominative:number=plural
+<s> b e i l a g e </s>|<s> b e i l a g e </s>|case=genitive:number=singular
+<s> b e i l a g e </s>|<s> b e i l a g e n </s>|case=genitive:number=plural
+<s> b e i l a g e </s>|<s> b e i l a g e </s>|case=dative:number=singular
+<s> b e i l a g e </s>|<s> b e i l a g e n </s>|case=dative:number=plural
+<s> b e i l a g e </s>|<s> b e i l a g e </s>|case=accusative:number=singular
+<s> b e i l a g e </s>|<s> b e i l a g e n </s>|case=accusative:number=plural
+<s> b e r b e r a f f e </s>|<s> b e r b e r a f f e </s>|case=nominative:number=singular
+<s> b e r b e r a f f e </s>|<s> b e r b e r a f f e n </s>|case=nominative:number=plural
+<s> b e r b e r a f f e </s>|<s> b e r b e r a f f e n </s>|case=genitive:number=singular
+<s> b e r b e r a f f e </s>|<s> b e r b e r a f f e n </s>|case=genitive:number=plural
+<s> b e r b e r a f f e </s>|<s> b e r b e r a f f e n </s>|case=dative:number=singular
+<s> b e r b e r a f f e </s>|<s> b e r b e r a f f e n </s>|case=dative:number=plural
+<s> b e r b e r a f f e </s>|<s> b e r b e r a f f e n </s>|case=accusative:number=singular
+<s> b e r b e r a f f e </s>|<s> b e r b e r a f f e n </s>|case=accusative:number=plural
+<s> b e z i e h u n g </s>|<s> b e z i e h u n g </s>|case=nominative:number=singular
+<s> b e z i e h u n g </s>|<s> b e z i e h u n g e n </s>|case=nominative:number=plural
+<s> b e z i e h u n g </s>|<s> b e z i e h u n g </s>|case=genitive:number=singular
+<s> b e z i e h u n g </s>|<s> b e z i e h u n g e n </s>|case=genitive:number=plural
+<s> b e z i e h u n g </s>|<s> b e z i e h u n g </s>|case=dative:number=singular
+<s> b e z i e h u n g </s>|<s> b e z i e h u n g e n </s>|case=dative:number=plural
+<s> b e z i e h u n g </s>|<s> b e z i e h u n g </s>|case=accusative:number=singular
+<s> b e z i e h u n g </s>|<s> b e z i e h u n g e n </s>|case=accusative:number=plural
+<s> b i b e l </s>|<s> b i b e l </s>|case=nominative:number=singular
+<s> b i b e l </s>|<s> b i b e l n </s>|case=nominative:number=plural
+<s> b i b e l </s>|<s> b i b e l </s>|case=genitive:number=singular
+<s> b i b e l </s>|<s> b i b e l n </s>|case=genitive:number=plural
+<s> b i b e l </s>|<s> b i b e l </s>|case=dative:number=singular
+<s> b i b e l </s>|<s> b i b e l n </s>|case=dative:number=plural
+<s> b i b e l </s>|<s> b i b e l </s>|case=accusative:number=singular
+<s> b i b e l </s>|<s> b i b e l n </s>|case=accusative:number=plural
+<s> b l u m e </s>|<s> b l u m e </s>|case=nominative:number=singular
+<s> b l u m e </s>|<s> b l u m e n </s>|case=nominative:number=plural
+<s> b l u m e </s>|<s> b l u m e </s>|case=genitive:number=singular
+<s> b l u m e </s>|<s> b l u m e n </s>|case=genitive:number=plural
+<s> b l u m e </s>|<s> b l u m e </s>|case=dative:number=singular
+<s> b l u m e </s>|<s> b l u m e n </s>|case=dative:number=plural
+<s> b l u m e </s>|<s> b l u m e </s>|case=accusative:number=singular
+<s> b l u m e </s>|<s> b l u m e n </s>|case=accusative:number=plural
+<s> b l u t u n g </s>|<s> b l u t u n g </s>|case=nominative:number=singular
+<s> b l u t u n g </s>|<s> b l u t u n g e n </s>|case=nominative:number=plural
+<s> b l u t u n g </s>|<s> b l u t u n g </s>|case=genitive:number=singular
+<s> b l u t u n g </s>|<s> b l u t u n g e n </s>|case=genitive:number=plural
+<s> b l u t u n g </s>|<s> b l u t u n g </s>|case=dative:number=singular
+<s> b l u t u n g </s>|<s> b l u t u n g e n </s>|case=dative:number=plural
+<s> b l u t u n g </s>|<s> b l u t u n g </s>|case=accusative:number=singular
+<s> b l u t u n g </s>|<s> b l u t u n g e n </s>|case=accusative:number=plural
+<s> b l ä t t c h e n </s>|<s> b l ä t t c h e n </s>|case=nominative:number=singular
+<s> b l ä t t c h e n </s>|<s> b l ä t t c h e n </s>|case=nominative:number=plural
+<s> b l ä t t c h e n </s>|<s> b l ä t t c h e n s </s>|case=genitive:number=singular
+<s> b l ä t t c h e n </s>|<s> b l ä t t c h e n </s>|case=genitive:number=plural
+<s> b l ä t t c h e n </s>|<s> b l ä t t c h e n </s>|case=dative:number=singular
+<s> b l ä t t c h e n </s>|<s> b l ä t t c h e n </s>|case=dative:number=plural
+<s> b l ä t t c h e n </s>|<s> b l ä t t c h e n </s>|case=accusative:number=singular
+<s> b l ä t t c h e n </s>|<s> b l ä t t c h e n </s>|case=accusative:number=plural
+<s> b l ü t e n s t ä n g e l </s>|<s> b l ü t e n s t ä n g e l </s>|case=nominative:number=singular
+<s> b l ü t e n s t ä n g e l </s>|<s> b l ü t e n s t ä n g e l </s>|case=nominative:number=plural
+<s> b l ü t e n s t ä n g e l </s>|<s> b l ü t e n s t ä n g e l s </s>|case=genitive:number=singular
+<s> b l ü t e n s t ä n g e l </s>|<s> b l ü t e n s t ä n g e l </s>|case=genitive:number=plural
+<s> b l ü t e n s t ä n g e l </s>|<s> b l ü t e n s t ä n g e l </s>|case=dative:number=singular
+<s> b l ü t e n s t ä n g e l </s>|<s> b l ü t e n s t ä n g e l n </s>|case=dative:number=plural
+<s> b l ü t e n s t ä n g e l </s>|<s> b l ü t e n s t ä n g e l </s>|case=accusative:number=singular
+<s> b l ü t e n s t ä n g e l </s>|<s> b l ü t e n s t ä n g e l </s>|case=accusative:number=plural
+<s> b o g e n </s>|<s> b o g e n </s>|case=nominative:number=singular
+<s> b o g e n </s>|<s> b ö g e n </s>|case=nominative:number=plural
+<s> b o g e n </s>|<s> b o g e n s </s>|case=genitive:number=singular
+<s> b o g e n </s>|<s> b ö g e n </s>|case=genitive:number=plural
+<s> b o g e n </s>|<s> b o g e n </s>|case=dative:number=singular
+<s> b o g e n </s>|<s> b ö g e n </s>|case=dative:number=plural
+<s> b o g e n </s>|<s> b o g e n </s>|case=accusative:number=singular
+<s> b o g e n </s>|<s> b ö g e n </s>|case=accusative:number=plural
+<s> b o t o k u d e </s>|<s> b o t o k u d e </s>|case=nominative:number=singular
+<s> b o t o k u d e </s>|<s> b o t o k u d e n </s>|case=nominative:number=plural
+<s> b o t o k u d e </s>|<s> b o t o k u d e n </s>|case=genitive:number=singular
+<s> b o t o k u d e </s>|<s> b o t o k u d e n </s>|case=genitive:number=plural
+<s> b o t o k u d e </s>|<s> b o t o k u d e n </s>|case=dative:number=singular
+<s> b o t o k u d e </s>|<s> b o t o k u d e n </s>|case=dative:number=plural
+<s> b o t o k u d e </s>|<s> b o t o k u d e n </s>|case=accusative:number=singular
+<s> b o t o k u d e </s>|<s> b o t o k u d e n </s>|case=accusative:number=plural
+<s> b o t s c h a f t e r i n </s>|<s> b o t s c h a f t e r i n </s>|case=nominative:number=singular
+<s> b o t s c h a f t e r i n </s>|<s> b o t s c h a f t e r i n n e n </s>|case=nominative:number=plural
+<s> b o t s c h a f t e r i n </s>|<s> b o t s c h a f t e r i n </s>|case=genitive:number=singular
+<s> b o t s c h a f t e r i n </s>|<s> b o t s c h a f t e r i n n e n </s>|case=genitive:number=plural
+<s> b o t s c h a f t e r i n </s>|<s> b o t s c h a f t e r i n </s>|case=dative:number=singular
+<s> b o t s c h a f t e r i n </s>|<s> b o t s c h a f t e r i n n e n </s>|case=dative:number=plural
+<s> b o t s c h a f t e r i n </s>|<s> b o t s c h a f t e r i n </s>|case=accusative:number=singular
+<s> b o t s c h a f t e r i n </s>|<s> b o t s c h a f t e r i n n e n </s>|case=accusative:number=plural
+<s> b r e c h u n g </s>|<s> b r e c h u n g </s>|case=nominative:number=singular
+<s> b r e c h u n g </s>|<s> b r e c h u n g e n </s>|case=nominative:number=plural
+<s> b r e c h u n g </s>|<s> b r e c h u n g </s>|case=genitive:number=singular
+<s> b r e c h u n g </s>|<s> b r e c h u n g e n </s>|case=genitive:number=plural
+<s> b r e c h u n g </s>|<s> b r e c h u n g </s>|case=dative:number=singular
+<s> b r e c h u n g </s>|<s> b r e c h u n g e n </s>|case=dative:number=plural
+<s> b r e c h u n g </s>|<s> b r e c h u n g </s>|case=accusative:number=singular
+<s> b r e c h u n g </s>|<s> b r e c h u n g e n </s>|case=accusative:number=plural
+<s> b r o t s u p p e </s>|<s> b r o t s u p p e </s>|case=nominative:number=singular
+<s> b r o t s u p p e </s>|<s> b r o t s u p p e n </s>|case=nominative:number=plural
+<s> b r o t s u p p e </s>|<s> b r o t s u p p e </s>|case=genitive:number=singular
+<s> b r o t s u p p e </s>|<s> b r o t s u p p e n </s>|case=genitive:number=plural
+<s> b r o t s u p p e </s>|<s> b r o t s u p p e </s>|case=dative:number=singular
+<s> b r o t s u p p e </s>|<s> b r o t s u p p e n </s>|case=dative:number=plural
+<s> b r o t s u p p e </s>|<s> b r o t s u p p e </s>|case=accusative:number=singular
+<s> b r o t s u p p e </s>|<s> b r o t s u p p e n </s>|case=accusative:number=plural
+<s> b u t z e m a n n </s>|<s> b u t z e m a n n </s>|case=nominative:number=singular
+<s> b u t z e m a n n </s>|<s> b u t z e m ä n n e r </s>|case=nominative:number=plural
+<s> b u t z e m a n n </s>|<s> b u t z e m a n n e s </s>|case=genitive:number=singular
+<s> b u t z e m a n n </s>|<s> b u t z e m ä n n e r </s>|case=genitive:number=plural
+<s> b u t z e m a n n </s>|<s> b u t z e m a n n </s>|case=dative:number=singular
+<s> b u t z e m a n n </s>|<s> b u t z e m ä n n e r n </s>|case=dative:number=plural
+<s> b u t z e m a n n </s>|<s> b u t z e m a n n </s>|case=accusative:number=singular
+<s> b u t z e m a n n </s>|<s> b u t z e m ä n n e r </s>|case=accusative:number=plural
+<s> c o m m u n i q u é </s>|<s> c o m m u n i q u é </s>|case=nominative:number=singular
+<s> c o m m u n i q u é </s>|<s> c o m m u n i q u é s </s>|case=nominative:number=plural
+<s> c o m m u n i q u é </s>|<s> c o m m u n i q u é s </s>|case=genitive:number=singular
+<s> c o m m u n i q u é </s>|<s> c o m m u n i q u é s </s>|case=genitive:number=plural
+<s> c o m m u n i q u é </s>|<s> c o m m u n i q u é </s>|case=dative:number=singular
+<s> c o m m u n i q u é </s>|<s> c o m m u n i q u é s </s>|case=dative:number=plural
+<s> c o m m u n i q u é </s>|<s> c o m m u n i q u é </s>|case=accusative:number=singular
+<s> c o m m u n i q u é </s>|<s> c o m m u n i q u é s </s>|case=accusative:number=plural
+<s> d a m a s t g e w e b e </s>|<s> d a m a s t g e w e b e </s>|case=nominative:number=singular
+<s> d a m a s t g e w e b e </s>|<s> d a m a s t g e w e b e </s>|case=nominative:number=plural
+<s> d a m a s t g e w e b e </s>|<s> d a m a s t g e w e b e s </s>|case=genitive:number=singular
+<s> d a m a s t g e w e b e </s>|<s> d a m a s t g e w e b e </s>|case=genitive:number=plural
+<s> d a m a s t g e w e b e </s>|<s> d a m a s t g e w e b e </s>|case=dative:number=singular
+<s> d a m a s t g e w e b e </s>|<s> d a m a s t g e w e b e n </s>|case=dative:number=plural
+<s> d a m a s t g e w e b e </s>|<s> d a m a s t g e w e b e </s>|case=accusative:number=singular
+<s> d a m a s t g e w e b e </s>|<s> d a m a s t g e w e b e </s>|case=accusative:number=plural
+<s> d i l d o </s>|<s> d i l d o </s>|case=nominative:number=singular
+<s> d i l d o </s>|<s> d i l d o s </s>|case=nominative:number=plural
+<s> d i l d o </s>|<s> d i l d o s </s>|case=genitive:number=singular
+<s> d i l d o </s>|<s> d i l d o s </s>|case=genitive:number=plural
+<s> d i l d o </s>|<s> d i l d o </s>|case=dative:number=singular
+<s> d i l d o </s>|<s> d i l d o s </s>|case=dative:number=plural
+<s> d i l d o </s>|<s> d i l d o </s>|case=accusative:number=singular
+<s> d i l d o </s>|<s> d i l d o s </s>|case=accusative:number=plural
+<s> d o w n e r </s>|<s> d o w n e r </s>|case=nominative:number=singular
+<s> d o w n e r </s>|<s> d o w n e r </s>|case=nominative:number=plural
+<s> d o w n e r </s>|<s> d o w n e r s </s>|case=genitive:number=singular
+<s> d o w n e r </s>|<s> d o w n e r </s>|case=genitive:number=plural
+<s> d o w n e r </s>|<s> d o w n e r </s>|case=dative:number=singular
+<s> d o w n e r </s>|<s> d o w n e r n </s>|case=dative:number=plural
+<s> d o w n e r </s>|<s> d o w n e r </s>|case=accusative:number=singular
+<s> d o w n e r </s>|<s> d o w n e r </s>|case=accusative:number=plural
+<s> d r o g e n f a l l e </s>|<s> d r o g e n f a l l e </s>|case=nominative:number=singular
+<s> d r o g e n f a l l e </s>|<s> d r o g e n f a l l e n </s>|case=nominative:number=plural
+<s> d r o g e n f a l l e </s>|<s> d r o g e n f a l l e </s>|case=genitive:number=singular
+<s> d r o g e n f a l l e </s>|<s> d r o g e n f a l l e n </s>|case=genitive:number=plural
+<s> d r o g e n f a l l e </s>|<s> d r o g e n f a l l e </s>|case=dative:number=singular
+<s> d r o g e n f a l l e </s>|<s> d r o g e n f a l l e n </s>|case=dative:number=plural
+<s> d r o g e n f a l l e </s>|<s> d r o g e n f a l l e </s>|case=accusative:number=singular
+<s> d r o g e n f a l l e </s>|<s> d r o g e n f a l l e n </s>|case=accusative:number=plural
+<s> d ä m o n </s>|<s> d ä m o n </s>|case=nominative:number=singular
+<s> d ä m o n </s>|<s> d ä m o n e n </s>|case=nominative:number=plural
+<s> d ä m o n </s>|<s> d ä m o n s </s>|case=genitive:number=singular
+<s> d ä m o n </s>|<s> d ä m o n e n </s>|case=genitive:number=plural
+<s> d ä m o n </s>|<s> d ä m o n </s>|case=dative:number=singular
+<s> d ä m o n </s>|<s> d ä m o n e n </s>|case=dative:number=plural
+<s> d ä m o n </s>|<s> d ä m o n </s>|case=accusative:number=singular
+<s> d ä m o n </s>|<s> d ä m o n e n </s>|case=accusative:number=plural
+<s> e b b e </s>|<s> e b b e </s>|case=nominative:number=singular
+<s> e b b e </s>|<s> e b b e n </s>|case=nominative:number=plural
+<s> e b b e </s>|<s> e b b e </s>|case=genitive:number=singular
+<s> e b b e </s>|<s> e b b e n </s>|case=genitive:number=plural
+<s> e b b e </s>|<s> e b b e </s>|case=dative:number=singular
+<s> e b b e </s>|<s> e b b e n </s>|case=dative:number=plural
+<s> e b b e </s>|<s> e b b e </s>|case=accusative:number=singular
+<s> e b b e </s>|<s> e b b e n </s>|case=accusative:number=plural
+<s> e i n s c h n i t t </s>|<s> e i n s c h n i t t </s>|case=nominative:number=singular
+<s> e i n s c h n i t t </s>|<s> e i n s c h n i t t e </s>|case=nominative:number=plural
+<s> e i n s c h n i t t </s>|<s> e i n s c h n i t t e s </s>|case=genitive:number=singular
+<s> e i n s c h n i t t </s>|<s> e i n s c h n i t t e </s>|case=genitive:number=plural
+<s> e i n s c h n i t t </s>|<s> e i n s c h n i t t </s>|case=dative:number=singular
+<s> e i n s c h n i t t </s>|<s> e i n s c h n i t t e n </s>|case=dative:number=plural
+<s> e i n s c h n i t t </s>|<s> e i n s c h n i t t </s>|case=accusative:number=singular
+<s> e i n s c h n i t t </s>|<s> e i n s c h n i t t e </s>|case=accusative:number=plural
+<s> e n t d e c k e r </s>|<s> e n t d e c k e r </s>|case=nominative:number=singular
+<s> e n t d e c k e r </s>|<s> e n t d e c k e r </s>|case=nominative:number=plural
+<s> e n t d e c k e r </s>|<s> e n t d e c k e r s </s>|case=genitive:number=singular
+<s> e n t d e c k e r </s>|<s> e n t d e c k e r </s>|case=genitive:number=plural
+<s> e n t d e c k e r </s>|<s> e n t d e c k e r </s>|case=dative:number=singular
+<s> e n t d e c k e r </s>|<s> e n t d e c k e r n </s>|case=dative:number=plural
+<s> e n t d e c k e r </s>|<s> e n t d e c k e r </s>|case=accusative:number=singular
+<s> e n t d e c k e r </s>|<s> e n t d e c k e r </s>|case=accusative:number=plural
+<s> e r k r a n k u n g </s>|<s> e r k r a n k u n g </s>|case=nominative:number=singular
+<s> e r k r a n k u n g </s>|<s> e r k r a n k u n g e n </s>|case=nominative:number=plural
+<s> e r k r a n k u n g </s>|<s> e r k r a n k u n g </s>|case=genitive:number=singular
+<s> e r k r a n k u n g </s>|<s> e r k r a n k u n g e n </s>|case=genitive:number=plural
+<s> e r k r a n k u n g </s>|<s> e r k r a n k u n g </s>|case=dative:number=singular
+<s> e r k r a n k u n g </s>|<s> e r k r a n k u n g e n </s>|case=dative:number=plural
+<s> e r k r a n k u n g </s>|<s> e r k r a n k u n g </s>|case=accusative:number=singular
+<s> e r k r a n k u n g </s>|<s> e r k r a n k u n g e n </s>|case=accusative:number=plural
+<s> e v o l u t i o n i s t i n </s>|<s> e v o l u t i o n i s t i n </s>|case=nominative:number=singular
+<s> e v o l u t i o n i s t i n </s>|<s> e v o l u t i o n i s t i n n e n </s>|case=nominative:number=plural
+<s> e v o l u t i o n i s t i n </s>|<s> e v o l u t i o n i s t i n </s>|case=genitive:number=singular
+<s> e v o l u t i o n i s t i n </s>|<s> e v o l u t i o n i s t i n n e n </s>|case=genitive:number=plural
+<s> e v o l u t i o n i s t i n </s>|<s> e v o l u t i o n i s t i n </s>|case=dative:number=singular
+<s> e v o l u t i o n i s t i n </s>|<s> e v o l u t i o n i s t i n n e n </s>|case=dative:number=plural
+<s> e v o l u t i o n i s t i n </s>|<s> e v o l u t i o n i s t i n </s>|case=accusative:number=singular
+<s> e v o l u t i o n i s t i n </s>|<s> e v o l u t i o n i s t i n n e n </s>|case=accusative:number=plural
+<s> e x p e r t i n </s>|<s> e x p e r t i n </s>|case=nominative:number=singular
+<s> e x p e r t i n </s>|<s> e x p e r t i n n e n </s>|case=nominative:number=plural
+<s> e x p e r t i n </s>|<s> e x p e r t i n </s>|case=genitive:number=singular
+<s> e x p e r t i n </s>|<s> e x p e r t i n n e n </s>|case=genitive:number=plural
+<s> e x p e r t i n </s>|<s> e x p e r t i n </s>|case=dative:number=singular
+<s> e x p e r t i n </s>|<s> e x p e r t i n n e n </s>|case=dative:number=plural
+<s> e x p e r t i n </s>|<s> e x p e r t i n </s>|case=accusative:number=singular
+<s> e x p e r t i n </s>|<s> e x p e r t i n n e n </s>|case=accusative:number=plural
+<s> f a n </s>|<s> f a n </s>|case=nominative:number=singular
+<s> f a n </s>|<s> f a n s </s>|case=nominative:number=plural
+<s> f a n </s>|<s> f a n s </s>|case=genitive:number=singular
+<s> f a n </s>|<s> f a n s </s>|case=genitive:number=plural
+<s> f a n </s>|<s> f a n </s>|case=dative:number=singular
+<s> f a n </s>|<s> f a n s </s>|case=dative:number=plural
+<s> f a n </s>|<s> f a n </s>|case=accusative:number=singular
+<s> f a n </s>|<s> f a n s </s>|case=accusative:number=plural
+<s> f a u s t f e u e r w a f f e </s>|<s> f a u s t f e u e r w a f f e </s>|case=nominative:number=singular
+<s> f a u s t f e u e r w a f f e </s>|<s> f a u s t f e u e r w a f f e n </s>|case=nominative:number=plural
+<s> f a u s t f e u e r w a f f e </s>|<s> f a u s t f e u e r w a f f e </s>|case=genitive:number=singular
+<s> f a u s t f e u e r w a f f e </s>|<s> f a u s t f e u e r w a f f e n </s>|case=genitive:number=plural
+<s> f a u s t f e u e r w a f f e </s>|<s> f a u s t f e u e r w a f f e </s>|case=dative:number=singular
+<s> f a u s t f e u e r w a f f e </s>|<s> f a u s t f e u e r w a f f e n </s>|case=dative:number=plural
+<s> f a u s t f e u e r w a f f e </s>|<s> f a u s t f e u e r w a f f e </s>|case=accusative:number=singular
+<s> f a u s t f e u e r w a f f e </s>|<s> f a u s t f e u e r w a f f e n </s>|case=accusative:number=plural
+<s> f e d e r </s>|<s> f e d e r </s>|case=nominative:number=singular
+<s> f e d e r </s>|<s> f e d e r n </s>|case=nominative:number=plural
+<s> f e d e r </s>|<s> f e d e r </s>|case=genitive:number=singular
+<s> f e d e r </s>|<s> f e d e r n </s>|case=genitive:number=plural
+<s> f e d e r </s>|<s> f e d e r </s>|case=dative:number=singular
+<s> f e d e r </s>|<s> f e d e r n </s>|case=dative:number=plural
+<s> f e d e r </s>|<s> f e d e r </s>|case=accusative:number=singular
+<s> f e d e r </s>|<s> f e d e r n </s>|case=accusative:number=plural
+<s> f e n n </s>|<s> f e n n </s>|case=nominative:number=singular
+<s> f e n n </s>|<s> f e n n e </s>|case=nominative:number=plural
+<s> f e n n </s>|<s> f e n n e s </s>|case=genitive:number=singular
+<s> f e n n </s>|<s> f e n n e </s>|case=genitive:number=plural
+<s> f e n n </s>|<s> f e n n </s>|case=dative:number=singular
+<s> f e n n </s>|<s> f e n n e n </s>|case=dative:number=plural
+<s> f e n n </s>|<s> f e n n </s>|case=accusative:number=singular
+<s> f e n n </s>|<s> f e n n e </s>|case=accusative:number=plural
+<s> f e s s e l s p i e l </s>|<s> f e s s e l s p i e l </s>|case=nominative:number=singular
+<s> f e s s e l s p i e l </s>|<s> f e s s e l s p i e l e </s>|case=nominative:number=plural
+<s> f e s s e l s p i e l </s>|<s> f e s s e l s p i e l e s </s>|case=genitive:number=singular
+<s> f e s s e l s p i e l </s>|<s> f e s s e l s p i e l e </s>|case=genitive:number=plural
+<s> f e s s e l s p i e l </s>|<s> f e s s e l s p i e l </s>|case=dative:number=singular
+<s> f e s s e l s p i e l </s>|<s> f e s s e l s p i e l e n </s>|case=dative:number=plural
+<s> f e s s e l s p i e l </s>|<s> f e s s e l s p i e l </s>|case=accusative:number=singular
+<s> f e s s e l s p i e l </s>|<s> f e s s e l s p i e l e </s>|case=accusative:number=plural
+<s> f i c h t e </s>|<s> f i c h t e </s>|case=nominative:number=singular
+<s> f i c h t e </s>|<s> f i c h t e n </s>|case=nominative:number=plural
+<s> f i c h t e </s>|<s> f i c h t e </s>|case=genitive:number=singular
+<s> f i c h t e </s>|<s> f i c h t e n </s>|case=genitive:number=plural
+<s> f i c h t e </s>|<s> f i c h t e </s>|case=dative:number=singular
+<s> f i c h t e </s>|<s> f i c h t e n </s>|case=dative:number=plural
+<s> f i c h t e </s>|<s> f i c h t e </s>|case=accusative:number=singular
+<s> f i c h t e </s>|<s> f i c h t e n </s>|case=accusative:number=plural
+<s> f i c k </s>|<s> f i c k </s>|case=nominative:number=singular
+<s> f i c k </s>|<s> f i c k s </s>|case=nominative:number=plural
+<s> f i c k </s>|<s> f i c k s </s>|case=genitive:number=singular
+<s> f i c k </s>|<s> f i c k s </s>|case=genitive:number=plural
+<s> f i c k </s>|<s> f i c k </s>|case=dative:number=singular
+<s> f i c k </s>|<s> f i c k s </s>|case=dative:number=plural
+<s> f i c k </s>|<s> f i c k </s>|case=accusative:number=singular
+<s> f i c k </s>|<s> f i c k s </s>|case=accusative:number=plural
+<s> f i c k e r </s>|<s> f i c k e r </s>|case=nominative:number=singular
+<s> f i c k e r </s>|<s> f i c k e r </s>|case=nominative:number=plural
+<s> f i c k e r </s>|<s> f i c k e r s </s>|case=genitive:number=singular
+<s> f i c k e r </s>|<s> f i c k e r </s>|case=genitive:number=plural
+<s> f i c k e r </s>|<s> f i c k e r </s>|case=dative:number=singular
+<s> f i c k e r </s>|<s> f i c k e r n </s>|case=dative:number=plural
+<s> f i c k e r </s>|<s> f i c k e r </s>|case=accusative:number=singular
+<s> f i c k e r </s>|<s> f i c k e r </s>|case=accusative:number=plural
+<s> f i l z l a u s </s>|<s> f i l z l a u s </s>|case=nominative:number=singular
+<s> f i l z l a u s </s>|<s> f i l z l ä u s e </s>|case=nominative:number=plural
+<s> f i l z l a u s </s>|<s> f i l z l a u s </s>|case=genitive:number=singular
+<s> f i l z l a u s </s>|<s> f i l z l ä u s e </s>|case=genitive:number=plural
+<s> f i l z l a u s </s>|<s> f i l z l a u s </s>|case=dative:number=singular
+<s> f i l z l a u s </s>|<s> f i l z l ä u s e n </s>|case=dative:number=plural
+<s> f i l z l a u s </s>|<s> f i l z l a u s </s>|case=accusative:number=singular
+<s> f i l z l a u s </s>|<s> f i l z l ä u s e </s>|case=accusative:number=plural
+<s> f i n g e r </s>|<s> f i n g e r </s>|case=nominative:number=singular
+<s> f i n g e r </s>|<s> f i n g e r </s>|case=nominative:number=plural
+<s> f i n g e r </s>|<s> f i n g e r s </s>|case=genitive:number=singular
+<s> f i n g e r </s>|<s> f i n g e r </s>|case=genitive:number=plural
+<s> f i n g e r </s>|<s> f i n g e r </s>|case=dative:number=singular
+<s> f i n g e r </s>|<s> f i n g e r n </s>|case=dative:number=plural
+<s> f i n g e r </s>|<s> f i n g e r </s>|case=accusative:number=singular
+<s> f i n g e r </s>|<s> f i n g e r </s>|case=accusative:number=plural
+<s> f i s c h t r e p p e </s>|<s> f i s c h t r e p p e </s>|case=nominative:number=singular
+<s> f i s c h t r e p p e </s>|<s> f i s c h t r e p p e n </s>|case=nominative:number=plural
+<s> f i s c h t r e p p e </s>|<s> f i s c h t r e p p e </s>|case=genitive:number=singular
+<s> f i s c h t r e p p e </s>|<s> f i s c h t r e p p e n </s>|case=genitive:number=plural
+<s> f i s c h t r e p p e </s>|<s> f i s c h t r e p p e </s>|case=dative:number=singular
+<s> f i s c h t r e p p e </s>|<s> f i s c h t r e p p e n </s>|case=dative:number=plural
+<s> f i s c h t r e p p e </s>|<s> f i s c h t r e p p e </s>|case=accusative:number=singular
+<s> f i s c h t r e p p e </s>|<s> f i s c h t r e p p e n </s>|case=accusative:number=plural
+<s> f l u g b e g l e i t e r </s>|<s> f l u g b e g l e i t e r </s>|case=nominative:number=singular
+<s> f l u g b e g l e i t e r </s>|<s> f l u g b e g l e i t e r </s>|case=nominative:number=plural
+<s> f l u g b e g l e i t e r </s>|<s> f l u g b e g l e i t e r s </s>|case=genitive:number=singular
+<s> f l u g b e g l e i t e r </s>|<s> f l u g b e g l e i t e r </s>|case=genitive:number=plural
+<s> f l u g b e g l e i t e r </s>|<s> f l u g b e g l e i t e r </s>|case=dative:number=singular
+<s> f l u g b e g l e i t e r </s>|<s> f l u g b e g l e i t e r n </s>|case=dative:number=plural
+<s> f l u g b e g l e i t e r </s>|<s> f l u g b e g l e i t e r </s>|case=accusative:number=singular
+<s> f l u g b e g l e i t e r </s>|<s> f l u g b e g l e i t e r </s>|case=accusative:number=plural
+<s> f o r s c h u n g </s>|<s> f o r s c h u n g </s>|case=nominative:number=singular
+<s> f o r s c h u n g </s>|<s> f o r s c h u n g e n </s>|case=nominative:number=plural
+<s> f o r s c h u n g </s>|<s> f o r s c h u n g </s>|case=genitive:number=singular
+<s> f o r s c h u n g </s>|<s> f o r s c h u n g e n </s>|case=genitive:number=plural
+<s> f o r s c h u n g </s>|<s> f o r s c h u n g </s>|case=dative:number=singular
+<s> f o r s c h u n g </s>|<s> f o r s c h u n g e n </s>|case=dative:number=plural
+<s> f o r s c h u n g </s>|<s> f o r s c h u n g </s>|case=accusative:number=singular
+<s> f o r s c h u n g </s>|<s> f o r s c h u n g e n </s>|case=accusative:number=plural
+<s> f r e i z e i t </s>|<s> f r e i z e i t </s>|case=nominative:number=singular
+<s> f r e i z e i t </s>|<s> f r e i z e i t e n </s>|case=nominative:number=plural
+<s> f r e i z e i t </s>|<s> f r e i z e i t </s>|case=genitive:number=singular
+<s> f r e i z e i t </s>|<s> f r e i z e i t e n </s>|case=genitive:number=plural
+<s> f r e i z e i t </s>|<s> f r e i z e i t </s>|case=dative:number=singular
+<s> f r e i z e i t </s>|<s> f r e i z e i t e n </s>|case=dative:number=plural
+<s> f r e i z e i t </s>|<s> f r e i z e i t </s>|case=accusative:number=singular
+<s> f r e i z e i t </s>|<s> f r e i z e i t e n </s>|case=accusative:number=plural
+<s> f ü h r e r h a u p t q u a r t i e r </s>|<s> f ü h r e r h a u p t q u a r t i e r </s>|case=nominative:number=singular
+<s> f ü h r e r h a u p t q u a r t i e r </s>|<s> f ü h r e r h a u p t q u a r t i e r e </s>|case=nominative:number=plural
+<s> f ü h r e r h a u p t q u a r t i e r </s>|<s> f ü h r e r h a u p t q u a r t i e r s </s>|case=genitive:number=singular
+<s> f ü h r e r h a u p t q u a r t i e r </s>|<s> f ü h r e r h a u p t q u a r t i e r e </s>|case=genitive:number=plural
+<s> f ü h r e r h a u p t q u a r t i e r </s>|<s> f ü h r e r h a u p t q u a r t i e r </s>|case=dative:number=singular
+<s> f ü h r e r h a u p t q u a r t i e r </s>|<s> f ü h r e r h a u p t q u a r t i e r e n </s>|case=dative:number=plural
+<s> f ü h r e r h a u p t q u a r t i e r </s>|<s> f ü h r e r h a u p t q u a r t i e r </s>|case=accusative:number=singular
+<s> f ü h r e r h a u p t q u a r t i e r </s>|<s> f ü h r e r h a u p t q u a r t i e r e </s>|case=accusative:number=plural
+<s> g a s t </s>|<s> g a s t </s>|case=nominative:number=singular
+<s> g a s t </s>|<s> g ä s t e </s>|case=nominative:number=plural
+<s> g a s t </s>|<s> g a s t e s </s>|case=genitive:number=singular
+<s> g a s t </s>|<s> g ä s t e </s>|case=genitive:number=plural
+<s> g a s t </s>|<s> g a s t </s>|case=dative:number=singular
+<s> g a s t </s>|<s> g ä s t e n </s>|case=dative:number=plural
+<s> g a s t </s>|<s> g a s t </s>|case=accusative:number=singular
+<s> g a s t </s>|<s> g ä s t e </s>|case=accusative:number=plural
+<s> g a s t h o f </s>|<s> g a s t h o f </s>|case=nominative:number=singular
+<s> g a s t h o f </s>|<s> g a s t h ö f e </s>|case=nominative:number=plural
+<s> g a s t h o f </s>|<s> g a s t h o f e s </s>|case=genitive:number=singular
+<s> g a s t h o f </s>|<s> g a s t h ö f e </s>|case=genitive:number=plural
+<s> g a s t h o f </s>|<s> g a s t h o f </s>|case=dative:number=singular
+<s> g a s t h o f </s>|<s> g a s t h ö f e n </s>|case=dative:number=plural
+<s> g a s t h o f </s>|<s> g a s t h o f </s>|case=accusative:number=singular
+<s> g a s t h o f </s>|<s> g a s t h ö f e </s>|case=accusative:number=plural
+<s> g e b ä u d e </s>|<s> g e b ä u d e </s>|case=nominative:number=singular
+<s> g e b ä u d e </s>|<s> g e b ä u d e </s>|case=nominative:number=plural
+<s> g e b ä u d e </s>|<s> g e b ä u d e s </s>|case=genitive:number=singular
+<s> g e b ä u d e </s>|<s> g e b ä u d e </s>|case=genitive:number=plural
+<s> g e b ä u d e </s>|<s> g e b ä u d e </s>|case=dative:number=singular
+<s> g e b ä u d e </s>|<s> g e b ä u d e n </s>|case=dative:number=plural
+<s> g e b ä u d e </s>|<s> g e b ä u d e </s>|case=accusative:number=singular
+<s> g e b ä u d e </s>|<s> g e b ä u d e </s>|case=accusative:number=plural
+<s> g e d a n k e n w e l t </s>|<s> g e d a n k e n w e l t </s>|case=nominative:number=singular
+<s> g e d a n k e n w e l t </s>|<s> g e d a n k e n w e l t e n </s>|case=nominative:number=plural
+<s> g e d a n k e n w e l t </s>|<s> g e d a n k e n w e l t </s>|case=genitive:number=singular
+<s> g e d a n k e n w e l t </s>|<s> g e d a n k e n w e l t e n </s>|case=genitive:number=plural
+<s> g e d a n k e n w e l t </s>|<s> g e d a n k e n w e l t </s>|case=dative:number=singular
+<s> g e d a n k e n w e l t </s>|<s> g e d a n k e n w e l t e n </s>|case=dative:number=plural
+<s> g e d a n k e n w e l t </s>|<s> g e d a n k e n w e l t </s>|case=accusative:number=singular
+<s> g e d a n k e n w e l t </s>|<s> g e d a n k e n w e l t e n </s>|case=accusative:number=plural
+<s> g e i e r </s>|<s> g e i e r </s>|case=nominative:number=singular
+<s> g e i e r </s>|<s> g e i e r n </s>|case=nominative:number=plural
+<s> g e i e r </s>|<s> g e i e r s </s>|case=genitive:number=singular
+<s> g e i e r </s>|<s> g e i e r n </s>|case=genitive:number=plural
+<s> g e i e r </s>|<s> g e i e r </s>|case=dative:number=singular
+<s> g e i e r </s>|<s> g e i e r n </s>|case=dative:number=plural
+<s> g e i e r </s>|<s> g e i e r </s>|case=accusative:number=singular
+<s> g e i e r </s>|<s> g e i e r n </s>|case=accusative:number=plural
+<s> g e i s t </s>|<s> g e i s t </s>|case=nominative:number=singular
+<s> g e i s t </s>|<s> g e i s t e </s>|case=nominative:number=plural
+<s> g e i s t </s>|<s> g e i s t e s </s>|case=genitive:number=singular
+<s> g e i s t </s>|<s> g e i s t e </s>|case=genitive:number=plural
+<s> g e i s t </s>|<s> g e i s t </s>|case=dative:number=singular
+<s> g e i s t </s>|<s> g e i s t e n </s>|case=dative:number=plural
+<s> g e i s t </s>|<s> g e i s t </s>|case=accusative:number=singular
+<s> g e i s t </s>|<s> g e i s t e </s>|case=accusative:number=plural
+<s> g e r ä u s c h </s>|<s> g e r ä u s c h </s>|case=nominative:number=singular
+<s> g e r ä u s c h </s>|<s> g e r ä u s c h e </s>|case=nominative:number=plural
+<s> g e r ä u s c h </s>|<s> g e r ä u s c h e s </s>|case=genitive:number=singular
+<s> g e r ä u s c h </s>|<s> g e r ä u s c h e </s>|case=genitive:number=plural
+<s> g e r ä u s c h </s>|<s> g e r ä u s c h </s>|case=dative:number=singular
+<s> g e r ä u s c h </s>|<s> g e r ä u s c h e n </s>|case=dative:number=plural
+<s> g e r ä u s c h </s>|<s> g e r ä u s c h </s>|case=accusative:number=singular
+<s> g e r ä u s c h </s>|<s> g e r ä u s c h e </s>|case=accusative:number=plural
+<s> g e s c h l e c h t </s>|<s> g e s c h l e c h t </s>|case=nominative:number=singular
+<s> g e s c h l e c h t </s>|<s> g e s c h l e c h t e r </s>|case=nominative:number=plural
+<s> g e s c h l e c h t </s>|<s> g e s c h l e c h t e s </s>|case=genitive:number=singular
+<s> g e s c h l e c h t </s>|<s> g e s c h l e c h t e r </s>|case=genitive:number=plural
+<s> g e s c h l e c h t </s>|<s> g e s c h l e c h t </s>|case=dative:number=singular
+<s> g e s c h l e c h t </s>|<s> g e s c h l e c h t e r n </s>|case=dative:number=plural
+<s> g e s c h l e c h t </s>|<s> g e s c h l e c h t </s>|case=accusative:number=singular
+<s> g e s c h l e c h t </s>|<s> g e s c h l e c h t e r </s>|case=accusative:number=plural
+<s> g e s e t z g e b e r </s>|<s> g e s e t z g e b e r </s>|case=nominative:number=singular
+<s> g e s e t z g e b e r </s>|<s> g e s e t z g e b e r </s>|case=nominative:number=plural
+<s> g e s e t z g e b e r </s>|<s> g e s e t z g e b e r s </s>|case=genitive:number=singular
+<s> g e s e t z g e b e r </s>|<s> g e s e t z g e b e r </s>|case=genitive:number=plural
+<s> g e s e t z g e b e r </s>|<s> g e s e t z g e b e r </s>|case=dative:number=singular
+<s> g e s e t z g e b e r </s>|<s> g e s e t z g e b e r n </s>|case=dative:number=plural
+<s> g e s e t z g e b e r </s>|<s> g e s e t z g e b e r </s>|case=accusative:number=singular
+<s> g e s e t z g e b e r </s>|<s> g e s e t z g e b e r </s>|case=accusative:number=plural
+<s> g i t a r r e n s p i e l e r </s>|<s> g i t a r r e n s p i e l e r </s>|case=nominative:number=singular
+<s> g i t a r r e n s p i e l e r </s>|<s> g i t a r r e n s p i e l e r </s>|case=nominative:number=plural
+<s> g i t a r r e n s p i e l e r </s>|<s> g i t a r r e n s p i e l e r s </s>|case=genitive:number=singular
+<s> g i t a r r e n s p i e l e r </s>|<s> g i t a r r e n s p i e l e r </s>|case=genitive:number=plural
+<s> g i t a r r e n s p i e l e r </s>|<s> g i t a r r e n s p i e l e r </s>|case=dative:number=singular
+<s> g i t a r r e n s p i e l e r </s>|<s> g i t a r r e n s p i e l e r n </s>|case=dative:number=plural
+<s> g i t a r r e n s p i e l e r </s>|<s> g i t a r r e n s p i e l e r </s>|case=accusative:number=singular
+<s> g i t a r r e n s p i e l e r </s>|<s> g i t a r r e n s p i e l e r </s>|case=accusative:number=plural
+<s> g r a n a t a p f e l </s>|<s> g r a n a t a p f e l </s>|case=nominative:number=singular
+<s> g r a n a t a p f e l </s>|<s> g r a n a t ä p f e l </s>|case=nominative:number=plural
+<s> g r a n a t a p f e l </s>|<s> g r a n a t a p f e l s </s>|case=genitive:number=singular
+<s> g r a n a t a p f e l </s>|<s> g r a n a t ä p f e l </s>|case=genitive:number=plural
+<s> g r a n a t a p f e l </s>|<s> g r a n a t a p f e l </s>|case=dative:number=singular
+<s> g r a n a t a p f e l </s>|<s> g r a n a t ä p f e l n </s>|case=dative:number=plural
+<s> g r a n a t a p f e l </s>|<s> g r a n a t a p f e l </s>|case=accusative:number=singular
+<s> g r a n a t a p f e l </s>|<s> g r a n a t ä p f e l </s>|case=accusative:number=plural
+<s> g r a p h </s>|<s> g r a p h </s>|case=nominative:number=singular
+<s> g r a p h </s>|<s> g r a p h e n </s>|case=nominative:number=plural
+<s> g r a p h </s>|<s> g r a p h e n </s>|case=genitive:number=singular
+<s> g r a p h </s>|<s> g r a p h e n </s>|case=genitive:number=plural
+<s> g r a p h </s>|<s> g r a p h e n </s>|case=dative:number=singular
+<s> g r a p h </s>|<s> g r a p h e n </s>|case=dative:number=plural
+<s> g r a p h </s>|<s> g r a p h e n </s>|case=accusative:number=singular
+<s> g r a p h </s>|<s> g r a p h e n </s>|case=accusative:number=plural
+<s> g r u n d s c h u l e </s>|<s> g r u n d s c h u l e </s>|case=nominative:number=singular
+<s> g r u n d s c h u l e </s>|<s> g r u n d s c h u l e n </s>|case=nominative:number=plural
+<s> g r u n d s c h u l e </s>|<s> g r u n d s c h u l e </s>|case=genitive:number=singular
+<s> g r u n d s c h u l e </s>|<s> g r u n d s c h u l e n </s>|case=genitive:number=plural
+<s> g r u n d s c h u l e </s>|<s> g r u n d s c h u l e </s>|case=dative:number=singular
+<s> g r u n d s c h u l e </s>|<s> g r u n d s c h u l e n </s>|case=dative:number=plural
+<s> g r u n d s c h u l e </s>|<s> g r u n d s c h u l e </s>|case=accusative:number=singular
+<s> g r u n d s c h u l e </s>|<s> g r u n d s c h u l e n </s>|case=accusative:number=plural
+<s> g r ü n d e r </s>|<s> g r ü n d e r </s>|case=nominative:number=singular
+<s> g r ü n d e r </s>|<s> g r ü n d e r </s>|case=nominative:number=plural
+<s> g r ü n d e r </s>|<s> g r ü n d e r s </s>|case=genitive:number=singular
+<s> g r ü n d e r </s>|<s> g r ü n d e r </s>|case=genitive:number=plural
+<s> g r ü n d e r </s>|<s> g r ü n d e r </s>|case=dative:number=singular
+<s> g r ü n d e r </s>|<s> g r ü n d e r n </s>|case=dative:number=plural
+<s> g r ü n d e r </s>|<s> g r ü n d e r </s>|case=accusative:number=singular
+<s> g r ü n d e r </s>|<s> g r ü n d e r </s>|case=accusative:number=plural
+<s> h a f e n </s>|<s> h a f e n </s>|case=nominative:number=singular
+<s> h a f e n </s>|<s> h ä f e n </s>|case=nominative:number=plural
+<s> h a f e n </s>|<s> h a f e n s </s>|case=genitive:number=singular
+<s> h a f e n </s>|<s> h ä f e n </s>|case=genitive:number=plural
+<s> h a f e n </s>|<s> h a f e n </s>|case=dative:number=singular
+<s> h a f e n </s>|<s> h ä f e n </s>|case=dative:number=plural
+<s> h a f e n </s>|<s> h a f e n </s>|case=accusative:number=singular
+<s> h a f e n </s>|<s> h ä f e n </s>|case=accusative:number=plural
+<s> h e e r z u g </s>|<s> h e e r z u g </s>|case=nominative:number=singular
+<s> h e e r z u g </s>|<s> h e e r z ü g e </s>|case=nominative:number=plural
+<s> h e e r z u g </s>|<s> h e e r z u g e s </s>|case=genitive:number=singular
+<s> h e e r z u g </s>|<s> h e e r z ü g e </s>|case=genitive:number=plural
+<s> h e e r z u g </s>|<s> h e e r z u g </s>|case=dative:number=singular
+<s> h e e r z u g </s>|<s> h e e r z ü g e n </s>|case=dative:number=plural
+<s> h e e r z u g </s>|<s> h e e r z u g </s>|case=accusative:number=singular
+<s> h e e r z u g </s>|<s> h e e r z ü g e </s>|case=accusative:number=plural
+<s> h i l f s s p r a c h e </s>|<s> h i l f s s p r a c h e </s>|case=nominative:number=singular
+<s> h i l f s s p r a c h e </s>|<s> h i l f s s p r a c h e n </s>|case=nominative:number=plural
+<s> h i l f s s p r a c h e </s>|<s> h i l f s s p r a c h e </s>|case=genitive:number=singular
+<s> h i l f s s p r a c h e </s>|<s> h i l f s s p r a c h e n </s>|case=genitive:number=plural
+<s> h i l f s s p r a c h e </s>|<s> h i l f s s p r a c h e </s>|case=dative:number=singular
+<s> h i l f s s p r a c h e </s>|<s> h i l f s s p r a c h e n </s>|case=dative:number=plural
+<s> h i l f s s p r a c h e </s>|<s> h i l f s s p r a c h e </s>|case=accusative:number=singular
+<s> h i l f s s p r a c h e </s>|<s> h i l f s s p r a c h e n </s>|case=accusative:number=plural
+<s> h o l z s c h e i t </s>|<s> h o l z s c h e i t </s>|case=nominative:number=singular
+<s> h o l z s c h e i t </s>|<s> h o l z s c h e i t e </s>|case=nominative:number=plural
+<s> h o l z s c h e i t </s>|<s> h o l z s c h e i t e s </s>|case=genitive:number=singular
+<s> h o l z s c h e i t </s>|<s> h o l z s c h e i t e </s>|case=genitive:number=plural
+<s> h o l z s c h e i t </s>|<s> h o l z s c h e i t </s>|case=dative:number=singular
+<s> h o l z s c h e i t </s>|<s> h o l z s c h e i t e n </s>|case=dative:number=plural
+<s> h o l z s c h e i t </s>|<s> h o l z s c h e i t </s>|case=accusative:number=singular
+<s> h o l z s c h e i t </s>|<s> h o l z s c h e i t e </s>|case=accusative:number=plural
+<s> h ä n d e d r u c k </s>|<s> h ä n d e d r u c k </s>|case=nominative:number=singular
+<s> h ä n d e d r u c k </s>|<s> h ä n d e d r ü c k e </s>|case=nominative:number=plural
+<s> h ä n d e d r u c k </s>|<s> h ä n d e d r u c k e s </s>|case=genitive:number=singular
+<s> h ä n d e d r u c k </s>|<s> h ä n d e d r ü c k e </s>|case=genitive:number=plural
+<s> h ä n d e d r u c k </s>|<s> h ä n d e d r u c k </s>|case=dative:number=singular
+<s> h ä n d e d r u c k </s>|<s> h ä n d e d r ü c k e n </s>|case=dative:number=plural
+<s> h ä n d e d r u c k </s>|<s> h ä n d e d r u c k </s>|case=accusative:number=singular
+<s> h ä n d e d r u c k </s>|<s> h ä n d e d r ü c k e </s>|case=accusative:number=plural
+<s> i n s t i t u t i o n </s>|<s> i n s t i t u t i o n </s>|case=nominative:number=singular
+<s> i n s t i t u t i o n </s>|<s> i n s t i t u t i o n e n </s>|case=nominative:number=plural
+<s> i n s t i t u t i o n </s>|<s> i n s t i t u t i o n </s>|case=genitive:number=singular
+<s> i n s t i t u t i o n </s>|<s> i n s t i t u t i o n e n </s>|case=genitive:number=plural
+<s> i n s t i t u t i o n </s>|<s> i n s t i t u t i o n </s>|case=dative:number=singular
+<s> i n s t i t u t i o n </s>|<s> i n s t i t u t i o n e n </s>|case=dative:number=plural
+<s> i n s t i t u t i o n </s>|<s> i n s t i t u t i o n </s>|case=accusative:number=singular
+<s> i n s t i t u t i o n </s>|<s> i n s t i t u t i o n e n </s>|case=accusative:number=plural
+<s> k a b e l </s>|<s> k a b e l </s>|case=nominative:number=singular
+<s> k a b e l </s>|<s> k a b e l </s>|case=nominative:number=plural
+<s> k a b e l </s>|<s> k a b e l s </s>|case=genitive:number=singular
+<s> k a b e l </s>|<s> k a b e l </s>|case=genitive:number=plural
+<s> k a b e l </s>|<s> k a b e l </s>|case=dative:number=singular
+<s> k a b e l </s>|<s> k a b e l n </s>|case=dative:number=plural
+<s> k a b e l </s>|<s> k a b e l </s>|case=accusative:number=singular
+<s> k a b e l </s>|<s> k a b e l </s>|case=accusative:number=plural
+<s> k a c h e l o f e n </s>|<s> k a c h e l o f e n </s>|case=nominative:number=singular
+<s> k a c h e l o f e n </s>|<s> k a c h e l ö f e n </s>|case=nominative:number=plural
+<s> k a c h e l o f e n </s>|<s> k a c h e l o f e n s </s>|case=genitive:number=singular
+<s> k a c h e l o f e n </s>|<s> k a c h e l ö f e n </s>|case=genitive:number=plural
+<s> k a c h e l o f e n </s>|<s> k a c h e l o f e n </s>|case=dative:number=singular
+<s> k a c h e l o f e n </s>|<s> k a c h e l ö f e n </s>|case=dative:number=plural
+<s> k a c h e l o f e n </s>|<s> k a c h e l o f e n </s>|case=accusative:number=singular
+<s> k a c h e l o f e n </s>|<s> k a c h e l ö f e n </s>|case=accusative:number=plural
+<s> k a s s e </s>|<s> k a s s e </s>|case=nominative:number=singular
+<s> k a s s e </s>|<s> k a s s e n </s>|case=nominative:number=plural
+<s> k a s s e </s>|<s> k a s s e </s>|case=genitive:number=singular
+<s> k a s s e </s>|<s> k a s s e n </s>|case=genitive:number=plural
+<s> k a s s e </s>|<s> k a s s e </s>|case=dative:number=singular
+<s> k a s s e </s>|<s> k a s s e n </s>|case=dative:number=plural
+<s> k a s s e </s>|<s> k a s s e </s>|case=accusative:number=singular
+<s> k a s s e </s>|<s> k a s s e n </s>|case=accusative:number=plural
+<s> k e i m </s>|<s> k e i m </s>|case=nominative:number=singular
+<s> k e i m </s>|<s> k e i m e </s>|case=nominative:number=plural
+<s> k e i m </s>|<s> k e i m e s </s>|case=genitive:number=singular
+<s> k e i m </s>|<s> k e i m e </s>|case=genitive:number=plural
+<s> k e i m </s>|<s> k e i m </s>|case=dative:number=singular
+<s> k e i m </s>|<s> k e i m e n </s>|case=dative:number=plural
+<s> k e i m </s>|<s> k e i m </s>|case=accusative:number=singular
+<s> k e i m </s>|<s> k e i m e </s>|case=accusative:number=plural
+<s> k e l c h b l a t t </s>|<s> k e l c h b l a t t </s>|case=nominative:number=singular
+<s> k e l c h b l a t t </s>|<s> k e l c h b l ä t t e r </s>|case=nominative:number=plural
+<s> k e l c h b l a t t </s>|<s> k e l c h b l a t t e s </s>|case=genitive:number=singular
+<s> k e l c h b l a t t </s>|<s> k e l c h b l ä t t e r </s>|case=genitive:number=plural
+<s> k e l c h b l a t t </s>|<s> k e l c h b l a t t </s>|case=dative:number=singular
+<s> k e l c h b l a t t </s>|<s> k e l c h b l ä t t e r n </s>|case=dative:number=plural
+<s> k e l c h b l a t t </s>|<s> k e l c h b l a t t </s>|case=accusative:number=singular
+<s> k e l c h b l a t t </s>|<s> k e l c h b l ä t t e r </s>|case=accusative:number=plural
+<s> k i b a </s>|<s> k i b a </s>|case=nominative:number=singular
+<s> k i b a </s>|<s> k i b a s </s>|case=nominative:number=plural
+<s> k i b a </s>|<s> k i b a s </s>|case=genitive:number=singular
+<s> k i b a </s>|<s> k i b a s </s>|case=genitive:number=plural
+<s> k i b a </s>|<s> k i b a </s>|case=dative:number=singular
+<s> k i b a </s>|<s> k i b a s </s>|case=dative:number=plural
+<s> k i b a </s>|<s> k i b a </s>|case=accusative:number=singular
+<s> k i b a </s>|<s> k i b a s </s>|case=accusative:number=plural
+<s> k l e i n k i n d </s>|<s> k l e i n k i n d </s>|case=nominative:number=singular
+<s> k l e i n k i n d </s>|<s> k l e i n k i n d e r </s>|case=nominative:number=plural
+<s> k l e i n k i n d </s>|<s> k l e i n k i n d e s </s>|case=genitive:number=singular
+<s> k l e i n k i n d </s>|<s> k l e i n k i n d e r </s>|case=genitive:number=plural
+<s> k l e i n k i n d </s>|<s> k l e i n k i n d </s>|case=dative:number=singular
+<s> k l e i n k i n d </s>|<s> k l e i n k i n d e r n </s>|case=dative:number=plural
+<s> k l e i n k i n d </s>|<s> k l e i n k i n d </s>|case=accusative:number=singular
+<s> k l e i n k i n d </s>|<s> k l e i n k i n d e r </s>|case=accusative:number=plural
+<s> k o m p a s s </s>|<s> k o m p a s s </s>|case=nominative:number=singular
+<s> k o m p a s s </s>|<s> k o m p a s s e </s>|case=nominative:number=plural
+<s> k o m p a s s </s>|<s> k o m p a s s e s </s>|case=genitive:number=singular
+<s> k o m p a s s </s>|<s> k o m p a s s e </s>|case=genitive:number=plural
+<s> k o m p a s s </s>|<s> k o m p a s s </s>|case=dative:number=singular
+<s> k o m p a s s </s>|<s> k o m p a s s e n </s>|case=dative:number=plural
+<s> k o m p a s s </s>|<s> k o m p a s s </s>|case=accusative:number=singular
+<s> k o m p a s s </s>|<s> k o m p a s s e </s>|case=accusative:number=plural
+<s> k o m ö d i e </s>|<s> k o m ö d i e </s>|case=nominative:number=singular
+<s> k o m ö d i e </s>|<s> k o m ö d i e n </s>|case=nominative:number=plural
+<s> k o m ö d i e </s>|<s> k o m ö d i e </s>|case=genitive:number=singular
+<s> k o m ö d i e </s>|<s> k o m ö d i e n </s>|case=genitive:number=plural
+<s> k o m ö d i e </s>|<s> k o m ö d i e </s>|case=dative:number=singular
+<s> k o m ö d i e </s>|<s> k o m ö d i e n </s>|case=dative:number=plural
+<s> k o m ö d i e </s>|<s> k o m ö d i e </s>|case=accusative:number=singular
+<s> k o m ö d i e </s>|<s> k o m ö d i e n </s>|case=accusative:number=plural
+<s> k r i e g s b e m a l u n g </s>|<s> k r i e g s b e m a l u n g </s>|case=nominative:number=singular
+<s> k r i e g s b e m a l u n g </s>|<s> k r i e g s b e m a l u n g e n </s>|case=nominative:number=plural
+<s> k r i e g s b e m a l u n g </s>|<s> k r i e g s b e m a l u n g </s>|case=genitive:number=singular
+<s> k r i e g s b e m a l u n g </s>|<s> k r i e g s b e m a l u n g e n </s>|case=genitive:number=plural
+<s> k r i e g s b e m a l u n g </s>|<s> k r i e g s b e m a l u n g </s>|case=dative:number=singular
+<s> k r i e g s b e m a l u n g </s>|<s> k r i e g s b e m a l u n g e n </s>|case=dative:number=plural
+<s> k r i e g s b e m a l u n g </s>|<s> k r i e g s b e m a l u n g </s>|case=accusative:number=singular
+<s> k r i e g s b e m a l u n g </s>|<s> k r i e g s b e m a l u n g e n </s>|case=accusative:number=plural
+<s> k u l t u r </s>|<s> k u l t u r </s>|case=nominative:number=singular
+<s> k u l t u r </s>|<s> k u l t u r e n </s>|case=nominative:number=plural
+<s> k u l t u r </s>|<s> k u l t u r </s>|case=genitive:number=singular
+<s> k u l t u r </s>|<s> k u l t u r e n </s>|case=genitive:number=plural
+<s> k u l t u r </s>|<s> k u l t u r </s>|case=dative:number=singular
+<s> k u l t u r </s>|<s> k u l t u r e n </s>|case=dative:number=plural
+<s> k u l t u r </s>|<s> k u l t u r </s>|case=accusative:number=singular
+<s> k u l t u r </s>|<s> k u l t u r e n </s>|case=accusative:number=plural
+<s> k u n s t s p r a c h e </s>|<s> k u n s t s p r a c h e </s>|case=nominative:number=singular
+<s> k u n s t s p r a c h e </s>|<s> k u n s t s p r a c h e n </s>|case=nominative:number=plural
+<s> k u n s t s p r a c h e </s>|<s> k u n s t s p r a c h e </s>|case=genitive:number=singular
+<s> k u n s t s p r a c h e </s>|<s> k u n s t s p r a c h e n </s>|case=genitive:number=plural
+<s> k u n s t s p r a c h e </s>|<s> k u n s t s p r a c h e </s>|case=dative:number=singular
+<s> k u n s t s p r a c h e </s>|<s> k u n s t s p r a c h e n </s>|case=dative:number=plural
+<s> k u n s t s p r a c h e </s>|<s> k u n s t s p r a c h e </s>|case=accusative:number=singular
+<s> k u n s t s p r a c h e </s>|<s> k u n s t s p r a c h e n </s>|case=accusative:number=plural
+<s> k ä f i g </s>|<s> k ä f i g </s>|case=nominative:number=singular
+<s> k ä f i g </s>|<s> k ä f i g e </s>|case=nominative:number=plural
+<s> k ä f i g </s>|<s> k ä f i g s </s>|case=genitive:number=singular
+<s> k ä f i g </s>|<s> k ä f i g e </s>|case=genitive:number=plural
+<s> k ä f i g </s>|<s> k ä f i g </s>|case=dative:number=singular
+<s> k ä f i g </s>|<s> k ä f i g e n </s>|case=dative:number=plural
+<s> k ä f i g </s>|<s> k ä f i g </s>|case=accusative:number=singular
+<s> k ä f i g </s>|<s> k ä f i g e </s>|case=accusative:number=plural
+<s> k ü s t e r </s>|<s> k ü s t e r </s>|case=nominative:number=singular
+<s> k ü s t e r </s>|<s> k ü s t e r </s>|case=nominative:number=plural
+<s> k ü s t e r </s>|<s> k ü s t e r s </s>|case=genitive:number=singular
+<s> k ü s t e r </s>|<s> k ü s t e r </s>|case=genitive:number=plural
+<s> k ü s t e r </s>|<s> k ü s t e r </s>|case=dative:number=singular
+<s> k ü s t e r </s>|<s> k ü s t e r n </s>|case=dative:number=plural
+<s> k ü s t e r </s>|<s> k ü s t e r </s>|case=accusative:number=singular
+<s> k ü s t e r </s>|<s> k ü s t e r </s>|case=accusative:number=plural
+<s> l a u t w a n d e l </s>|<s> l a u t w a n d e l </s>|case=nominative:number=singular
+<s> l a u t w a n d e l </s>|<s> l a u t w a n d e l </s>|case=nominative:number=plural
+<s> l a u t w a n d e l </s>|<s> l a u t w a n d e l s </s>|case=genitive:number=singular
+<s> l a u t w a n d e l </s>|<s> l a u t w a n d e l </s>|case=genitive:number=plural
+<s> l a u t w a n d e l </s>|<s> l a u t w a n d e l </s>|case=dative:number=singular
+<s> l a u t w a n d e l </s>|<s> l a u t w a n d e l n </s>|case=dative:number=plural
+<s> l a u t w a n d e l </s>|<s> l a u t w a n d e l </s>|case=accusative:number=singular
+<s> l a u t w a n d e l </s>|<s> l a u t w a n d e l </s>|case=accusative:number=plural
+<s> l e b e r k ä s e </s>|<s> l e b e r k ä s e </s>|case=nominative:number=singular
+<s> l e b e r k ä s e </s>|<s> l e b e r k ä s e </s>|case=nominative:number=plural
+<s> l e b e r k ä s e </s>|<s> l e b e r k ä s e s </s>|case=genitive:number=singular
+<s> l e b e r k ä s e </s>|<s> l e b e r k ä s e </s>|case=genitive:number=plural
+<s> l e b e r k ä s e </s>|<s> l e b e r k ä s e </s>|case=dative:number=singular
+<s> l e b e r k ä s e </s>|<s> l e b e r k ä s e n </s>|case=dative:number=plural
+<s> l e b e r k ä s e </s>|<s> l e b e r k ä s e </s>|case=accusative:number=singular
+<s> l e b e r k ä s e </s>|<s> l e b e r k ä s e </s>|case=accusative:number=plural
+<s> l e h r e </s>|<s> l e h r e </s>|case=nominative:number=singular
+<s> l e h r e </s>|<s> l e h r e n </s>|case=nominative:number=plural
+<s> l e h r e </s>|<s> l e h r e </s>|case=genitive:number=singular
+<s> l e h r e </s>|<s> l e h r e n </s>|case=genitive:number=plural
+<s> l e h r e </s>|<s> l e h r e </s>|case=dative:number=singular
+<s> l e h r e </s>|<s> l e h r e n </s>|case=dative:number=plural
+<s> l e h r e </s>|<s> l e h r e </s>|case=accusative:number=singular
+<s> l e h r e </s>|<s> l e h r e n </s>|case=accusative:number=plural
+<s> l i e d </s>|<s> l i e d </s>|case=nominative:number=singular
+<s> l i e d </s>|<s> l i e d e r </s>|case=nominative:number=plural
+<s> l i e d </s>|<s> l i e d e s </s>|case=genitive:number=singular
+<s> l i e d </s>|<s> l i e d e r </s>|case=genitive:number=plural
+<s> l i e d </s>|<s> l i e d </s>|case=dative:number=singular
+<s> l i e d </s>|<s> l i e d e r n </s>|case=dative:number=plural
+<s> l i e d </s>|<s> l i e d </s>|case=accusative:number=singular
+<s> l i e d </s>|<s> l i e d e r </s>|case=accusative:number=plural
+<s> l o h n </s>|<s> l o h n </s>|case=nominative:number=singular
+<s> l o h n </s>|<s> l ö h n e </s>|case=nominative:number=plural
+<s> l o h n </s>|<s> l o h n e s </s>|case=genitive:number=singular
+<s> l o h n </s>|<s> l ö h n e </s>|case=genitive:number=plural
+<s> l o h n </s>|<s> l o h n </s>|case=dative:number=singular
+<s> l o h n </s>|<s> l ö h n e n </s>|case=dative:number=plural
+<s> l o h n </s>|<s> l o h n </s>|case=accusative:number=singular
+<s> l o h n </s>|<s> l ö h n e </s>|case=accusative:number=plural
+<s> m a i s k o l b e n </s>|<s> m a i s k o l b e n </s>|case=nominative:number=singular
+<s> m a i s k o l b e n </s>|<s> m a i s k o l b e n </s>|case=nominative:number=plural
+<s> m a i s k o l b e n </s>|<s> m a i s k o l b e n s </s>|case=genitive:number=singular
+<s> m a i s k o l b e n </s>|<s> m a i s k o l b e n </s>|case=genitive:number=plural
+<s> m a i s k o l b e n </s>|<s> m a i s k o l b e n </s>|case=dative:number=singular
+<s> m a i s k o l b e n </s>|<s> m a i s k o l b e n </s>|case=dative:number=plural
+<s> m a i s k o l b e n </s>|<s> m a i s k o l b e n </s>|case=accusative:number=singular
+<s> m a i s k o l b e n </s>|<s> m a i s k o l b e n </s>|case=accusative:number=plural
+<s> m a r k </s>|<s> m a r k </s>|case=nominative:number=singular
+<s> m a r k </s>|<s> m a r k </s>|case=nominative:number=plural
+<s> m a r k </s>|<s> m a r k </s>|case=genitive:number=singular
+<s> m a r k </s>|<s> m a r k </s>|case=genitive:number=plural
+<s> m a r k </s>|<s> m a r k </s>|case=dative:number=singular
+<s> m a r k </s>|<s> m a r k </s>|case=dative:number=plural
+<s> m a r k </s>|<s> m a r k </s>|case=accusative:number=singular
+<s> m a r k </s>|<s> m a r k </s>|case=accusative:number=plural
+<s> m a ß </s>|<s> m a ß </s>|case=nominative:number=singular
+<s> m a ß </s>|<s> m a ß e </s>|case=nominative:number=plural
+<s> m a ß </s>|<s> m a ß e s </s>|case=genitive:number=singular
+<s> m a ß </s>|<s> m a ß e </s>|case=genitive:number=plural
+<s> m a ß </s>|<s> m a ß </s>|case=dative:number=singular
+<s> m a ß </s>|<s> m a ß e n </s>|case=dative:number=plural
+<s> m a ß </s>|<s> m a ß </s>|case=accusative:number=singular
+<s> m a ß </s>|<s> m a ß e </s>|case=accusative:number=plural
+<s> m e i l e </s>|<s> m e i l e </s>|case=nominative:number=singular
+<s> m e i l e </s>|<s> m e i l e n </s>|case=nominative:number=plural
+<s> m e i l e </s>|<s> m e i l e </s>|case=genitive:number=singular
+<s> m e i l e </s>|<s> m e i l e n </s>|case=genitive:number=plural
+<s> m e i l e </s>|<s> m e i l e </s>|case=dative:number=singular
+<s> m e i l e </s>|<s> m e i l e n </s>|case=dative:number=plural
+<s> m e i l e </s>|<s> m e i l e </s>|case=accusative:number=singular
+<s> m e i l e </s>|<s> m e i l e n </s>|case=accusative:number=plural
+<s> m e t o n y m i e </s>|<s> m e t o n y m i e </s>|case=nominative:number=singular
+<s> m e t o n y m i e </s>|<s> m e t o n y m i e n </s>|case=nominative:number=plural
+<s> m e t o n y m i e </s>|<s> m e t o n y m i e </s>|case=genitive:number=singular
+<s> m e t o n y m i e </s>|<s> m e t o n y m i e n </s>|case=genitive:number=plural
+<s> m e t o n y m i e </s>|<s> m e t o n y m i e </s>|case=dative:number=singular
+<s> m e t o n y m i e </s>|<s> m e t o n y m i e n </s>|case=dative:number=plural
+<s> m e t o n y m i e </s>|<s> m e t o n y m i e </s>|case=accusative:number=singular
+<s> m e t o n y m i e </s>|<s> m e t o n y m i e n </s>|case=accusative:number=plural
+<s> m i n e </s>|<s> m i n e </s>|case=nominative:number=singular
+<s> m i n e </s>|<s> m i n e n </s>|case=nominative:number=plural
+<s> m i n e </s>|<s> m i n e </s>|case=genitive:number=singular
+<s> m i n e </s>|<s> m i n e n </s>|case=genitive:number=plural
+<s> m i n e </s>|<s> m i n e </s>|case=dative:number=singular
+<s> m i n e </s>|<s> m i n e n </s>|case=dative:number=plural
+<s> m i n e </s>|<s> m i n e </s>|case=accusative:number=singular
+<s> m i n e </s>|<s> m i n e n </s>|case=accusative:number=plural
+<s> m u t a n t e </s>|<s> m u t a n t e </s>|case=nominative:number=singular
+<s> m u t a n t e </s>|<s> m u t a n t e n </s>|case=nominative:number=plural
+<s> m u t a n t e </s>|<s> m u t a n t e </s>|case=genitive:number=singular
+<s> m u t a n t e </s>|<s> m u t a n t e n </s>|case=genitive:number=plural
+<s> m u t a n t e </s>|<s> m u t a n t e </s>|case=dative:number=singular
+<s> m u t a n t e </s>|<s> m u t a n t e n </s>|case=dative:number=plural
+<s> m u t a n t e </s>|<s> m u t a n t e </s>|case=accusative:number=singular
+<s> m u t a n t e </s>|<s> m u t a n t e n </s>|case=accusative:number=plural
+<s> n a t i o n a l i t ä t </s>|<s> n a t i o n a l i t ä t </s>|case=nominative:number=singular
+<s> n a t i o n a l i t ä t </s>|<s> n a t i o n a l i t ä t e n </s>|case=nominative:number=plural
+<s> n a t i o n a l i t ä t </s>|<s> n a t i o n a l i t ä t </s>|case=genitive:number=singular
+<s> n a t i o n a l i t ä t </s>|<s> n a t i o n a l i t ä t e n </s>|case=genitive:number=plural
+<s> n a t i o n a l i t ä t </s>|<s> n a t i o n a l i t ä t </s>|case=dative:number=singular
+<s> n a t i o n a l i t ä t </s>|<s> n a t i o n a l i t ä t e n </s>|case=dative:number=plural
+<s> n a t i o n a l i t ä t </s>|<s> n a t i o n a l i t ä t </s>|case=accusative:number=singular
+<s> n a t i o n a l i t ä t </s>|<s> n a t i o n a l i t ä t e n </s>|case=accusative:number=plural
+<s> n a t i o n a l s o z i a l i s t </s>|<s> n a t i o n a l s o z i a l i s t </s>|case=nominative:number=singular
+<s> n a t i o n a l s o z i a l i s t </s>|<s> n a t i o n a l s o z i a l i s t e n </s>|case=nominative:number=plural
+<s> n a t i o n a l s o z i a l i s t </s>|<s> n a t i o n a l s o z i a l i s t e n </s>|case=genitive:number=singular
+<s> n a t i o n a l s o z i a l i s t </s>|<s> n a t i o n a l s o z i a l i s t e n </s>|case=genitive:number=plural
+<s> n a t i o n a l s o z i a l i s t </s>|<s> n a t i o n a l s o z i a l i s t e n </s>|case=dative:number=singular
+<s> n a t i o n a l s o z i a l i s t </s>|<s> n a t i o n a l s o z i a l i s t e n </s>|case=dative:number=plural
+<s> n a t i o n a l s o z i a l i s t </s>|<s> n a t i o n a l s o z i a l i s t e n </s>|case=accusative:number=singular
+<s> n a t i o n a l s o z i a l i s t </s>|<s> n a t i o n a l s o z i a l i s t e n </s>|case=accusative:number=plural
+<s> n a t u r t a l e n t </s>|<s> n a t u r t a l e n t </s>|case=nominative:number=singular
+<s> n a t u r t a l e n t </s>|<s> n a t u r t a l e n t e </s>|case=nominative:number=plural
+<s> n a t u r t a l e n t </s>|<s> n a t u r t a l e n t e s </s>|case=genitive:number=singular
+<s> n a t u r t a l e n t </s>|<s> n a t u r t a l e n t e </s>|case=genitive:number=plural
+<s> n a t u r t a l e n t </s>|<s> n a t u r t a l e n t </s>|case=dative:number=singular
+<s> n a t u r t a l e n t </s>|<s> n a t u r t a l e n t e n </s>|case=dative:number=plural
+<s> n a t u r t a l e n t </s>|<s> n a t u r t a l e n t </s>|case=accusative:number=singular
+<s> n a t u r t a l e n t </s>|<s> n a t u r t a l e n t e </s>|case=accusative:number=plural
+<s> n a t u r w i s s e n s c h a f t </s>|<s> n a t u r w i s s e n s c h a f t </s>|case=nominative:number=singular
+<s> n a t u r w i s s e n s c h a f t </s>|<s> n a t u r w i s s e n s c h a f t e n </s>|case=nominative:number=plural
+<s> n a t u r w i s s e n s c h a f t </s>|<s> n a t u r w i s s e n s c h a f t </s>|case=genitive:number=singular
+<s> n a t u r w i s s e n s c h a f t </s>|<s> n a t u r w i s s e n s c h a f t e n </s>|case=genitive:number=plural
+<s> n a t u r w i s s e n s c h a f t </s>|<s> n a t u r w i s s e n s c h a f t </s>|case=dative:number=singular
+<s> n a t u r w i s s e n s c h a f t </s>|<s> n a t u r w i s s e n s c h a f t e n </s>|case=dative:number=plural
+<s> n a t u r w i s s e n s c h a f t </s>|<s> n a t u r w i s s e n s c h a f t </s>|case=accusative:number=singular
+<s> n a t u r w i s s e n s c h a f t </s>|<s> n a t u r w i s s e n s c h a f t e n </s>|case=accusative:number=plural
+<s> n e u t r o n </s>|<s> n e u t r o n </s>|case=nominative:number=singular
+<s> n e u t r o n </s>|<s> n e u t r o n e n </s>|case=nominative:number=plural
+<s> n e u t r o n </s>|<s> n e u t r o n s </s>|case=genitive:number=singular
+<s> n e u t r o n </s>|<s> n e u t r o n e n </s>|case=genitive:number=plural
+<s> n e u t r o n </s>|<s> n e u t r o n </s>|case=dative:number=singular
+<s> n e u t r o n </s>|<s> n e u t r o n e n </s>|case=dative:number=plural
+<s> n e u t r o n </s>|<s> n e u t r o n </s>|case=accusative:number=singular
+<s> n e u t r o n </s>|<s> n e u t r o n e n </s>|case=accusative:number=plural
+<s> n i e d e r l ä n d e r </s>|<s> n i e d e r l ä n d e r </s>|case=nominative:number=singular
+<s> n i e d e r l ä n d e r </s>|<s> n i e d e r l ä n d e r </s>|case=nominative:number=plural
+<s> n i e d e r l ä n d e r </s>|<s> n i e d e r l ä n d e r s </s>|case=genitive:number=singular
+<s> n i e d e r l ä n d e r </s>|<s> n i e d e r l ä n d e r </s>|case=genitive:number=plural
+<s> n i e d e r l ä n d e r </s>|<s> n i e d e r l ä n d e r </s>|case=dative:number=singular
+<s> n i e d e r l ä n d e r </s>|<s> n i e d e r l ä n d e r n </s>|case=dative:number=plural
+<s> n i e d e r l ä n d e r </s>|<s> n i e d e r l ä n d e r </s>|case=accusative:number=singular
+<s> n i e d e r l ä n d e r </s>|<s> n i e d e r l ä n d e r </s>|case=accusative:number=plural
+<s> n u d e l h o l z </s>|<s> n u d e l h o l z </s>|case=nominative:number=singular
+<s> n u d e l h o l z </s>|<s> n u d e l h ö l z e r </s>|case=nominative:number=plural
+<s> n u d e l h o l z </s>|<s> n u d e l h o l z e s </s>|case=genitive:number=singular
+<s> n u d e l h o l z </s>|<s> n u d e l h ö l z e r </s>|case=genitive:number=plural
+<s> n u d e l h o l z </s>|<s> n u d e l h o l z </s>|case=dative:number=singular
+<s> n u d e l h o l z </s>|<s> n u d e l h ö l z e r n </s>|case=dative:number=plural
+<s> n u d e l h o l z </s>|<s> n u d e l h o l z </s>|case=accusative:number=singular
+<s> n u d e l h o l z </s>|<s> n u d e l h ö l z e r </s>|case=accusative:number=plural
+<s> o b e r l i p p e </s>|<s> o b e r l i p p e </s>|case=nominative:number=singular
+<s> o b e r l i p p e </s>|<s> o b e r l i p p e n </s>|case=nominative:number=plural
+<s> o b e r l i p p e </s>|<s> o b e r l i p p e </s>|case=genitive:number=singular
+<s> o b e r l i p p e </s>|<s> o b e r l i p p e n </s>|case=genitive:number=plural
+<s> o b e r l i p p e </s>|<s> o b e r l i p p e </s>|case=dative:number=singular
+<s> o b e r l i p p e </s>|<s> o b e r l i p p e n </s>|case=dative:number=plural
+<s> o b e r l i p p e </s>|<s> o b e r l i p p e </s>|case=accusative:number=singular
+<s> o b e r l i p p e </s>|<s> o b e r l i p p e n </s>|case=accusative:number=plural
+<s> p a r a s i t </s>|<s> p a r a s i t </s>|case=nominative:number=singular
+<s> p a r a s i t </s>|<s> p a r a s i t e n </s>|case=nominative:number=plural
+<s> p a r a s i t </s>|<s> p a r a s i t e n </s>|case=genitive:number=singular
+<s> p a r a s i t </s>|<s> p a r a s i t e n </s>|case=genitive:number=plural
+<s> p a r a s i t </s>|<s> p a r a s i t e n </s>|case=dative:number=singular
+<s> p a r a s i t </s>|<s> p a r a s i t e n </s>|case=dative:number=plural
+<s> p a r a s i t </s>|<s> p a r a s i t e n </s>|case=accusative:number=singular
+<s> p a r a s i t </s>|<s> p a r a s i t e n </s>|case=accusative:number=plural
+<s> p f l a s t e r </s>|<s> p f l a s t e r </s>|case=nominative:number=singular
+<s> p f l a s t e r </s>|<s> p f l a s t e r </s>|case=nominative:number=plural
+<s> p f l a s t e r </s>|<s> p f l a s t e r s </s>|case=genitive:number=singular
+<s> p f l a s t e r </s>|<s> p f l a s t e r </s>|case=genitive:number=plural
+<s> p f l a s t e r </s>|<s> p f l a s t e r </s>|case=dative:number=singular
+<s> p f l a s t e r </s>|<s> p f l a s t e r n </s>|case=dative:number=plural
+<s> p f l a s t e r </s>|<s> p f l a s t e r </s>|case=accusative:number=singular
+<s> p f l a s t e r </s>|<s> p f l a s t e r </s>|case=accusative:number=plural
+<s> p h i l l u m e n i s t </s>|<s> p h i l l u m e n i s t </s>|case=nominative:number=singular
+<s> p h i l l u m e n i s t </s>|<s> p h i l l u m e n i s t e n </s>|case=nominative:number=plural
+<s> p h i l l u m e n i s t </s>|<s> p h i l l u m e n i s t e n </s>|case=genitive:number=singular
+<s> p h i l l u m e n i s t </s>|<s> p h i l l u m e n i s t e n </s>|case=genitive:number=plural
+<s> p h i l l u m e n i s t </s>|<s> p h i l l u m e n i s t e n </s>|case=dative:number=singular
+<s> p h i l l u m e n i s t </s>|<s> p h i l l u m e n i s t e n </s>|case=dative:number=plural
+<s> p h i l l u m e n i s t </s>|<s> p h i l l u m e n i s t e n </s>|case=accusative:number=singular
+<s> p h i l l u m e n i s t </s>|<s> p h i l l u m e n i s t e n </s>|case=accusative:number=plural
+<s> p o m p o n </s>|<s> p o m p o n </s>|case=nominative:number=singular
+<s> p o m p o n </s>|<s> p o m p o n s </s>|case=nominative:number=plural
+<s> p o m p o n </s>|<s> p o m p o n s </s>|case=genitive:number=singular
+<s> p o m p o n </s>|<s> p o m p o n s </s>|case=genitive:number=plural
+<s> p o m p o n </s>|<s> p o m p o n </s>|case=dative:number=singular
+<s> p o m p o n </s>|<s> p o m p o n s </s>|case=dative:number=plural
+<s> p o m p o n </s>|<s> p o m p o n </s>|case=accusative:number=singular
+<s> p o m p o n </s>|<s> p o m p o n s </s>|case=accusative:number=plural
+<s> p o r p h y r i e </s>|<s> p o r p h y r i e </s>|case=nominative:number=singular
+<s> p o r p h y r i e </s>|<s> p o r p h y r i e n </s>|case=nominative:number=plural
+<s> p o r p h y r i e </s>|<s> p o r p h y r i e </s>|case=genitive:number=singular
+<s> p o r p h y r i e </s>|<s> p o r p h y r i e n </s>|case=genitive:number=plural
+<s> p o r p h y r i e </s>|<s> p o r p h y r i e </s>|case=dative:number=singular
+<s> p o r p h y r i e </s>|<s> p o r p h y r i e n </s>|case=dative:number=plural
+<s> p o r p h y r i e </s>|<s> p o r p h y r i e </s>|case=accusative:number=singular
+<s> p o r p h y r i e </s>|<s> p o r p h y r i e n </s>|case=accusative:number=plural
+<s> p o s a u n e </s>|<s> p o s a u n e </s>|case=nominative:number=singular
+<s> p o s a u n e </s>|<s> p o s a u n e n </s>|case=nominative:number=plural
+<s> p o s a u n e </s>|<s> p o s a u n e </s>|case=genitive:number=singular
+<s> p o s a u n e </s>|<s> p o s a u n e n </s>|case=genitive:number=plural
+<s> p o s a u n e </s>|<s> p o s a u n e </s>|case=dative:number=singular
+<s> p o s a u n e </s>|<s> p o s a u n e n </s>|case=dative:number=plural
+<s> p o s a u n e </s>|<s> p o s a u n e </s>|case=accusative:number=singular
+<s> p o s a u n e </s>|<s> p o s a u n e n </s>|case=accusative:number=plural
+<s> p o s t i l l i o n </s>|<s> p o s t i l l i o n </s>|case=nominative:number=singular
+<s> p o s t i l l i o n </s>|<s> p o s t i l l i o n e </s>|case=nominative:number=plural
+<s> p o s t i l l i o n </s>|<s> p o s t i l l i o n s </s>|case=genitive:number=singular
+<s> p o s t i l l i o n </s>|<s> p o s t i l l i o n e </s>|case=genitive:number=plural
+<s> p o s t i l l i o n </s>|<s> p o s t i l l i o n </s>|case=dative:number=singular
+<s> p o s t i l l i o n </s>|<s> p o s t i l l i o n e n </s>|case=dative:number=plural
+<s> p o s t i l l i o n </s>|<s> p o s t i l l i o n </s>|case=accusative:number=singular
+<s> p o s t i l l i o n </s>|<s> p o s t i l l i o n e </s>|case=accusative:number=plural
+<s> p o s t l e i t z a h l </s>|<s> p o s t l e i t z a h l </s>|case=nominative:number=singular
+<s> p o s t l e i t z a h l </s>|<s> p o s t l e i t z a h l e n </s>|case=nominative:number=plural
+<s> p o s t l e i t z a h l </s>|<s> p o s t l e i t z a h l </s>|case=genitive:number=singular
+<s> p o s t l e i t z a h l </s>|<s> p o s t l e i t z a h l e n </s>|case=genitive:number=plural
+<s> p o s t l e i t z a h l </s>|<s> p o s t l e i t z a h l </s>|case=dative:number=singular
+<s> p o s t l e i t z a h l </s>|<s> p o s t l e i t z a h l e n </s>|case=dative:number=plural
+<s> p o s t l e i t z a h l </s>|<s> p o s t l e i t z a h l </s>|case=accusative:number=singular
+<s> p o s t l e i t z a h l </s>|<s> p o s t l e i t z a h l e n </s>|case=accusative:number=plural
+<s> p r o t o n </s>|<s> p r o t o n </s>|case=nominative:number=singular
+<s> p r o t o n </s>|<s> p r o t o n e n </s>|case=nominative:number=plural
+<s> p r o t o n </s>|<s> p r o t o n s </s>|case=genitive:number=singular
+<s> p r o t o n </s>|<s> p r o t o n e n </s>|case=genitive:number=plural
+<s> p r o t o n </s>|<s> p r o t o n </s>|case=dative:number=singular
+<s> p r o t o n </s>|<s> p r o t o n e n </s>|case=dative:number=plural
+<s> p r o t o n </s>|<s> p r o t o n </s>|case=accusative:number=singular
+<s> p r o t o n </s>|<s> p r o t o n e n </s>|case=accusative:number=plural
+<s> p r o z e s s </s>|<s> p r o z e s s </s>|case=nominative:number=singular
+<s> p r o z e s s </s>|<s> p r o z e s s e </s>|case=nominative:number=plural
+<s> p r o z e s s </s>|<s> p r o z e s s e s </s>|case=genitive:number=singular
+<s> p r o z e s s </s>|<s> p r o z e s s e </s>|case=genitive:number=plural
+<s> p r o z e s s </s>|<s> p r o z e s s </s>|case=dative:number=singular
+<s> p r o z e s s </s>|<s> p r o z e s s e n </s>|case=dative:number=plural
+<s> p r o z e s s </s>|<s> p r o z e s s </s>|case=accusative:number=singular
+<s> p r o z e s s </s>|<s> p r o z e s s e </s>|case=accusative:number=plural
+<s> p u t e </s>|<s> p u t e </s>|case=nominative:number=singular
+<s> p u t e </s>|<s> p u t e n </s>|case=nominative:number=plural
+<s> p u t e </s>|<s> p u t e </s>|case=genitive:number=singular
+<s> p u t e </s>|<s> p u t e n </s>|case=genitive:number=plural
+<s> p u t e </s>|<s> p u t e </s>|case=dative:number=singular
+<s> p u t e </s>|<s> p u t e n </s>|case=dative:number=plural
+<s> p u t e </s>|<s> p u t e </s>|case=accusative:number=singular
+<s> p u t e </s>|<s> p u t e n </s>|case=accusative:number=plural
+<s> q u i r l </s>|<s> q u i r l </s>|case=nominative:number=singular
+<s> q u i r l </s>|<s> q u i r l e </s>|case=nominative:number=plural
+<s> q u i r l </s>|<s> q u i r l e s </s>|case=genitive:number=singular
+<s> q u i r l </s>|<s> q u i r l e </s>|case=genitive:number=plural
+<s> q u i r l </s>|<s> q u i r l </s>|case=dative:number=singular
+<s> q u i r l </s>|<s> q u i r l e n </s>|case=dative:number=plural
+<s> q u i r l </s>|<s> q u i r l </s>|case=accusative:number=singular
+<s> q u i r l </s>|<s> q u i r l e </s>|case=accusative:number=plural
+<s> r a s t s t ä t t e </s>|<s> r a s t s t ä t t e </s>|case=nominative:number=singular
+<s> r a s t s t ä t t e </s>|<s> r a s t s t ä t t e n </s>|case=nominative:number=plural
+<s> r a s t s t ä t t e </s>|<s> r a s t s t ä t t e </s>|case=genitive:number=singular
+<s> r a s t s t ä t t e </s>|<s> r a s t s t ä t t e n </s>|case=genitive:number=plural
+<s> r a s t s t ä t t e </s>|<s> r a s t s t ä t t e </s>|case=dative:number=singular
+<s> r a s t s t ä t t e </s>|<s> r a s t s t ä t t e n n </s>|case=dative:number=plural
+<s> r a s t s t ä t t e </s>|<s> r a s t s t ä t t e </s>|case=accusative:number=singular
+<s> r a s t s t ä t t e </s>|<s> r a s t s t ä t t e n </s>|case=accusative:number=plural
+<s> r e i f </s>|<s> r e i f </s>|case=nominative:number=singular
+<s> r e i f </s>|<s> r e i f e </s>|case=nominative:number=plural
+<s> r e i f </s>|<s> r e i f e s </s>|case=genitive:number=singular
+<s> r e i f </s>|<s> r e i f e </s>|case=genitive:number=plural
+<s> r e i f </s>|<s> r e i f </s>|case=dative:number=singular
+<s> r e i f </s>|<s> r e i f e n </s>|case=dative:number=plural
+<s> r e i f </s>|<s> r e i f </s>|case=accusative:number=singular
+<s> r e i f </s>|<s> r e i f e </s>|case=accusative:number=plural
+<s> r e l i g i o n </s>|<s> r e l i g i o n </s>|case=nominative:number=singular
+<s> r e l i g i o n </s>|<s> r e l i g i o n e n </s>|case=nominative:number=plural
+<s> r e l i g i o n </s>|<s> r e l i g i o n </s>|case=genitive:number=singular
+<s> r e l i g i o n </s>|<s> r e l i g i o n e n </s>|case=genitive:number=plural
+<s> r e l i g i o n </s>|<s> r e l i g i o n </s>|case=dative:number=singular
+<s> r e l i g i o n </s>|<s> r e l i g i o n e n </s>|case=dative:number=plural
+<s> r e l i g i o n </s>|<s> r e l i g i o n </s>|case=accusative:number=singular
+<s> r e l i g i o n </s>|<s> r e l i g i o n e n </s>|case=accusative:number=plural
+<s> r h e t o r i k </s>|<s> r h e t o r i k </s>|case=nominative:number=singular
+<s> r h e t o r i k </s>|<s> r h e t o r i k e n </s>|case=nominative:number=plural
+<s> r h e t o r i k </s>|<s> r h e t o r i k </s>|case=genitive:number=singular
+<s> r h e t o r i k </s>|<s> r h e t o r i k e n </s>|case=genitive:number=plural
+<s> r h e t o r i k </s>|<s> r h e t o r i k </s>|case=dative:number=singular
+<s> r h e t o r i k </s>|<s> r h e t o r i k e n </s>|case=dative:number=plural
+<s> r h e t o r i k </s>|<s> r h e t o r i k </s>|case=accusative:number=singular
+<s> r h e t o r i k </s>|<s> r h e t o r i k e n </s>|case=accusative:number=plural
+<s> r i c h t e r </s>|<s> r i c h t e r </s>|case=nominative:number=singular
+<s> r i c h t e r </s>|<s> r i c h t e r </s>|case=nominative:number=plural
+<s> r i c h t e r </s>|<s> r i c h t e r s </s>|case=genitive:number=singular
+<s> r i c h t e r </s>|<s> r i c h t e r </s>|case=genitive:number=plural
+<s> r i c h t e r </s>|<s> r i c h t e r </s>|case=dative:number=singular
+<s> r i c h t e r </s>|<s> r i c h t e r n </s>|case=dative:number=plural
+<s> r i c h t e r </s>|<s> r i c h t e r </s>|case=accusative:number=singular
+<s> r i c h t e r </s>|<s> r i c h t e r </s>|case=accusative:number=plural
+<s> r o c k </s>|<s> r o c k </s>|case=nominative:number=singular
+<s> r o c k </s>|<s> r ö c k e </s>|case=nominative:number=plural
+<s> r o c k </s>|<s> r o c k e s </s>|case=genitive:number=singular
+<s> r o c k </s>|<s> r ö c k e </s>|case=genitive:number=plural
+<s> r o c k </s>|<s> r o c k </s>|case=dative:number=singular
+<s> r o c k </s>|<s> r ö c k e n </s>|case=dative:number=plural
+<s> r o c k </s>|<s> r o c k </s>|case=accusative:number=singular
+<s> r o c k </s>|<s> r ö c k e </s>|case=accusative:number=plural
+<s> r ä u c h e r a a l </s>|<s> r ä u c h e r a a l </s>|case=nominative:number=singular
+<s> r ä u c h e r a a l </s>|<s> r ä u c h e r a a l e </s>|case=nominative:number=plural
+<s> r ä u c h e r a a l </s>|<s> r ä u c h e r a a l e s </s>|case=genitive:number=singular
+<s> r ä u c h e r a a l </s>|<s> r ä u c h e r a a l e </s>|case=genitive:number=plural
+<s> r ä u c h e r a a l </s>|<s> r ä u c h e r a a l </s>|case=dative:number=singular
+<s> r ä u c h e r a a l </s>|<s> r ä u c h e r a a l e n </s>|case=dative:number=plural
+<s> r ä u c h e r a a l </s>|<s> r ä u c h e r a a l </s>|case=accusative:number=singular
+<s> r ä u c h e r a a l </s>|<s> r ä u c h e r a a l e </s>|case=accusative:number=plural
+<s> s a a l </s>|<s> s a a l </s>|case=nominative:number=singular
+<s> s a a l </s>|<s> s ä l e </s>|case=nominative:number=plural
+<s> s a a l </s>|<s> s a a l e s </s>|case=genitive:number=singular
+<s> s a a l </s>|<s> s ä l e </s>|case=genitive:number=plural
+<s> s a a l </s>|<s> s a a l </s>|case=dative:number=singular
+<s> s a a l </s>|<s> s ä l e n </s>|case=dative:number=plural
+<s> s a a l </s>|<s> s a a l </s>|case=accusative:number=singular
+<s> s a a l </s>|<s> s ä l e </s>|case=accusative:number=plural
+<s> s a c h e t </s>|<s> s a c h e t </s>|case=nominative:number=singular
+<s> s a c h e t </s>|<s> s a c h e t s </s>|case=nominative:number=plural
+<s> s a c h e t </s>|<s> s a c h e t s </s>|case=genitive:number=singular
+<s> s a c h e t </s>|<s> s a c h e t s </s>|case=genitive:number=plural
+<s> s a c h e t </s>|<s> s a c h e t </s>|case=dative:number=singular
+<s> s a c h e t </s>|<s> s a c h e t s </s>|case=dative:number=plural
+<s> s a c h e t </s>|<s> s a c h e t </s>|case=accusative:number=singular
+<s> s a c h e t </s>|<s> s a c h e t s </s>|case=accusative:number=plural
+<s> s c h a t z </s>|<s> s c h a t z </s>|case=nominative:number=singular
+<s> s c h a t z </s>|<s> s c h ä t z e </s>|case=nominative:number=plural
+<s> s c h a t z </s>|<s> s c h a t z e s </s>|case=genitive:number=singular
+<s> s c h a t z </s>|<s> s c h ä t z e </s>|case=genitive:number=plural
+<s> s c h a t z </s>|<s> s c h a t z </s>|case=dative:number=singular
+<s> s c h a t z </s>|<s> s c h ä t z e n </s>|case=dative:number=plural
+<s> s c h a t z </s>|<s> s c h a t z </s>|case=accusative:number=singular
+<s> s c h a t z </s>|<s> s c h ä t z e </s>|case=accusative:number=plural
+<s> s c h e r e </s>|<s> s c h e r e </s>|case=nominative:number=singular
+<s> s c h e r e </s>|<s> s c h e r e n </s>|case=nominative:number=plural
+<s> s c h e r e </s>|<s> s c h e r e </s>|case=genitive:number=singular
+<s> s c h e r e </s>|<s> s c h e r e n </s>|case=genitive:number=plural
+<s> s c h e r e </s>|<s> s c h e r e </s>|case=dative:number=singular
+<s> s c h e r e </s>|<s> s c h e r e n </s>|case=dative:number=plural
+<s> s c h e r e </s>|<s> s c h e r e </s>|case=accusative:number=singular
+<s> s c h e r e </s>|<s> s c h e r e n </s>|case=accusative:number=plural
+<s> s c h i c h t </s>|<s> s c h i c h t </s>|case=nominative:number=singular
+<s> s c h i c h t </s>|<s> s c h i c h t e n </s>|case=nominative:number=plural
+<s> s c h i c h t </s>|<s> s c h i c h t </s>|case=genitive:number=singular
+<s> s c h i c h t </s>|<s> s c h i c h t e n </s>|case=genitive:number=plural
+<s> s c h i c h t </s>|<s> s c h i c h t </s>|case=dative:number=singular
+<s> s c h i c h t </s>|<s> s c h i c h t e n </s>|case=dative:number=plural
+<s> s c h i c h t </s>|<s> s c h i c h t </s>|case=accusative:number=singular
+<s> s c h i c h t </s>|<s> s c h i c h t e n </s>|case=accusative:number=plural
+<s> s c h l a f a n z u g </s>|<s> s c h l a f a n z u g </s>|case=nominative:number=singular
+<s> s c h l a f a n z u g </s>|<s> s c h l a f a n z ü g e </s>|case=nominative:number=plural
+<s> s c h l a f a n z u g </s>|<s> s c h l a f a n z u g e s </s>|case=genitive:number=singular
+<s> s c h l a f a n z u g </s>|<s> s c h l a f a n z ü g e </s>|case=genitive:number=plural
+<s> s c h l a f a n z u g </s>|<s> s c h l a f a n z u g </s>|case=dative:number=singular
+<s> s c h l a f a n z u g </s>|<s> s c h l a f a n z ü g e n </s>|case=dative:number=plural
+<s> s c h l a f a n z u g </s>|<s> s c h l a f a n z u g </s>|case=accusative:number=singular
+<s> s c h l a f a n z u g </s>|<s> s c h l a f a n z ü g e </s>|case=accusative:number=plural
+<s> s c h l a f m ü t z e </s>|<s> s c h l a f m ü t z e </s>|case=nominative:number=singular
+<s> s c h l a f m ü t z e </s>|<s> s c h l a f m ü t z e n </s>|case=nominative:number=plural
+<s> s c h l a f m ü t z e </s>|<s> s c h l a f m ü t z e </s>|case=genitive:number=singular
+<s> s c h l a f m ü t z e </s>|<s> s c h l a f m ü t z e n </s>|case=genitive:number=plural
+<s> s c h l a f m ü t z e </s>|<s> s c h l a f m ü t z e </s>|case=dative:number=singular
+<s> s c h l a f m ü t z e </s>|<s> s c h l a f m ü t z e n </s>|case=dative:number=plural
+<s> s c h l a f m ü t z e </s>|<s> s c h l a f m ü t z e </s>|case=accusative:number=singular
+<s> s c h l a f m ü t z e </s>|<s> s c h l a f m ü t z e n </s>|case=accusative:number=plural
+<s> s c h l a r a f f e n l a n d </s>|<s> s c h l a r a f f e n l a n d </s>|case=nominative:number=singular
+<s> s c h l a r a f f e n l a n d </s>|<s> s c h l a r a f f e n l ä n d e r </s>|case=nominative:number=plural
+<s> s c h l a r a f f e n l a n d </s>|<s> s c h l a r a f f e n l a n d e s </s>|case=genitive:number=singular
+<s> s c h l a r a f f e n l a n d </s>|<s> s c h l a r a f f e n l ä n d e r </s>|case=genitive:number=plural
+<s> s c h l a r a f f e n l a n d </s>|<s> s c h l a r a f f e n l a n d </s>|case=dative:number=singular
+<s> s c h l a r a f f e n l a n d </s>|<s> s c h l a r a f f e n l ä n d e r n </s>|case=dative:number=plural
+<s> s c h l a r a f f e n l a n d </s>|<s> s c h l a r a f f e n l a n d </s>|case=accusative:number=singular
+<s> s c h l a r a f f e n l a n d </s>|<s> s c h l a r a f f e n l ä n d e r </s>|case=accusative:number=plural
+<s> s c h n a u z e </s>|<s> s c h n a u z e </s>|case=nominative:number=singular
+<s> s c h n a u z e </s>|<s> s c h n a u z e n </s>|case=nominative:number=plural
+<s> s c h n a u z e </s>|<s> s c h n a u z e </s>|case=genitive:number=singular
+<s> s c h n a u z e </s>|<s> s c h n a u z e n </s>|case=genitive:number=plural
+<s> s c h n a u z e </s>|<s> s c h n a u z e </s>|case=dative:number=singular
+<s> s c h n a u z e </s>|<s> s c h n a u z e n </s>|case=dative:number=plural
+<s> s c h n a u z e </s>|<s> s c h n a u z e </s>|case=accusative:number=singular
+<s> s c h n a u z e </s>|<s> s c h n a u z e n </s>|case=accusative:number=plural
+<s> s c h w e i n e r e i </s>|<s> s c h w e i n e r e i </s>|case=nominative:number=singular
+<s> s c h w e i n e r e i </s>|<s> s c h w e i n e r e i e n </s>|case=nominative:number=plural
+<s> s c h w e i n e r e i </s>|<s> s c h w e i n e r e i </s>|case=genitive:number=singular
+<s> s c h w e i n e r e i </s>|<s> s c h w e i n e r e i e n </s>|case=genitive:number=plural
+<s> s c h w e i n e r e i </s>|<s> s c h w e i n e r e i </s>|case=dative:number=singular
+<s> s c h w e i n e r e i </s>|<s> s c h w e i n e r e i e n </s>|case=dative:number=plural
+<s> s c h w e i n e r e i </s>|<s> s c h w e i n e r e i </s>|case=accusative:number=singular
+<s> s c h w e i n e r e i </s>|<s> s c h w e i n e r e i e n </s>|case=accusative:number=plural
+<s> s e e s c h w a l b e </s>|<s> s e e s c h w a l b e </s>|case=nominative:number=singular
+<s> s e e s c h w a l b e </s>|<s> s e e s c h w a l b e n </s>|case=nominative:number=plural
+<s> s e e s c h w a l b e </s>|<s> s e e s c h w a l b e </s>|case=genitive:number=singular
+<s> s e e s c h w a l b e </s>|<s> s e e s c h w a l b e n </s>|case=genitive:number=plural
+<s> s e e s c h w a l b e </s>|<s> s e e s c h w a l b e </s>|case=dative:number=singular
+<s> s e e s c h w a l b e </s>|<s> s e e s c h w a l b e n </s>|case=dative:number=plural
+<s> s e e s c h w a l b e </s>|<s> s e e s c h w a l b e </s>|case=accusative:number=singular
+<s> s e e s c h w a l b e </s>|<s> s e e s c h w a l b e n </s>|case=accusative:number=plural
+<s> s e x t e </s>|<s> s e x t e </s>|case=nominative:number=singular
+<s> s e x t e </s>|<s> s e x t e n </s>|case=nominative:number=plural
+<s> s e x t e </s>|<s> s e x t e </s>|case=genitive:number=singular
+<s> s e x t e </s>|<s> s e x t e n </s>|case=genitive:number=plural
+<s> s e x t e </s>|<s> s e x t e </s>|case=dative:number=singular
+<s> s e x t e </s>|<s> s e x t e n </s>|case=dative:number=plural
+<s> s e x t e </s>|<s> s e x t e </s>|case=accusative:number=singular
+<s> s e x t e </s>|<s> s e x t e n </s>|case=accusative:number=plural
+<s> s p a n n u n g </s>|<s> s p a n n u n g </s>|case=nominative:number=singular
+<s> s p a n n u n g </s>|<s> s p a n n u n g e n </s>|case=nominative:number=plural
+<s> s p a n n u n g </s>|<s> s p a n n u n g </s>|case=genitive:number=singular
+<s> s p a n n u n g </s>|<s> s p a n n u n g e n </s>|case=genitive:number=plural
+<s> s p a n n u n g </s>|<s> s p a n n u n g </s>|case=dative:number=singular
+<s> s p a n n u n g </s>|<s> s p a n n u n g e n </s>|case=dative:number=plural
+<s> s p a n n u n g </s>|<s> s p a n n u n g </s>|case=accusative:number=singular
+<s> s p a n n u n g </s>|<s> s p a n n u n g e n </s>|case=accusative:number=plural
+<s> s p e c h t </s>|<s> s p e c h t </s>|case=nominative:number=singular
+<s> s p e c h t </s>|<s> s p e c h t e </s>|case=nominative:number=plural
+<s> s p e c h t </s>|<s> s p e c h t e s </s>|case=genitive:number=singular
+<s> s p e c h t </s>|<s> s p e c h t e </s>|case=genitive:number=plural
+<s> s p e c h t </s>|<s> s p e c h t </s>|case=dative:number=singular
+<s> s p e c h t </s>|<s> s p e c h t e n </s>|case=dative:number=plural
+<s> s p e c h t </s>|<s> s p e c h t </s>|case=accusative:number=singular
+<s> s p e c h t </s>|<s> s p e c h t e </s>|case=accusative:number=plural
+<s> s p i e l z e u g v e r k ä u f e r </s>|<s> s p i e l z e u g v e r k ä u f e r </s>|case=nominative:number=singular
+<s> s p i e l z e u g v e r k ä u f e r </s>|<s> s p i e l z e u g v e r k ä u f e r </s>|case=nominative:number=plural
+<s> s p i e l z e u g v e r k ä u f e r </s>|<s> s p i e l z e u g v e r k ä u f e r s </s>|case=genitive:number=singular
+<s> s p i e l z e u g v e r k ä u f e r </s>|<s> s p i e l z e u g v e r k ä u f e r </s>|case=genitive:number=plural
+<s> s p i e l z e u g v e r k ä u f e r </s>|<s> s p i e l z e u g v e r k ä u f e r </s>|case=dative:number=singular
+<s> s p i e l z e u g v e r k ä u f e r </s>|<s> s p i e l z e u g v e r k ä u f e r n </s>|case=dative:number=plural
+<s> s p i e l z e u g v e r k ä u f e r </s>|<s> s p i e l z e u g v e r k ä u f e r </s>|case=accusative:number=singular
+<s> s p i e l z e u g v e r k ä u f e r </s>|<s> s p i e l z e u g v e r k ä u f e r </s>|case=accusative:number=plural
+<s> s p i t z e n k a n d i d a t </s>|<s> s p i t z e n k a n d i d a t </s>|case=nominative:number=singular
+<s> s p i t z e n k a n d i d a t </s>|<s> s p i t z e n k a n d i d a t e n </s>|case=nominative:number=plural
+<s> s p i t z e n k a n d i d a t </s>|<s> s p i t z e n k a n d i d a t e n </s>|case=genitive:number=singular
+<s> s p i t z e n k a n d i d a t </s>|<s> s p i t z e n k a n d i d a t e n </s>|case=genitive:number=plural
+<s> s p i t z e n k a n d i d a t </s>|<s> s p i t z e n k a n d i d a t e n </s>|case=dative:number=singular
+<s> s p i t z e n k a n d i d a t </s>|<s> s p i t z e n k a n d i d a t e n </s>|case=dative:number=plural
+<s> s p i t z e n k a n d i d a t </s>|<s> s p i t z e n k a n d i d a t e n </s>|case=accusative:number=singular
+<s> s p i t z e n k a n d i d a t </s>|<s> s p i t z e n k a n d i d a t e n </s>|case=accusative:number=plural
+<s> s p r u c h b a n d </s>|<s> s p r u c h b a n d </s>|case=nominative:number=singular
+<s> s p r u c h b a n d </s>|<s> s p r u c h b ä n d e r </s>|case=nominative:number=plural
+<s> s p r u c h b a n d </s>|<s> s p r u c h b a n d e s </s>|case=genitive:number=singular
+<s> s p r u c h b a n d </s>|<s> s p r u c h b ä n d e r </s>|case=genitive:number=plural
+<s> s p r u c h b a n d </s>|<s> s p r u c h b a n d </s>|case=dative:number=singular
+<s> s p r u c h b a n d </s>|<s> s p r u c h b ä n d e r n </s>|case=dative:number=plural
+<s> s p r u c h b a n d </s>|<s> s p r u c h b a n d </s>|case=accusative:number=singular
+<s> s p r u c h b a n d </s>|<s> s p r u c h b ä n d e r </s>|case=accusative:number=plural
+<s> s p u r </s>|<s> s p u r </s>|case=nominative:number=singular
+<s> s p u r </s>|<s> s p u r e n </s>|case=nominative:number=plural
+<s> s p u r </s>|<s> s p u r </s>|case=genitive:number=singular
+<s> s p u r </s>|<s> s p u r e n </s>|case=genitive:number=plural
+<s> s p u r </s>|<s> s p u r </s>|case=dative:number=singular
+<s> s p u r </s>|<s> s p u r e n </s>|case=dative:number=plural
+<s> s p u r </s>|<s> s p u r </s>|case=accusative:number=singular
+<s> s p u r </s>|<s> s p u r e n </s>|case=accusative:number=plural
+<s> s t e i n b e i ß e r </s>|<s> s t e i n b e i ß e r </s>|case=nominative:number=singular
+<s> s t e i n b e i ß e r </s>|<s> s t e i n b e i ß e r </s>|case=nominative:number=plural
+<s> s t e i n b e i ß e r </s>|<s> s t e i n b e i ß e r s </s>|case=genitive:number=singular
+<s> s t e i n b e i ß e r </s>|<s> s t e i n b e i ß e r </s>|case=genitive:number=plural
+<s> s t e i n b e i ß e r </s>|<s> s t e i n b e i ß e r </s>|case=dative:number=singular
+<s> s t e i n b e i ß e r </s>|<s> s t e i n b e i ß e r n </s>|case=dative:number=plural
+<s> s t e i n b e i ß e r </s>|<s> s t e i n b e i ß e r </s>|case=accusative:number=singular
+<s> s t e i n b e i ß e r </s>|<s> s t e i n b e i ß e r </s>|case=accusative:number=plural
+<s> s t e p p e n k a t z e </s>|<s> s t e p p e n k a t z e </s>|case=nominative:number=singular
+<s> s t e p p e n k a t z e </s>|<s> s t e p p e n k a t z e n </s>|case=nominative:number=plural
+<s> s t e p p e n k a t z e </s>|<s> s t e p p e n k a t z e </s>|case=genitive:number=singular
+<s> s t e p p e n k a t z e </s>|<s> s t e p p e n k a t z e n </s>|case=genitive:number=plural
+<s> s t e p p e n k a t z e </s>|<s> s t e p p e n k a t z e </s>|case=dative:number=singular
+<s> s t e p p e n k a t z e </s>|<s> s t e p p e n k a t z e n </s>|case=dative:number=plural
+<s> s t e p p e n k a t z e </s>|<s> s t e p p e n k a t z e </s>|case=accusative:number=singular
+<s> s t e p p e n k a t z e </s>|<s> s t e p p e n k a t z e n </s>|case=accusative:number=plural
+<s> s t i c h </s>|<s> s t i c h </s>|case=nominative:number=singular
+<s> s t i c h </s>|<s> s t i c h e </s>|case=nominative:number=plural
+<s> s t i c h </s>|<s> s t i c h e s </s>|case=genitive:number=singular
+<s> s t i c h </s>|<s> s t i c h e </s>|case=genitive:number=plural
+<s> s t i c h </s>|<s> s t i c h </s>|case=dative:number=singular
+<s> s t i c h </s>|<s> s t i c h e n </s>|case=dative:number=plural
+<s> s t i c h </s>|<s> s t i c h </s>|case=accusative:number=singular
+<s> s t i c h </s>|<s> s t i c h e </s>|case=accusative:number=plural
+<s> s t i m m e </s>|<s> s t i m m e </s>|case=nominative:number=singular
+<s> s t i m m e </s>|<s> s t i m m e n </s>|case=nominative:number=plural
+<s> s t i m m e </s>|<s> s t i m m e </s>|case=genitive:number=singular
+<s> s t i m m e </s>|<s> s t i m m e n </s>|case=genitive:number=plural
+<s> s t i m m e </s>|<s> s t i m m e </s>|case=dative:number=singular
+<s> s t i m m e </s>|<s> s t i m m e n </s>|case=dative:number=plural
+<s> s t i m m e </s>|<s> s t i m m e </s>|case=accusative:number=singular
+<s> s t i m m e </s>|<s> s t i m m e n </s>|case=accusative:number=plural
+<s> s t r a u ß </s>|<s> s t r a u ß </s>|case=nominative:number=singular
+<s> s t r a u ß </s>|<s> s t r ä u ß e </s>|case=nominative:number=plural
+<s> s t r a u ß </s>|<s> s t r a u ß e s </s>|case=genitive:number=singular
+<s> s t r a u ß </s>|<s> s t r ä u ß e </s>|case=genitive:number=plural
+<s> s t r a u ß </s>|<s> s t r a u ß </s>|case=dative:number=singular
+<s> s t r a u ß </s>|<s> s t r ä u ß e n </s>|case=dative:number=plural
+<s> s t r a u ß </s>|<s> s t r a u ß </s>|case=accusative:number=singular
+<s> s t r a u ß </s>|<s> s t r ä u ß e </s>|case=accusative:number=plural
+<s> s t ä n g e l </s>|<s> s t ä n g e l </s>|case=nominative:number=singular
+<s> s t ä n g e l </s>|<s> s t ä n g e l </s>|case=nominative:number=plural
+<s> s t ä n g e l </s>|<s> s t ä n g e l s </s>|case=genitive:number=singular
+<s> s t ä n g e l </s>|<s> s t ä n g e l </s>|case=genitive:number=plural
+<s> s t ä n g e l </s>|<s> s t ä n g e l </s>|case=dative:number=singular
+<s> s t ä n g e l </s>|<s> s t ä n g e l n </s>|case=dative:number=plural
+<s> s t ä n g e l </s>|<s> s t ä n g e l </s>|case=accusative:number=singular
+<s> s t ä n g e l </s>|<s> s t ä n g e l </s>|case=accusative:number=plural
+<s> s t ä t t e </s>|<s> s t ä t t e </s>|case=nominative:number=singular
+<s> s t ä t t e </s>|<s> s t ä t t e n </s>|case=nominative:number=plural
+<s> s t ä t t e </s>|<s> s t ä t t e </s>|case=genitive:number=singular
+<s> s t ä t t e </s>|<s> s t ä t t e n </s>|case=genitive:number=plural
+<s> s t ä t t e </s>|<s> s t ä t t e </s>|case=dative:number=singular
+<s> s t ä t t e </s>|<s> s t ä t t e n </s>|case=dative:number=plural
+<s> s t ä t t e </s>|<s> s t ä t t e </s>|case=accusative:number=singular
+<s> s t ä t t e </s>|<s> s t ä t t e n </s>|case=accusative:number=plural
+<s> s t ü t z r a d </s>|<s> s t ü t z r a d </s>|case=nominative:number=singular
+<s> s t ü t z r a d </s>|<s> s t ü t z r ä d e r </s>|case=nominative:number=plural
+<s> s t ü t z r a d </s>|<s> s t ü t z r a d e s </s>|case=genitive:number=singular
+<s> s t ü t z r a d </s>|<s> s t ü t z r ä d e r </s>|case=genitive:number=plural
+<s> s t ü t z r a d </s>|<s> s t ü t z r a d </s>|case=dative:number=singular
+<s> s t ü t z r a d </s>|<s> s t ü t z r ä d e r n </s>|case=dative:number=plural
+<s> s t ü t z r a d </s>|<s> s t ü t z r a d </s>|case=accusative:number=singular
+<s> s t ü t z r a d </s>|<s> s t ü t z r ä d e r </s>|case=accusative:number=plural
+<s> s w a s t i k a </s>|<s> s w a s t i k a </s>|case=nominative:number=singular
+<s> s w a s t i k a </s>|<s> s w a s t i k e n </s>|case=nominative:number=plural
+<s> s w a s t i k a </s>|<s> s w a s t i k a </s>|case=genitive:number=singular
+<s> s w a s t i k a </s>|<s> s w a s t i k e n </s>|case=genitive:number=plural
+<s> s w a s t i k a </s>|<s> s w a s t i k a </s>|case=dative:number=singular
+<s> s w a s t i k a </s>|<s> s w a s t i k e n </s>|case=dative:number=plural
+<s> s w a s t i k a </s>|<s> s w a s t i k a </s>|case=accusative:number=singular
+<s> s w a s t i k a </s>|<s> s w a s t i k e n </s>|case=accusative:number=plural
+<s> t a l g </s>|<s> t a l g </s>|case=nominative:number=singular
+<s> t a l g </s>|<s> t a l g e </s>|case=nominative:number=plural
+<s> t a l g </s>|<s> t a l g e s </s>|case=genitive:number=singular
+<s> t a l g </s>|<s> t a l g e </s>|case=genitive:number=plural
+<s> t a l g </s>|<s> t a l g </s>|case=dative:number=singular
+<s> t a l g </s>|<s> t a l g e n </s>|case=dative:number=plural
+<s> t a l g </s>|<s> t a l g </s>|case=accusative:number=singular
+<s> t a l g </s>|<s> t a l g e </s>|case=accusative:number=plural
+<s> t a s c h e </s>|<s> t a s c h e </s>|case=nominative:number=singular
+<s> t a s c h e </s>|<s> t a s c h e n </s>|case=nominative:number=plural
+<s> t a s c h e </s>|<s> t a s c h e </s>|case=genitive:number=singular
+<s> t a s c h e </s>|<s> t a s c h e n </s>|case=genitive:number=plural
+<s> t a s c h e </s>|<s> t a s c h e </s>|case=dative:number=singular
+<s> t a s c h e </s>|<s> t a s c h e n </s>|case=dative:number=plural
+<s> t a s c h e </s>|<s> t a s c h e </s>|case=accusative:number=singular
+<s> t a s c h e </s>|<s> t a s c h e n </s>|case=accusative:number=plural
+<s> t a u g l i c h k e i t </s>|<s> t a u g l i c h k e i t </s>|case=nominative:number=singular
+<s> t a u g l i c h k e i t </s>|<s> t a u g l i c h k e i t e n </s>|case=nominative:number=plural
+<s> t a u g l i c h k e i t </s>|<s> t a u g l i c h k e i t </s>|case=genitive:number=singular
+<s> t a u g l i c h k e i t </s>|<s> t a u g l i c h k e i t e n </s>|case=genitive:number=plural
+<s> t a u g l i c h k e i t </s>|<s> t a u g l i c h k e i t </s>|case=dative:number=singular
+<s> t a u g l i c h k e i t </s>|<s> t a u g l i c h k e i t e n </s>|case=dative:number=plural
+<s> t a u g l i c h k e i t </s>|<s> t a u g l i c h k e i t </s>|case=accusative:number=singular
+<s> t a u g l i c h k e i t </s>|<s> t a u g l i c h k e i t e n </s>|case=accusative:number=plural
+<s> t a u s e n d s c h ö n c h e n </s>|<s> t a u s e n d s c h ö n c h e n </s>|case=nominative:number=singular
+<s> t a u s e n d s c h ö n c h e n </s>|<s> t a u s e n d s c h ö n c h e n </s>|case=nominative:number=plural
+<s> t a u s e n d s c h ö n c h e n </s>|<s> t a u s e n d s c h ö n c h e n s </s>|case=genitive:number=singular
+<s> t a u s e n d s c h ö n c h e n </s>|<s> t a u s e n d s c h ö n c h e n </s>|case=genitive:number=plural
+<s> t a u s e n d s c h ö n c h e n </s>|<s> t a u s e n d s c h ö n c h e n </s>|case=dative:number=singular
+<s> t a u s e n d s c h ö n c h e n </s>|<s> t a u s e n d s c h ö n c h e n </s>|case=dative:number=plural
+<s> t a u s e n d s c h ö n c h e n </s>|<s> t a u s e n d s c h ö n c h e n </s>|case=accusative:number=singular
+<s> t a u s e n d s c h ö n c h e n </s>|<s> t a u s e n d s c h ö n c h e n </s>|case=accusative:number=plural
+<s> t e c h n o l o g i e </s>|<s> t e c h n o l o g i e </s>|case=nominative:number=singular
+<s> t e c h n o l o g i e </s>|<s> t e c h n o l o g i e n </s>|case=nominative:number=plural
+<s> t e c h n o l o g i e </s>|<s> t e c h n o l o g i e </s>|case=genitive:number=singular
+<s> t e c h n o l o g i e </s>|<s> t e c h n o l o g i e n </s>|case=genitive:number=plural
+<s> t e c h n o l o g i e </s>|<s> t e c h n o l o g i e </s>|case=dative:number=singular
+<s> t e c h n o l o g i e </s>|<s> t e c h n o l o g i e n </s>|case=dative:number=plural
+<s> t e c h n o l o g i e </s>|<s> t e c h n o l o g i e </s>|case=accusative:number=singular
+<s> t e c h n o l o g i e </s>|<s> t e c h n o l o g i e n </s>|case=accusative:number=plural
+<s> t o a s t e r </s>|<s> t o a s t e r </s>|case=nominative:number=singular
+<s> t o a s t e r </s>|<s> t o a s t e r </s>|case=nominative:number=plural
+<s> t o a s t e r </s>|<s> t o a s t e r s </s>|case=genitive:number=singular
+<s> t o a s t e r </s>|<s> t o a s t e r </s>|case=genitive:number=plural
+<s> t o a s t e r </s>|<s> t o a s t e r </s>|case=dative:number=singular
+<s> t o a s t e r </s>|<s> t o a s t e r n </s>|case=dative:number=plural
+<s> t o a s t e r </s>|<s> t o a s t e r </s>|case=accusative:number=singular
+<s> t o a s t e r </s>|<s> t o a s t e r </s>|case=accusative:number=plural
+<s> t o r s c h ü t z e </s>|<s> t o r s c h ü t z e </s>|case=nominative:number=singular
+<s> t o r s c h ü t z e </s>|<s> t o r s c h ü t z e n </s>|case=nominative:number=plural
+<s> t o r s c h ü t z e </s>|<s> t o r s c h ü t z e n </s>|case=genitive:number=singular
+<s> t o r s c h ü t z e </s>|<s> t o r s c h ü t z e n </s>|case=genitive:number=plural
+<s> t o r s c h ü t z e </s>|<s> t o r s c h ü t z e n </s>|case=dative:number=singular
+<s> t o r s c h ü t z e </s>|<s> t o r s c h ü t z e n </s>|case=dative:number=plural
+<s> t o r s c h ü t z e </s>|<s> t o r s c h ü t z e n </s>|case=accusative:number=singular
+<s> t o r s c h ü t z e </s>|<s> t o r s c h ü t z e n </s>|case=accusative:number=plural
+<s> t r e i b h a u s g a s </s>|<s> t r e i b h a u s g a s </s>|case=nominative:number=singular
+<s> t r e i b h a u s g a s </s>|<s> t r e i b h a u s g a s e </s>|case=nominative:number=plural
+<s> t r e i b h a u s g a s </s>|<s> t r e i b h a u s g a s e s </s>|case=genitive:number=singular
+<s> t r e i b h a u s g a s </s>|<s> t r e i b h a u s g a s e </s>|case=genitive:number=plural
+<s> t r e i b h a u s g a s </s>|<s> t r e i b h a u s g a s </s>|case=dative:number=singular
+<s> t r e i b h a u s g a s </s>|<s> t r e i b h a u s g a s e n </s>|case=dative:number=plural
+<s> t r e i b h a u s g a s </s>|<s> t r e i b h a u s g a s </s>|case=accusative:number=singular
+<s> t r e i b h a u s g a s </s>|<s> t r e i b h a u s g a s e </s>|case=accusative:number=plural
+<s> t ä t i g k e i t s w o r t </s>|<s> t ä t i g k e i t s w o r t </s>|case=nominative:number=singular
+<s> t ä t i g k e i t s w o r t </s>|<s> t ä t i g k e i t s w ö r t e r </s>|case=nominative:number=plural
+<s> t ä t i g k e i t s w o r t </s>|<s> t ä t i g k e i t s w o r t e s </s>|case=genitive:number=singular
+<s> t ä t i g k e i t s w o r t </s>|<s> t ä t i g k e i t s w ö r t e r </s>|case=genitive:number=plural
+<s> t ä t i g k e i t s w o r t </s>|<s> t ä t i g k e i t s w o r t </s>|case=dative:number=singular
+<s> t ä t i g k e i t s w o r t </s>|<s> t ä t i g k e i t s w ö r t e r n </s>|case=dative:number=plural
+<s> t ä t i g k e i t s w o r t </s>|<s> t ä t i g k e i t s w o r t </s>|case=accusative:number=singular
+<s> t ä t i g k e i t s w o r t </s>|<s> t ä t i g k e i t s w ö r t e r </s>|case=accusative:number=plural
+<s> u n t e r s u c h u n g </s>|<s> u n t e r s u c h u n g </s>|case=nominative:number=singular
+<s> u n t e r s u c h u n g </s>|<s> u n t e r s u c h u n g e n </s>|case=nominative:number=plural
+<s> u n t e r s u c h u n g </s>|<s> u n t e r s u c h u n g </s>|case=genitive:number=singular
+<s> u n t e r s u c h u n g </s>|<s> u n t e r s u c h u n g e n </s>|case=genitive:number=plural
+<s> u n t e r s u c h u n g </s>|<s> u n t e r s u c h u n g </s>|case=dative:number=singular
+<s> u n t e r s u c h u n g </s>|<s> u n t e r s u c h u n g e n </s>|case=dative:number=plural
+<s> u n t e r s u c h u n g </s>|<s> u n t e r s u c h u n g </s>|case=accusative:number=singular
+<s> u n t e r s u c h u n g </s>|<s> u n t e r s u c h u n g e n </s>|case=accusative:number=plural
+<s> v a g i n a </s>|<s> v a g i n a </s>|case=nominative:number=singular
+<s> v a g i n a </s>|<s> v a g i n e n </s>|case=nominative:number=plural
+<s> v a g i n a </s>|<s> v a g i n a </s>|case=genitive:number=singular
+<s> v a g i n a </s>|<s> v a g i n e n </s>|case=genitive:number=plural
+<s> v a g i n a </s>|<s> v a g i n a </s>|case=dative:number=singular
+<s> v a g i n a </s>|<s> v a g i n e n </s>|case=dative:number=plural
+<s> v a g i n a </s>|<s> v a g i n a </s>|case=accusative:number=singular
+<s> v a g i n a </s>|<s> v a g i n e n </s>|case=accusative:number=plural
+<s> v e r l a u f </s>|<s> v e r l a u f </s>|case=nominative:number=singular
+<s> v e r l a u f </s>|<s> v e r l ä u f e </s>|case=nominative:number=plural
+<s> v e r l a u f </s>|<s> v e r l a u f e s </s>|case=genitive:number=singular
+<s> v e r l a u f </s>|<s> v e r l ä u f e </s>|case=genitive:number=plural
+<s> v e r l a u f </s>|<s> v e r l a u f </s>|case=dative:number=singular
+<s> v e r l a u f </s>|<s> v e r l ä u f e n </s>|case=dative:number=plural
+<s> v e r l a u f </s>|<s> v e r l a u f </s>|case=accusative:number=singular
+<s> v e r l a u f </s>|<s> v e r l ä u f e </s>|case=accusative:number=plural
+<s> v e r w a l t u n g s a k t </s>|<s> v e r w a l t u n g s a k t </s>|case=nominative:number=singular
+<s> v e r w a l t u n g s a k t </s>|<s> v e r w a l t u n g s a k t e </s>|case=nominative:number=plural
+<s> v e r w a l t u n g s a k t </s>|<s> v e r w a l t u n g s a k t e s </s>|case=genitive:number=singular
+<s> v e r w a l t u n g s a k t </s>|<s> v e r w a l t u n g s a k t e </s>|case=genitive:number=plural
+<s> v e r w a l t u n g s a k t </s>|<s> v e r w a l t u n g s a k t </s>|case=dative:number=singular
+<s> v e r w a l t u n g s a k t </s>|<s> v e r w a l t u n g s a k t e n </s>|case=dative:number=plural
+<s> v e r w a l t u n g s a k t </s>|<s> v e r w a l t u n g s a k t </s>|case=accusative:number=singular
+<s> v e r w a l t u n g s a k t </s>|<s> v e r w a l t u n g s a k t e </s>|case=accusative:number=plural
+<s> v e r w e c h s l u n g </s>|<s> v e r w e c h s l u n g </s>|case=nominative:number=singular
+<s> v e r w e c h s l u n g </s>|<s> v e r w e c h s l u n g e n </s>|case=nominative:number=plural
+<s> v e r w e c h s l u n g </s>|<s> v e r w e c h s l u n g </s>|case=genitive:number=singular
+<s> v e r w e c h s l u n g </s>|<s> v e r w e c h s l u n g e n </s>|case=genitive:number=plural
+<s> v e r w e c h s l u n g </s>|<s> v e r w e c h s l u n g </s>|case=dative:number=singular
+<s> v e r w e c h s l u n g </s>|<s> v e r w e c h s l u n g e n </s>|case=dative:number=plural
+<s> v e r w e c h s l u n g </s>|<s> v e r w e c h s l u n g </s>|case=accusative:number=singular
+<s> v e r w e c h s l u n g </s>|<s> v e r w e c h s l u n g e n </s>|case=accusative:number=plural
+<s> v i d e o a u f z e i c h n u n g </s>|<s> v i d e o a u f z e i c h n u n g </s>|case=nominative:number=singular
+<s> v i d e o a u f z e i c h n u n g </s>|<s> v i d e o a u f z e i c h n u n g e n </s>|case=nominative:number=plural
+<s> v i d e o a u f z e i c h n u n g </s>|<s> v i d e o a u f z e i c h n u n g </s>|case=genitive:number=singular
+<s> v i d e o a u f z e i c h n u n g </s>|<s> v i d e o a u f z e i c h n u n g e n </s>|case=genitive:number=plural
+<s> v i d e o a u f z e i c h n u n g </s>|<s> v i d e o a u f z e i c h n u n g </s>|case=dative:number=singular
+<s> v i d e o a u f z e i c h n u n g </s>|<s> v i d e o a u f z e i c h n u n g e n </s>|case=dative:number=plural
+<s> v i d e o a u f z e i c h n u n g </s>|<s> v i d e o a u f z e i c h n u n g </s>|case=accusative:number=singular
+<s> v i d e o a u f z e i c h n u n g </s>|<s> v i d e o a u f z e i c h n u n g e n </s>|case=accusative:number=plural
+<s> v o r h a u t </s>|<s> v o r h a u t </s>|case=nominative:number=singular
+<s> v o r h a u t </s>|<s> v o r h ä u t e </s>|case=nominative:number=plural
+<s> v o r h a u t </s>|<s> v o r h a u t </s>|case=genitive:number=singular
+<s> v o r h a u t </s>|<s> v o r h ä u t e </s>|case=genitive:number=plural
+<s> v o r h a u t </s>|<s> v o r h a u t </s>|case=dative:number=singular
+<s> v o r h a u t </s>|<s> v o r h ä u t e n </s>|case=dative:number=plural
+<s> v o r h a u t </s>|<s> v o r h a u t </s>|case=accusative:number=singular
+<s> v o r h a u t </s>|<s> v o r h ä u t e </s>|case=accusative:number=plural
+<s> v o r k o m m e n </s>|<s> v o r k o m m e n </s>|case=nominative:number=singular
+<s> v o r k o m m e n </s>|<s> v o r k o m m e n </s>|case=nominative:number=plural
+<s> v o r k o m m e n </s>|<s> v o r k o m m e n s </s>|case=genitive:number=singular
+<s> v o r k o m m e n </s>|<s> v o r k o m m e n </s>|case=genitive:number=plural
+<s> v o r k o m m e n </s>|<s> v o r k o m m e n </s>|case=dative:number=singular
+<s> v o r k o m m e n </s>|<s> v o r k o m m e n </s>|case=dative:number=plural
+<s> v o r k o m m e n </s>|<s> v o r k o m m e n </s>|case=accusative:number=singular
+<s> v o r k o m m e n </s>|<s> v o r k o m m e n </s>|case=accusative:number=plural
+<s> w c </s>|<s> w c </s>|case=nominative:number=singular
+<s> w c </s>|<s> w c s </s>|case=nominative:number=plural
+<s> w c </s>|<s> w c s </s>|case=genitive:number=singular
+<s> w c </s>|<s> w c s </s>|case=genitive:number=plural
+<s> w c </s>|<s> w c </s>|case=dative:number=singular
+<s> w c </s>|<s> w c s </s>|case=dative:number=plural
+<s> w c </s>|<s> w c </s>|case=accusative:number=singular
+<s> w c </s>|<s> w c s </s>|case=accusative:number=plural
+<s> w a s c h m i t t e l </s>|<s> w a s c h m i t t e l </s>|case=nominative:number=singular
+<s> w a s c h m i t t e l </s>|<s> w a s c h m i t t e l </s>|case=nominative:number=plural
+<s> w a s c h m i t t e l </s>|<s> w a s c h m i t t e l s </s>|case=genitive:number=singular
+<s> w a s c h m i t t e l </s>|<s> w a s c h m i t t e l </s>|case=genitive:number=plural
+<s> w a s c h m i t t e l </s>|<s> w a s c h m i t t e l </s>|case=dative:number=singular
+<s> w a s c h m i t t e l </s>|<s> w a s c h m i t t e l n </s>|case=dative:number=plural
+<s> w a s c h m i t t e l </s>|<s> w a s c h m i t t e l </s>|case=accusative:number=singular
+<s> w a s c h m i t t e l </s>|<s> w a s c h m i t t e l </s>|case=accusative:number=plural
+<s> w a s s e r b ä r </s>|<s> w a s s e r b ä r </s>|case=nominative:number=singular
+<s> w a s s e r b ä r </s>|<s> w a s s e r b ä r e n </s>|case=nominative:number=plural
+<s> w a s s e r b ä r </s>|<s> w a s s e r b ä r e n </s>|case=genitive:number=singular
+<s> w a s s e r b ä r </s>|<s> w a s s e r b ä r e n </s>|case=genitive:number=plural
+<s> w a s s e r b ä r </s>|<s> w a s s e r b ä r e n </s>|case=dative:number=singular
+<s> w a s s e r b ä r </s>|<s> w a s s e r b ä r e n </s>|case=dative:number=plural
+<s> w a s s e r b ä r </s>|<s> w a s s e r b ä r e n </s>|case=accusative:number=singular
+<s> w a s s e r b ä r </s>|<s> w a s s e r b ä r e n </s>|case=accusative:number=plural
+<s> w e i l e r </s>|<s> w e i l e r </s>|case=nominative:number=singular
+<s> w e i l e r </s>|<s> w e i l e r </s>|case=nominative:number=plural
+<s> w e i l e r </s>|<s> w e i l e r s </s>|case=genitive:number=singular
+<s> w e i l e r </s>|<s> w e i l e r </s>|case=genitive:number=plural
+<s> w e i l e r </s>|<s> w e i l e r </s>|case=dative:number=singular
+<s> w e i l e r </s>|<s> w e i l e r n </s>|case=dative:number=plural
+<s> w e i l e r </s>|<s> w e i l e r </s>|case=accusative:number=singular
+<s> w e i l e r </s>|<s> w e i l e r </s>|case=accusative:number=plural
+<s> w e l t f r i e d e n </s>|<s> w e l t f r i e d e n </s>|case=nominative:number=singular
+<s> w e l t f r i e d e n </s>|<s> w e l t f r i e d e n </s>|case=nominative:number=plural
+<s> w e l t f r i e d e n </s>|<s> w e l t f r i e d e n s </s>|case=genitive:number=singular
+<s> w e l t f r i e d e n </s>|<s> w e l t f r i e d e n </s>|case=genitive:number=plural
+<s> w e l t f r i e d e n </s>|<s> w e l t f r i e d e n </s>|case=dative:number=singular
+<s> w e l t f r i e d e n </s>|<s> w e l t f r i e d e n </s>|case=dative:number=plural
+<s> w e l t f r i e d e n </s>|<s> w e l t f r i e d e n </s>|case=accusative:number=singular
+<s> w e l t f r i e d e n </s>|<s> w e l t f r i e d e n </s>|case=accusative:number=plural
+<s> w i m p e r n t u s c h e </s>|<s> w i m p e r n t u s c h e </s>|case=nominative:number=singular
+<s> w i m p e r n t u s c h e </s>|<s> w i m p e r n t u s c h e n </s>|case=nominative:number=plural
+<s> w i m p e r n t u s c h e </s>|<s> w i m p e r n t u s c h e </s>|case=genitive:number=singular
+<s> w i m p e r n t u s c h e </s>|<s> w i m p e r n t u s c h e n </s>|case=genitive:number=plural
+<s> w i m p e r n t u s c h e </s>|<s> w i m p e r n t u s c h e </s>|case=dative:number=singular
+<s> w i m p e r n t u s c h e </s>|<s> w i m p e r n t u s c h e n </s>|case=dative:number=plural
+<s> w i m p e r n t u s c h e </s>|<s> w i m p e r n t u s c h e </s>|case=accusative:number=singular
+<s> w i m p e r n t u s c h e </s>|<s> w i m p e r n t u s c h e n </s>|case=accusative:number=plural
+<s> z e i t r a u m </s>|<s> z e i t r a u m </s>|case=nominative:number=singular
+<s> z e i t r a u m </s>|<s> z e i t r ä u m e </s>|case=nominative:number=plural
+<s> z e i t r a u m </s>|<s> z e i t r a u m e s </s>|case=genitive:number=singular
+<s> z e i t r a u m </s>|<s> z e i t r ä u m e </s>|case=genitive:number=plural
+<s> z e i t r a u m </s>|<s> z e i t r a u m </s>|case=dative:number=singular
+<s> z e i t r a u m </s>|<s> z e i t r ä u m e n </s>|case=dative:number=plural
+<s> z e i t r a u m </s>|<s> z e i t r a u m </s>|case=accusative:number=singular
+<s> z e i t r a u m </s>|<s> z e i t r ä u m e </s>|case=accusative:number=plural
+<s> z i e g e </s>|<s> z i e g e </s>|case=nominative:number=singular
+<s> z i e g e </s>|<s> z i e g e n </s>|case=nominative:number=plural
+<s> z i e g e </s>|<s> z i e g e </s>|case=genitive:number=singular
+<s> z i e g e </s>|<s> z i e g e n </s>|case=genitive:number=plural
+<s> z i e g e </s>|<s> z i e g e </s>|case=dative:number=singular
+<s> z i e g e </s>|<s> z i e g e n </s>|case=dative:number=plural
+<s> z i e g e </s>|<s> z i e g e </s>|case=accusative:number=singular
+<s> z i e g e </s>|<s> z i e g e n </s>|case=accusative:number=plural
+<s> z i e g e n b o c k </s>|<s> z i e g e n b o c k </s>|case=nominative:number=singular
+<s> z i e g e n b o c k </s>|<s> z i e g e n b ö c k e </s>|case=nominative:number=plural
+<s> z i e g e n b o c k </s>|<s> z i e g e n b o c k e s </s>|case=genitive:number=singular
+<s> z i e g e n b o c k </s>|<s> z i e g e n b ö c k e </s>|case=genitive:number=plural
+<s> z i e g e n b o c k </s>|<s> z i e g e n b o c k </s>|case=dative:number=singular
+<s> z i e g e n b o c k </s>|<s> z i e g e n b ö c k e n </s>|case=dative:number=plural
+<s> z i e g e n b o c k </s>|<s> z i e g e n b o c k </s>|case=accusative:number=singular
+<s> z i e g e n b o c k </s>|<s> z i e g e n b ö c k e </s>|case=accusative:number=plural
+<s> z w e c k </s>|<s> z w e c k </s>|case=nominative:number=singular
+<s> z w e c k </s>|<s> z w e c k e </s>|case=nominative:number=plural
+<s> z w e c k </s>|<s> z w e c k e s </s>|case=genitive:number=singular
+<s> z w e c k </s>|<s> z w e c k e </s>|case=genitive:number=plural
+<s> z w e c k </s>|<s> z w e c k </s>|case=dative:number=singular
+<s> z w e c k </s>|<s> z w e c k e n </s>|case=dative:number=plural
+<s> z w e c k </s>|<s> z w e c k </s>|case=accusative:number=singular
+<s> z w e c k </s>|<s> z w e c k e </s>|case=accusative:number=plural
+<s> z w e i g </s>|<s> z w e i g </s>|case=nominative:number=singular
+<s> z w e i g </s>|<s> z w e i g e </s>|case=nominative:number=plural
+<s> z w e i g </s>|<s> z w e i g e s </s>|case=genitive:number=singular
+<s> z w e i g </s>|<s> z w e i g e </s>|case=genitive:number=plural
+<s> z w e i g </s>|<s> z w e i g </s>|case=dative:number=singular
+<s> z w e i g </s>|<s> z w e i g e n </s>|case=dative:number=plural
+<s> z w e i g </s>|<s> z w e i g </s>|case=accusative:number=singular
+<s> z w e i g </s>|<s> z w e i g e </s>|case=accusative:number=plural
+<s> z w e i s i t z e r </s>|<s> z w e i s i t z e r </s>|case=nominative:number=singular
+<s> z w e i s i t z e r </s>|<s> z w e i s i t z e r </s>|case=nominative:number=plural
+<s> z w e i s i t z e r </s>|<s> z w e i s i t z e r s </s>|case=genitive:number=singular
+<s> z w e i s i t z e r </s>|<s> z w e i s i t z e r </s>|case=genitive:number=plural
+<s> z w e i s i t z e r </s>|<s> z w e i s i t z e r </s>|case=dative:number=singular
+<s> z w e i s i t z e r </s>|<s> z w e i s i t z e r n </s>|case=dative:number=plural
+<s> z w e i s i t z e r </s>|<s> z w e i s i t z e r </s>|case=accusative:number=singular
+<s> z w e i s i t z e r </s>|<s> z w e i s i t z e r </s>|case=accusative:number=plural
+<s> z w e r g p i n s c h e r </s>|<s> z w e r g p i n s c h e r </s>|case=nominative:number=singular
+<s> z w e r g p i n s c h e r </s>|<s> z w e r g p i n s c h e r </s>|case=nominative:number=plural
+<s> z w e r g p i n s c h e r </s>|<s> z w e r g p i n s c h e r s </s>|case=genitive:number=singular
+<s> z w e r g p i n s c h e r </s>|<s> z w e r g p i n s c h e r </s>|case=genitive:number=plural
+<s> z w e r g p i n s c h e r </s>|<s> z w e r g p i n s c h e r </s>|case=dative:number=singular
+<s> z w e r g p i n s c h e r </s>|<s> z w e r g p i n s c h e r n </s>|case=dative:number=plural
+<s> z w e r g p i n s c h e r </s>|<s> z w e r g p i n s c h e r </s>|case=accusative:number=singular
+<s> z w e r g p i n s c h e r </s>|<s> z w e r g p i n s c h e r </s>|case=accusative:number=plural
+<s> ö k o s y s t e m </s>|<s> ö k o s y s t e m </s>|case=nominative:number=singular
+<s> ö k o s y s t e m </s>|<s> ö k o s y s t e m e </s>|case=nominative:number=plural
+<s> ö k o s y s t e m </s>|<s> ö k o s y s t e m s </s>|case=genitive:number=singular
+<s> ö k o s y s t e m </s>|<s> ö k o s y s t e m e </s>|case=genitive:number=plural
+<s> ö k o s y s t e m </s>|<s> ö k o s y s t e m </s>|case=dative:number=singular
+<s> ö k o s y s t e m </s>|<s> ö k o s y s t e m e n </s>|case=dative:number=plural
+<s> ö k o s y s t e m </s>|<s> ö k o s y s t e m </s>|case=accusative:number=singular
+<s> ö k o s y s t e m </s>|<s> ö k o s y s t e m e </s>|case=accusative:number=plural
