@@ -11,7 +11,7 @@ OBJDIR=obj
 SRCDIR=src
 
 .PHONY: clean
-all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph $(BINDIR)/train-joint-enc-morph $(BINDIR)/eval-ensemble-joint-enc-morph $(BINDIR)/train-lm-sep-morph $(BINDIR)/eval-ensemble-lm-sep-morph $(BINDIR)/train-joint-enc-dec-morph $(BINDIR)/eval-ensemble-joint-enc-dec-morph $(BINDIR)/train-infl-to-root $(BINDIR)/train-sep-infl-to-root $(BINDIR)/eval-ensemble-sep-morph-beam $(BINDIR)/train-lm-joint-enc $(BINDIR)/eval-ensemble-lm-joint-enc $(BINDIR)/eval-ensemble-joint-enc-beam $(BINDIR)/train-no-enc $(BINDIR)/eval-ensemble-no-enc $(BINDIR)/train-enc-dec $(BINDIR)/eval-ensemble-enc-dec $(BINDIR)/train-enc-dec-attn $(BINDIR)/eval-ensemble-enc-dec-attn
+all: make_dirs $(BINDIR)/train-sep-morph $(BINDIR)/eval-ensemble-sep-morph $(BINDIR)/train-joint-enc-morph $(BINDIR)/eval-ensemble-joint-enc-morph $(BINDIR)/train-lm-sep-morph $(BINDIR)/eval-ensemble-lm-sep-morph $(BINDIR)/train-joint-enc-dec-morph $(BINDIR)/eval-ensemble-joint-enc-dec-morph $(BINDIR)/train-infl-to-root $(BINDIR)/train-sep-infl-to-root $(BINDIR)/eval-ensemble-sep-morph-beam $(BINDIR)/train-lm-joint-enc $(BINDIR)/eval-ensemble-lm-joint-enc $(BINDIR)/eval-ensemble-joint-enc-beam $(BINDIR)/train-no-enc $(BINDIR)/eval-ensemble-no-enc $(BINDIR)/train-enc-dec $(BINDIR)/eval-ensemble-enc-dec $(BINDIR)/train-enc-dec-attn $(BINDIR)/eval-ensemble-enc-dec-attn $(BINDIR)/eval-ensemble-sep-morph-spanish-gen
 
 make_dirs:
 	mkdir -p $(OBJDIR)
@@ -57,6 +57,9 @@ $(BINDIR)/eval-ensemble-lm-joint-enc: $(addprefix $(OBJDIR)/, eval-ensemble-lm-j
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
 $(BINDIR)/eval-ensemble-sep-morph: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph.o utils.o sep-morph.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
+$(BINDIR)/eval-ensemble-sep-morph-spanish-gen: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph-spanish-gen.o utils.o sep-morph.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
 $(BINDIR)/eval-ensemble-no-enc: $(addprefix $(OBJDIR)/, eval-ensemble-no-enc.o utils.o no-enc.o)
