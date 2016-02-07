@@ -55,6 +55,9 @@ $(BINDIR)/eval-ensemble-lm-joint-enc: $(addprefix $(OBJDIR)/, eval-ensemble-lm-j
 $(BINDIR)/eval-ensemble-sep-morph: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph.o utils.o sep-morph.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
+$(BINDIR)/eval-ensemble-sep-morph-spanish-gen: $(addprefix $(OBJDIR)/, eval-ensemble-sep-morph-spanish-gen.o utils.o sep-morph.o)
+	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
+
 $(BINDIR)/eval-ensemble-no-enc: $(addprefix $(OBJDIR)/, eval-ensemble-no-enc.o utils.o no-enc.o)
 	$(CC) $(CFLAGS) $(LIBS) $(INCS) $^ -o $@ $(FINAL)
 
