@@ -123,7 +123,6 @@ float EncDec::Train(const unsigned& morph_id, const vector<unsigned>& inputs,
 
   vector<Expression> decoder_hidden_units;
   vector<Expression> init;
-  init.push_back(tanh(encoded_input_vec));
   init.push_back(encoded_input_vec);
   output_forward[morph_id].start_new_sequence(init);
   for (const auto& vec : input_vecs_for_dec) {
