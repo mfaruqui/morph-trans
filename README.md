@@ -27,6 +27,8 @@ You need three files to train the inflection generation system. Two files that c
 
 ```<s> a a l </s>|<s> a a l e s </s>|case=genitive:number=singular```
 
+* Optional language models: [here] (https://drive.google.com/folderview?id=0B93-ltInuGUyeGhDUVZSeWkyUVE&usp=sharing)
+
 ###Compile
 
 After you have installed, CNN, Boost and Eige, you can simply install the software by typing the following command:-
