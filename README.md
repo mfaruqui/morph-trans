@@ -1,7 +1,7 @@
 # morph-trans
 Manaal Faruqui, manaalfar@gmail.com
 
-This tool is used to generate morphologically inflected forms of a given word according to a specified morphological attribute. The input word is treated as a sequence of characters and the output word is generated as the transofrmed sequence of characters using a variant of neural encoder-decoder architecture. This is described in Faruqui et al (2016).
+This tool is used to generate morphologically inflected forms of a given word according to a specified morphological attribute. The input word is treated as a sequence of characters and the output word is generated as the transofrmed sequence of characters using a variant of neural encoder-decoder architecture. This is described in Faruqui et al (NAACL, 2016).
 
 ###Requirements
 
@@ -51,10 +51,10 @@ This can use an ensemble of models for evaluation. If you want to use only one m
 
 ###Reference
 ```
-@article{faruqui:2016:infl,
+@inproceedings{faruqui:2016:infl,
   author    = {Faruqui, Manaal and Tsvetkov, Yulia and Neubig, Graham and Dyer, Chris},
   title     = {Morphological Inflection Generation Using Character Sequence to Sequence Learning},
-  journal = {arXiv:1512.06110},
+  journal = {Proc. of NAACL},
   year      = {2016},
 }
 ```
