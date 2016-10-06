@@ -4,7 +4,7 @@ EIGEN_DIR=$(EIGEN)
 BOOST_DIR=$(BOOST)
 
 CNN_BUILD_DIR=$(CNN_DIR)/build
-INCS=-I$(CNN_DIR) -I$(CNN_BUILD_DIR) -I$(EIGEN)
+INCS=-I$(CNN_DIR) -I$(CNN_BUILD_DIR) -I$(EIGEN_DIR)
 LIBS=-L$(CNN_BUILD_DIR)/cnn/ -L$(BOOST_DIR)/lib
 FINAL=-lcnn -lboost_regex -lboost_serialization -lboost_program_options -lrt -lpthread
 CFLAGS=-std=c++11 -Ofast -g -march=native -pipe
