@@ -5,7 +5,7 @@ This tool is used to generate morphologically inflected forms of a given word ac
 
 ###Requirements
 
-1. CNN neural network library: https://github.com/clab/cnn
+1. CNN neural network library: https://github.com/clab/cnn-v1
 2. C++ BOOST library: http://www.boost.org/
 3. C++ Eigen library: http://eigen.tuxfamily.org/
 
